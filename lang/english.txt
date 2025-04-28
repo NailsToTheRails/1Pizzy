@@ -1,0 +1,381 @@
+lang = "en"
+
+# ------------------
+# WARNING!!!
+# Palette 2 is reserved for the freezerator pepper pizza skin overlay
+# Palettes 12, 13 and 14 are reserved for patterns and Fake Peppino
+# Every other palette (AFTER the default one) will be automatically added to the dresser
+# ------------------
+
+remuNoti = "To toggle the full array of patterns, turn on Remux!"
+
+# ------------------
+# DRESSER PIZZELLE
+# ------------------
+PRONOUN_1M = "he"
+PRONOUN_2M = "him"
+PRONOUN_3M = "he's"
+PRONOUN_4M = "He's"
+PRONOUN_5M = "men"
+PRONOUN_6M = "His"
+PRONOUN_1F = "she"
+PRONOUN_2F = "her"
+PRONOUN_3F = "she's"
+PRONOUN_4F = "She's"
+PRONOUN_5F = "women"
+PRONOUN_6F = "Her"
+PRONOUN_1X = "they"
+PRONOUN_2X = "them"
+PRONOUN_3X = "they're"
+PRONOUN_4X = "They're"
+PRONOUN_5X = "people"
+PRONOUN_6X = "Their"
+
+lapgranny1PZ = "So this is the famed Pizza Tower!"
+lapgranny2PZ = "I knew you liked candy over pizza, but you didn't have to commit to the bit this much..."
+lapgranny3PZ = "Wrong exhibition, buddy."
+lapgranny4PZ = "Nice Spongebob cosplay!"
+lapgranny5PZ = "Aren't you sweet! Please leave, I wouldn't want to get cavities..."
+lapgranny6PZ = "How can that small little scooter you got there even possibly let you keep up pace with that fatass italian? Color me impressed!"
+lapgranny7PZ = "The Painter? Pssh. I can paint pretty well, too."
+lapgranny8PZ = "You look like that gremlin guy, but... weirder..."
+lapgranny9PZ = "You don't live around here, so you don't have to deal with these miserable tax rates... So why are you beefing with the pizza man?"
+lapgranny10PZ = "Does your HRT happen to be cherry flavored?"
+lapgranny11PZ = "I liked the P rank build better."
+lapgranny12PZ = "I liked the Construct build better."
+lapgranny13PZ = "I liked Demo 1 better."
+lapgranny14PZ = "It's a good thing you only gave the fat man a little bump on the head. I think we know what happens if you take it too far..."
+lapgranny15PZ = "All that candy can't be good for your health, sweetie."
+lapgranny16PZ = "dude i fucking need that pizzele v2 mod i FUCKING NEED IT dude please join the fucking cheesed up mod hub server and give me that pizzelle v2 mod I CAN'T LIVE WITHOUT IT PLEASE I FUCKING NEED IT I NEED THAT FUCKING PIZZELLE MOD I FUCKING NEED IT PLEASE DUDE GIVE ME THE LINK FOR FUCKS SAKE I FUCKING NEED IT PLEASE GIVE IT TO ME GIVE IT TO ME PLEASE I'M NOT  AFUCKING KOOLAID I NEED THAT PIZZELLE MOD DUDE PLEASE GIVE IT TO ME"
+lapgranny17PZ = "Noise? What happened? You look stupid."
+lapgranny18PZ = "You look different. Did you cut your hair?"
+lapgranny19PZ = "You HAVE heard of pizza, right?"
+lapgranny20PZ = "Weren't you supposed to be long gone by now?"
+lapgranny21PZ = "my port"
+
+dresser_PZ1 = "Pizzelle"
+dresser_PZ1D = "Love PRONOUN_2 or hate PRONOUN_2."
+
+dresser_PZ3 = "Exhibition Night"
+dresser_PZ3D = "Was it truly worth the $250?"
+
+dresser_PZ4 = "Painter Red"
+dresser_PZ4D = "This makes me antsy."
+
+dresser_PZ5 = "Painter Black"
+dresser_PZ5D = "Painter's black what?"
+
+dresser_PZ6 = "Painter Purple"
+dresser_PZ6D = "It's covered with ink, don't touch it."
+
+dresser_PZ7 = "Noise"
+dresser_PZ7D = "Hmm... Copyright Tour de Pizza"
+
+dresser_PZ8 = "Sugar"
+dresser_PZ8D = "I forgot the reason it's green."
+
+dresser_PZ9 = "Rivals"
+dresser_PZ9D = "Smash."
+
+dresser_PZ10 = "Gum"
+dresser_PZ10D = "Don't actually chew PRONOUN_2, please."
+
+dresser_PZ11 = "Old School"
+dresser_PZ11D = "Also known as... grayscale."
+dresser_PZ11_mix = "GRAYSCALE"
+
+dresser_PZ15 = "Zombified"
+dresser_PZ15D = "Sorry about that."
+dresser_PZ15_mix = "ZOMBIE"
+
+dresser_PZ16 = "Forestation"
+dresser_PZ16D = "Deforestation rather, considering PRONOUN_3 wearing it."
+
+dresser_PZ17 = "Lamda"
+dresser_PZ17D = "Who the fuck knows, it's a demo 1 palette."
+dresser_PZ17_mix = "LAMDA"
+
+dresser_PZ18 = "Gnome Wizard"
+dresser_PZ18D = "Really diving deep into the gremlin persona."
+dresser_PZ18_mix = "GNOME"
+
+dresser_PZ19 = "Oversweetened"
+dresser_PZ19D = "Get that candy off-a there!"
+dresser_PZ19_mix = "SWEETENED"
+
+dresser_PZ20 = "Candy Cane"
+dresser_PZ20D = "PRONOUN_4 the candy!"
+dresser_PZ20_mix = "CANDY"
+
+dresser_PZ21 = "Pumpkin"
+dresser_PZ21D = "Now with 30% less fiber."
+dresser_PZ21_mix = "PUMPKIN"
+
+dresser_PZ22 = "SAGE"
+dresser_PZ22D = "Do upside down slopes make it a Sonic game?"
+
+dresser_PZ23 = "DOOM"
+dresser_PZ23D = "PRONOUN_4 the rip-n-tearing patisje!"
+dresser_PZ23_mix = "SLAYER"
+
+dresser_PZ24 = "Demolitions Expert"
+dresser_PZ24D = "It's ball-busting time."
+dresser_PZ24_mix = "DYNAMITE"
+
+dresser_PZ25 = "Scooter"
+dresser_PZ25D = "Turning a sphere outside in."
+dresser_PZ25_mix = "SCOOTER"
+
+dresser_PZ26 = "Blurple"
+dresser_PZ26D = "Also known as \"test\"."
+
+dresser_PZ27 = "Paintlad"
+dresser_PZ27D = "Fittingly looked drawn in MS Paint."
+dresser_PZ27_mix = "PAINTLY"
+
+dresser_PZ28 = "Cotton Candy"
+dresser_PZ28D = "Delicious colors. I want to eat PRONOUN_2."
+dresser_PZ28_mix = "COTTON"
+
+dresser_PZ29 = "Green Apple"
+dresser_PZ29D = "The least favorite candy flavor."
+dresser_PZ29_mix = "COATED"
+
+dresser_PZ30 = "Stupid Rat"
+dresser_PZ30D = "An otherwordly creature in this case."
+dresser_PZ30_mix = "RAT"
+
+dresser_PZ31 = "Pastel"
+dresser_PZ31D = "Soft on the eyes."
+dresser_PZ31_mix = "PASTEL"
+
+dresser_PZ32 = "Crazy Frog"
+dresser_PZ32D = "Ding ding!"
+dresser_PZ32_mix = "CRAZY"
+
+dresser_PZ33 = "Factory"
+dresser_PZ33D = "PLEASE. I BEG YOU."
+dresser_PZ33_mix = "MAN-MADE"
+
+dresser_PZ34 = "Harsh Pink"
+dresser_PZ34D = "Bismuth subsalicylate."
+dresser_PZ34_mix = "PINK"
+
+dresser_PZ35 = "Shadow"
+dresser_PZ35D = "SHUT UP! My dad works at Sugary Spire and can give you PREGNANT."
+dresser_PZ35_mix = "SHADOW"
+
+dresser_PZ43 = "Krystal"
+dresser_PZ43D = "yaham-ice."
+dresser_PZ43_mix = "KRYSTALLY"
+
+dresser_PZ44 = "David"
+dresser_PZ44D = "Where is my candy?"
+
+dresser_PZ45 = "Easy-o-Ween"
+dresser_PZ45D = "They dont have it!"
+
+dresser_PZ46 = "Release"
+dresser_PZ46D = "Bo-lieve it or not"
+
+dresser_PZ47 = "Limishzelle"
+dresser_PZ47D = "Slime cube!"
+
+dresser_PZ48 = "Nightmare"
+dresser_PZ48D = "You bring a light?"
+
+dresser_PZ49 = "Doizelle"
+dresser_PZ49D = "Can PRONOUN_1 die already...?"
+
+dresser_PZ50 = "Daedalend"
+dresser_PZ50D = "The legend"
+
+dresser_PZ51 = "NJA"
+dresser_PZ51D = "I LOVE IT!!!!."
+dresser_PZ51_mix = "NJATASTIC"
+
+dresser_PZ52 = "what"
+dresser_PZ52D = "Is there supposed to be something different about this?"
+dresser_PZ52_mix = "FREE"
+
+dresser_PZ53 = "Mr. Doe"
+dresser_PZ53D = "PRONOUN_6 little Doe is out..."
+dresser_PZ53_mix = "Doe'd"
+
+dresser_PZ54 = "C00LER"
+dresser_PZ54D = "JOIN TEAM C00LKIDD TODAY!"
+dresser_PZ54_mix = "C00LED"
+
+dresser_PZ55 = "Macaron"
+dresser_PZ55D = "PRONOUN_4 a sweet meringue-based confection!"
+dresser_PZ55_mix = "Macaroned"
+
+dresser_PZ56 = "Unhinged Superhero"
+dresser_PZ56D = "What? Did you like, hit your head twice?"
+
+dresser_PZ57 = "Candyzelle"
+dresser_PZ57D = "Edible!"
+dresser_PZ57_mix = "Candied"
+
+dresser_PZ58 = "Gummy"
+dresser_PZ58D = "...Do you think PRONOUN_2 and John are best friends?"
+
+dresser_PZ59 = "Watermelon"
+dresser_PZ59D = "Only the best version of Sour Patch Kids!"
+
+dresser_PZ60 = "Asbel"
+dresser_PZ60D = "This stuff smells like it died"
+
+dresser_PZ61 = "RED"
+dresser_PZ61D = "Reliable Excavation Demolition 4 life"
+
+dresser_PZ62 = "BLU"
+dresser_PZ62D = "Builders League United 4 Life"
+
+dresser_PZ63 = "GRN"
+dresser_PZ63D = "Global Radio Network 4 Life"
+
+dresser_PZ64 = "YLW"
+dresser_PZ64D = "Yard Logistics Workers 4 Life"
+
+dresser_PZ65 = "Nautical Neighbor"
+dresser_PZ65D = "I'm Pizzybob!"
+dresser_PZ65_mix = "Neighbory"
+
+dresser_PZ66 = "evil and fuked up pizell"
+dresser_PZ66D = "mwehehe..."
+dresser_PZ66_mix = "EVIL AND FUUUKKKEDD UPPP"
+
+dresser_PZ67 = "Pizzelle's Ego"
+dresser_PZ67D = "*glass shatter sfx*"
+
+dresser_PZ68 = "Griggol"
+dresser_PZ68D = "OLD.. SO OLD.. 2 YEARS OLD.."
+dresser_PZ68_mix = "Grigged"
+
+dresser_PZ69 = "Vizzy"
+dresser_PZ69D = ":333333333333333"
+dresser_PZ69_mix = "VIZZIBLE"
+
+dresser_PZ70 = "Dranched"
+dresser_PZ70D = "Mmmmmmm... Pruople..."
+dresser_PZ70_mix = "DRANCHED"
+
+dresser_PZ71 = "Fartelle"
+dresser_PZ71D = "You know that time when I shitted and farted?"
+dresser_PZ71_mix = "FARTY"
+
+dresser_PZ72 = "My Time"
+dresser_PZ72D = "Oyasumi, oyasumi. Close your eyes and you'll leave this dream."
+dresser_PZ72_mix = "Dreamt"
+
+# ------------------
+# DRESSER PATTERNS
+# ------------------
+
+pattern_LAMMY = "Um Pizzy Lizzy"
+pattern_LAMMYD = "1999 rhythm video game developed by NanaOn-Sha!"
+dresser_Lammy = "Get COOL!"
+
+pattern_PZC_1 = "Double Flavor"
+pattern_PZC_1D = "Crunchy, gummy and yummy."
+dresser_DoubleFlavor = "Unlocked in Sandbox"
+pattern_PZC_2 = "Sugary"
+pattern_PZC_2D = "OOOH NAMEDROP!"
+dresser_Sugary = "Unlocked in Sandbox"
+
+
+pattern_PZEN_1 = "Brainiac"
+pattern_PZEN_1D = "Face your judgement."
+dresser_Brainy = "Unlocked by facing the painter's judgement. Theoretically."
+pattern_PZEN_2 = "Golden Brains"
+pattern_PZEN_2D = "If you think about it, \"pennies\" kinda sounds like"
+dresser_BrainyG = "Unlocked by getting a perfect judgement from the painter. Theoretically."
+pattern_PZEN_3 = "Hazardous"
+pattern_PZEN_3D = "Get to work!"
+dresser_Hazard = "Unlocked by cleaning up the construction site."
+pattern_PZEN_4 = "Steamy"
+pattern_PZEN_4D = "I think we all know why they called it Cottontown."
+dresser_Steamy = "Unlocked by digging in cotton for 10 seconds. Theoretically."
+pattern_PZEN_5 = "Fred's Choice"
+pattern_PZEN_5D = "Is this a reference?"
+dresser_Worm = "Unlocked by Theoretically annoying a certain worm."
+pattern_PZEN_6 = "Frog Pajamas"
+pattern_PZEN_6D = "Now you can have wet dreams."
+dresser_Frog = "Unlocked by destroying frogs. Theoretically of course."
+pattern_PZEN_7 = "Notebook"
+pattern_PZEN_7D = "How does this affect LeBron's legacy?"
+dresser_Notebook = "Unlocked by making a 3-pointer with a waste basket."
+
+pattern_PZM_1 = "Creamed"
+pattern_PZM_1D = "With Cookies!!!.................what was that you said?"
+dresser_Creamed = "Bought in the Weekend Delight"
+pattern_PZM_2 = "Heroic"
+pattern_PZM_2D = "A true slayer of beasts! Awarded to those with full beastiaries."
+dresser_Heroic = "Unlocked by killing every enemy type in the game."
+pattern_PZM_3 = "Dolor de la muerte"
+pattern_PZM_3D = "La passion nunca muere!"
+dresser_Muerte = "Die with checkpoints off in Lap 4."
+pattern_PZM_4 = "Swirl"
+pattern_PZM_4D = "Snip Snip! Want a mint?"
+dresser_Swirl = "Unlocked in Sandbox"
+pattern_PZM_5 = "Caramel"
+pattern_PZM_5D = "Bapple! Capple! Dapple!"
+dresser_CaramelAP = "Bought in the Weekend Delight"
+pattern_PZM_6 = "Funkay"
+pattern_PZM_6D = "So Retro! TM"
+dresser_Funkay = "Unlocked in the Weekend Delight"
+pattern_PZM_7 = "Autumn"
+pattern_PZM_7D = "Somethings awful fishy...or leafy...Achoo!"
+dresser_Autumn = "Unlocked in Sandbox"
+pattern_PZM_8 = "Neapolitan"
+pattern_PZM_8D = "Please don't just eat one."
+dresser_Napolitano = "Unlocked by taking out 20 smores, 20 gumslimes, and 20 chocolate frogs."
+pattern_PZM_9 = "Cookie"
+pattern_PZM_9D = "That's just how it crumbles."
+dresser_Cookie = "Unlocked in Sandbox"
+pattern_PZM_10 = "Missing"
+pattern_PZM_10D = "Fiddlesticks! PRONOUN_3 got to fix this immediately."
+dresser_Missing = "Unlocked by going to a forbidden room."
+pattern_PZM_11 = "Solid"
+pattern_PZM_11D = "The strongest of all PRONOUN_5."
+dresser_Solid = "Unlocked in the Weekend Delight"
+pattern_PZM_12 = "Choco"
+pattern_PZM_12D = "DOUBLE CHOCOLATE CHUNK COOKIE!! I LOVE CAPITALISM!!!"
+dresser_Choco = "Bought in the Weekend Delight"
+pattern_VLC = "VLC"
+pattern_VLCD = "I LOOOVE VLC MEDIA PLAYER!"
+dresser_VLC = "Bought in the VLC MEDIA PLAYER!"
+
+
+pattern_PZQ_1 = "Alright"
+pattern_PZQ_1D = "Hear me out."
+dresser_Alright = "You activated noclip like a little bitch."
+pattern_PZQ_2 = "Smooth"
+pattern_PZQ_2D = "But not quite."
+dresser_Smooth = "Unlocked by avoiding crashing into walls with the rocket transformation."
+pattern_PZQ_3 = "Lookin' Good"
+pattern_PZQ_3D = "Why, thank you!"
+dresser_LookinGood = "You tried out 10 outfits properly."
+pattern_PZQ_4 = "Fruity"
+pattern_PZQ_4D = "I love fruits! I'm very fruity with other PRONOUN_5."
+dresser_Fruity = "Unlocked in the Weekend Delight"
+pattern_PZQ_5 = "Mesmerizing"
+pattern_PZQ_5D = "Truly a sight to behold."
+dresser_Mesmerizing = "Unlocked by nabbing 1000 big collects"
+pattern_PZQ_6 = "Striking"
+pattern_PZQ_6D = "Keep your cool with these shades!"
+dresser_Striking = "Unlocked by mashing 2000 pummel attacks!"
+pattern_PZQ_7 = "Soul Crushing"
+pattern_PZQ_7D = "Ouch..."
+dresser_Soulcr = "Unlocked by ending a combo on the Soul Crushing title"
+pattern_PZQ_8 = "Awesome"
+pattern_PZQ_8D = "Incredible, incredible."
+dresser_Awesome = "Unlocked by reaching a combo of 200"
+pattern_PZQ_9 = "WTF!!!"
+pattern_PZQ_9D = "Stop saying cuss words, guys!"
+dresser_WTF = "Unlocked by ending a combo on the WTF! title"
+
+pattern_mytime = "Pale Machine"
+pattern_mytimeD = "I'm feeling good, let's say my emptiness has gone away."
+dresser_mytime = "Unlocked by being a machine and pale."
