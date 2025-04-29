@@ -50,6 +50,12 @@ options = [
                 desc: "Modifies certain parts of Pizzelle's moveset."
             },
             {
+                name: "Confectis",
+                variable: "toppinstyle",
+                options: ["OFF", "ON"],
+                desc: "Changes the Toppins to match the Confecti sprites."
+            },
+            {
                 name: "Pizzelle's Pronouns",
                 variable: "pizzypronoun",
                 options: ["he/him", "she/her", "they/them"],

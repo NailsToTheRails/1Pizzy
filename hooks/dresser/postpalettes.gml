@@ -44,6 +44,7 @@ if (global.sandbox)
         add_pattern(MOD_GLOBAL.spr_PZCpat2, "pattern_PZC_2").set_entry("Sugary").set_palette(12);
 	add_pattern(MOD_GLOBAL.spr_VLCpat, "pattern_VLC").set_entry("VLC").set_palette(12);
 	add_pattern(MOD_GLOBAL.spr_lammypat, "pattern_LAMMY").set_entry("Lammy").set_palette(12);
+	add_pattern(MOD_GLOBAL.spr_sugarysecretpat, "pattern_sugarysecret").set_entry("SugarySecret").set_palette(12);
 	add_pattern(MOD_GLOBAL.spr_mytimepat, "pattern_mytime").set_entry("PaleMachine").set_palette(12);
     }
 
