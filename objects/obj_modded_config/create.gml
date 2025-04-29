@@ -53,7 +53,7 @@ options = [
                 name: "Confectis",
                 variable: "toppinstyle",
                 options: ["OFF", "ON"],
-                desc: "Changes the Toppins to match the Confecti sprites."
+                desc: "Changes the Toppins to match the Confecti sprites. (BUGGY)"
             },
             {
                 name: "Pizzelle's Pronouns",
