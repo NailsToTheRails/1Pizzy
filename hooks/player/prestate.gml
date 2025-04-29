@@ -9,6 +9,7 @@ var mod_instance_exists = function(_object)
     }
     return false
 } // made by gryphon ^^ thanks gryphon
+
 with (obj_pizzakinparent)
 {
 if (global.toppinstyle == 0) {

@@ -23,4 +23,20 @@ if instance_exists(obj_skinchoice)
     MOD_GLOBAL.pizzloaded = false;
 }
 
+// Its Quite That Simple Really.
+with (obj_combotitle) {
+	if (global.combonames) {
+	sprite_index = MOD_GLOBAL.spr_SScomboTitles;
+	} else {
+	sprite_index = spr_comboend_title1;
+	}
+}
+with (obj_comboend) {
+	if (global.combonames) {
+	sprite = MOD_GLOBAL.spr_SScomboTitles;
+	} else {
+	sprite = spr_comboend_title1;
+	}
+}
+
 instance_activate_object(self);

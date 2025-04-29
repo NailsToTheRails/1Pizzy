@@ -25,6 +25,7 @@
 	"spr_tv_whitenoise": {"images": 5},
 	"spr_tv_placeholder": {"images": 37},
 	"spr_tv_clip": {"images": 2},
+	"spr_tv_cheesepep": {"images": 2},
 	"spr_tv_exprhurt": {"images": 6},
         "spr_tv_knight": {"images": 2},
         "spr_tv_bombpep": {"images": 2},
@@ -34,6 +35,7 @@
 	"spr_tv_boxxedpep": {"images": 2},
 	"spr_tv_cheeseball": {"images": 2},
 	"spr_tv_weenie": {"images": 2},
+	"spr_tv_mort": {"images": 2},
         "spr_tv_exprhurt1": {"images": 2},
         "spr_tv_exprhurt2": {"images": 2},
         "spr_tv_exprhurt3": {"images": 2},
@@ -251,6 +253,9 @@
 	"spr_rampjump": {"images": 10,"yorigin": 50 },
 	"spr_mrpinch": {"images": 4,"yorigin": 50, "speed":0.5},
 
+	"spr_corpsesurf": {"images": 3, "yorigin": 50, "xorigin": 50},	
+	"spr_corpsestart": {"images": 11, "yorigin": 50, "xorigin": 50},
+
 	"spr_attackdash": {"images": 16,"yorigin": 50},
         "spr_breakdancemove": {"images": 15, "xorigin": 50, "yorigin": 50},
         "spr_breakdancesuper": {"images": 15, "xorigin": 50, "yorigin": 50},
@@ -266,5 +271,5 @@
 	"spr_lunge": {"images": 13,"yorigin": 50, "speed":0.6},
         "spr_mach2jump": {"images": 7, "xorigin": 50, "yorigin": 54},
         "spr_suplexland": {"images": 11, "xorigin": 50, "yorigin": 50},
-	"spr_chainsawhitwall": {"images": 6, "xorigin": 75, "yorigin": 85},
+	"spr_chainsawhitwall": {"images": 7, "xorigin": 113, "yorigin": 85},
 }

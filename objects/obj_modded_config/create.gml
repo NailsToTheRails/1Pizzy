@@ -23,7 +23,7 @@ options = [
             {
                 name: "Lap 3 Theme",
                 variable: "lap3theme",
-                options: ["Clockin' Out Late", "Harry's Despair-y (Bilk Mix)", "Harry's Despair-y", "Sugarcube Hailstorm", "UNEXPECTION", "Blue Licorice", "KSI's Despair-y (Bilk Of It)", "Gummy Harry's Brain Freezin'"],
+                options: ["Clockin' Out Late", "Harry's Despair-y (Bilk Mix)", "Harry's Despair-y", "Sugarcube Hailstorm", "UNEXPECTION", "Blue Licorice", "KSI's Despair-y (Bilk Of It)", "Gummy Harry's Brain Freezin' (V1)", "Gummy Harry's Brain Freezin' (V2)"],
                 desc: "Change the music that plays during Lap 3 as Pizzelle."
             },
             {
@@ -44,6 +44,12 @@ options = [
                 desc: "Modifies how the combo meter looks."
             },
             {
+                name: "Combo Names",
+                variable: "combonames",
+                options: ["OFF", "ON"],
+                desc: "Changes the Combo names to be Sugary Spire's Combo names."
+            },
+            {
                 name: "Gameplay Style",
                 variable: "walljumptype",
                 options: ["Exhibition Night", "Scoutdigo", "NJA Style"],
@@ -53,7 +59,7 @@ options = [
                 name: "Confectis",
                 variable: "toppinstyle",
                 options: ["OFF", "ON"],
-                desc: "Changes the Toppins to match the Confecti sprites. (BUGGY)"
+                desc: "Changes the Toppins to match the Confecti sprites. BUGGY"
             },
             {
                 name: "Pizzelle's Pronouns",
