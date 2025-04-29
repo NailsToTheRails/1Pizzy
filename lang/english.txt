@@ -379,3 +379,7 @@ dresser_WTF = "Unlocked by ending a combo on the WTF! title"
 pattern_mytime = "Pale Machine"
 pattern_mytimeD = "I'm feeling good, let's say my emptiness has gone away."
 dresser_mytime = "Unlocked by being a machine and pale."
+
+pattern_sugarysecret = "Sugary Secret"
+pattern_sugarysecretD = "I got paint in my eye and it BURNS"
+dresser_sugarysecret = "Unlocked by entering a secret within the Sugary Spire"

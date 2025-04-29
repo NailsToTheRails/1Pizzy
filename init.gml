@@ -149,6 +149,7 @@ global.SScombofont = font_add_sprite_ext(MOD_GLOBAL.spr_tvHUD_comboFont, "012345
 MOD_GLOBAL.spr_VLCpat = sprite_add(MOD_PATH + "/sprites/pat/VLC.png", 1, false, false, 13, 13);
 
 MOD_GLOBAL.spr_mytimepat = sprite_add(MOD_PATH + "/sprites/pat/mytime.png", 1, false, false, 0, 0);
+MOD_GLOBAL.spr_sugarysecretpat = sprite_add(MOD_PATH + "/sprites/pat/sugarysecret.png", 1, false, false, 0, 0);
 
 //      EXHIBITION ASSETS
 MOD_GLOBAL.spr_PZENpat1 = sprite_add(MOD_PATH + "/sprites/pat/demoBrain.png", 1, false, false, 13, 13);
