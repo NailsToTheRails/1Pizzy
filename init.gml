@@ -13,6 +13,7 @@ global.lap2theme = ini_read_real("modded", "lap2theme", 0);
 global.lap3theme = ini_read_real("modded", "lap3theme", 0);
 global.lap3duringinf = ini_read_real("modded", "lap3duringinf", 0);
 global.walljumptype = ini_read_real("modded", "walljumptype", 0);
+global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
 global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
@@ -33,7 +34,7 @@ MOD_GLOBAL.pizzyost[1,1] = "event:/sugary/music/(L2)Sweet Release of Death (Demo
 MOD_GLOBAL.pizzyost[2,1] = "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)"
 MOD_GLOBAL.pizzyost[3,1] = "event:/sugary/music/(L2)Sweet Release of MIDI"
 MOD_GLOBAL.pizzyost[4,1] = "event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)"
-MOD_GLOBAL.pizzyost[5,1] = "event:/sugary/music/(L2)Sweet Release of MIDI"
+MOD_GLOBAL.pizzyost[5,1] = "event:/sugary/music/(L2)Sweet Release of Jam"
 MOD_GLOBAL.pizzyost[6,1] = "event:/sugary/music/(L2)I'm in The Thick of Death"
 
 MOD_GLOBAL.pizzyost[0,2] = "event:/sugary/music/(L3)Clockin' Out Late"
@@ -201,4 +202,54 @@ MOD_GLOBAL.spr_flowerpetal4 = sprite_add(MOD_PATH + "/sprites/spr_flowerpetal4.p
 MOD_GLOBAL.spr_fireass_intro = sprite_add(MOD_PATH + "/sprites/spr_fireass_intro.png", 6, false, false, 50, 50);
 MOD_GLOBAL.spr_fireass_fall = sprite_add(MOD_PATH + "/sprites/spr_fireass_fall.png", 3, false, false, 50, 50);
 MOD_GLOBAL.spr_fireass_dash = sprite_add(MOD_PATH + "/sprites/spr_fireass_dash.png", 16, false, false, 75, 75);
+
+// TOPPINSSS
+
+//1
+MOD_GLOBAL.spr_marshmallow_appear = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmallow_appear.png", 14, false, false, 50, 50);
+MOD_GLOBAL.spr_marshmellow_idle = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmellow_idle.png", 12, false, false, 50, 50);
+MOD_GLOBAL.spr_marshmellow_walk = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmellow_run.png", 15, false, false, 50, 50);
+MOD_GLOBAL.spr_marshmellow_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmellow_taunt.png", 3, false, false, 50, 50);
+MOD_GLOBAL.spr_marshmallow_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmallow_supertaunt.png", 10, false, false, 50, 50);
+MOD_GLOBAL.spr_marshmellow_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmellow_panic.png", 8, false, false, 50, 50);
+MOD_GLOBAL.spr_marshmellow_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmellow_panicWalk.png", 15, false, false, 50, 50);
+
+//2
+MOD_GLOBAL.spr_chocolate_appear = sprite_add(MOD_PATH + "/sprites/toppins/spr_chocolate_appear.png", 22, false, false, 50, 54);
+MOD_GLOBAL.spr_chocolate_idle = sprite_add(MOD_PATH + "/sprites/toppins/spr_chocolate_idle.png", 28, false, false, 50, 54);
+MOD_GLOBAL.spr_chocolate_walk = sprite_add(MOD_PATH + "/sprites/toppins/spr_chocolate_walk.png", 20, false, false, 50, 54);
+MOD_GLOBAL.spr_chocolate_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_chocolate_taunt.png", 3, false, false, 50, 54);
+MOD_GLOBAL.spr_chocolate_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_chocolate_supertaunt.png", 10, false, false, 50, 54);
+MOD_GLOBAL.spr_chocolate_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_chocolate_panic.png", 9, false, false, 50, 54);
+MOD_GLOBAL.spr_chocolate_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_chocolate_panicWalk.png", 20, false, false, 50, 54);
+
+
+//3
+MOD_GLOBAL.spr_crack_appear = sprite_add(MOD_PATH + "/sprites/toppins/spr_crack_appear.png", 17, false, false, 54, 54);
+MOD_GLOBAL.spr_crack_idle = sprite_add(MOD_PATH + "/sprites/toppins/spr_crack_idle.png", 22, false, false, 50, 54);
+MOD_GLOBAL.spr_crack_walk = sprite_add(MOD_PATH + "/sprites/toppins/spr_crack_walk.png", 9, false, false, 50, 54);
+MOD_GLOBAL.spr_crack_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_crack_taunt.png", 3, false, false, 50, 54);
+MOD_GLOBAL.spr_crack_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_crack_supertaunt.png", 10, false, false, 50, 54);
+MOD_GLOBAL.spr_crack_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_crack_panic.png", 9, false, false, 50, 54);
+MOD_GLOBAL.spr_crack_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_crack_panicWalk.png", 9, false, false, 50, 54);
+
+//4
+MOD_GLOBAL.spr_gummyworm_appear = sprite_add(MOD_PATH + "/sprites/toppins/spr_gummyworm_appear.png", 15, false, false, 50, 54);
+MOD_GLOBAL.spr_gummyworm_idle = sprite_add(MOD_PATH + "/sprites/toppins/spr_gummyworm_idle.png", 21, false, false, 50, 54);
+MOD_GLOBAL.spr_gummyworm_walk = sprite_add(MOD_PATH + "/sprites/toppins/spr_gummyworm_walk.png", 9, false, false, 50, 54);
+MOD_GLOBAL.spr_gummyworm_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_gummyworm_taunt.png", 3, false, false, 50, 54);
+MOD_GLOBAL.spr_gummyworm_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_gummyworm_supertaunt.png", 10, false, false, 50, 54);
+MOD_GLOBAL.spr_gummyworm_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_gummyworm_panic.png", 10, false, false, 50, 54);
+MOD_GLOBAL.spr_gummyworm_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_gummyworm_panicWalk.png", 9, false, false, 50, 54);
+
+//5
+MOD_GLOBAL.spr_candy_appear = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_appear.png", 18, false, false, 50, 54);
+MOD_GLOBAL.spr_candy_idle = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_idle.png", 34, false, false, 50, 54);
+MOD_GLOBAL.spr_candy_walk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_walk.png", 15, false, false, 50, 54);
+MOD_GLOBAL.spr_candy_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_taunt.png", 3, false, false, 50, 54);
+MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_supertaunt.png", 10, false, false, 50, 54);
+MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
+MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
+
+
 instance_create(0,0,obj_pizConst);
