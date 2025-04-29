@@ -44,6 +44,7 @@ MOD_GLOBAL.pizzyost[3,2] = "event:/sugary/music/(L3)Sugarcube Hailstorm"
 MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)UNEXPECTION"
 MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
 MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
+MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 
 /*
 MOD_GLOBAL.pizzyost = {
@@ -70,7 +71,8 @@ MOD_GLOBAL.pizzyost = {
 	Harry : "event:/sugary/music/(L3)Harry's Despair-y",
 	Unexpection : "event:/sugary/music/(L3)UNEXPECTION",
 	SugarCube : "event:/sugary/music/(L3)Sugarcube Hailstorm",
-	ThickOfIt : "event:/sugary/music/(L3)thickofit"
+	ThickOfIt : "event:/sugary/music/(L3)thickofit",
+	BrainFreezin' : "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 }*/
 MOD_GLOBAL.CustomThemesCheck = ["event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)","event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)","event:/sugary/music/(L1)Glucose Getaway (Construct)","event:/sugary/music/(L1)Glucose Getaway","event:/sugary/music/(L1)It's SugaryPizza Time!","event:/sugary/music/(L1)Midi Getaway (Construct)","event:/sugary/music/(L1)Midi Getaway (Demo 1)","event:/sugary/music/(L1)Sugar Rush (Exhibition Night)","event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT","event:/sugary/music/(L1)Sugar Rush (Lila Mix)","event:/sugary/music/(L2)Sweet Release of Death (Demo 1)","event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)","event:/sugary/music/(L2)Sweet Release of Death (EN)","event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)","event:/sugary/music/(L2)Sweet Release of MIDI","event:/sugary/music/(L2)Sweet Release of Jam","event:/sugary/music/(L2)I'm in The Thick of Death","event:/sugary/music/(L3)Blue Licorice","event:/sugary/music/(L3)Clockin' Out Late","event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)","event:/sugary/music/(L2)(L3)Harry's Despair-y","event/:sugary/music/(L3)UNEXPECTION","event/:sugary/music/(L3)Sugarcube Hailstorm","event:/sugary/music/(L3)thickofit",]
 MOD_GLOBAL.EPIC = sprite_add(MOD_PATH + "/sprites/Epic.png", 1, false, false, 50, 50);

@@ -23,7 +23,7 @@ options = [
             {
                 name: "Lap 3 Theme",
                 variable: "lap3theme",
-                options: ["Clockin' Out Late", "Harry's Despair-y (Bilk Mix)", "Harry's Despair-y", "Sugarcube Hailstorm", "UNEXPECTION", "Blue Licorice", "KSI's Despair-y (Bilk Of It)"],
+                options: ["Clockin' Out Late", "Harry's Despair-y (Bilk Mix)", "Harry's Despair-y", "Sugarcube Hailstorm", "UNEXPECTION", "Blue Licorice", "KSI's Despair-y (Bilk Of It)", "Gummy Harry's Brain Freezin'"],
                 desc: "Change the music that plays during Lap 3 as Pizzelle."
             },
             {
