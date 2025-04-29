@@ -3,6 +3,7 @@ if global.laps == 3 exit;
 //show_message(event)
 if obj_player1.character == "PZ"
 {
+	if event == "event:/modded/cosmicclone" return "event:/sugary/music/cosmicclone";
     if event == "event:/music/pizzatime"
 	{
 		var ass = 0;
@@ -107,6 +108,5 @@ if obj_player1.character == "PZ"
 		}
 		*/
 	}
-    if event == "event:/modded/cosmicclone"
-        return "event:/sugary/music/cosmicclone";
+
 }
