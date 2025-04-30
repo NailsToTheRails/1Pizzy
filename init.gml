@@ -1,14 +1,15 @@
 randomize()
+MOD_GLOBAL._iconlist = []
 add_sprite = function(name, frames, xorigin, yorigin)
 {
     var s = sprite_add(concat(MOD_PATH, "/sprites/", name, ".png"), frames, false, false, xorigin, yorigin);
     sprite_set_speed(s, 1, spritespeed_framespergameframe);
     return s;
 }
-var _f = file_find_first(MOD_PATH + "/sprites/icons*.png",0)
+var _f = file_find_first(MOD_PATH + "/sprites/icons/*.png",0)
 for(var _i = 0; _f != "";_i++)
 {
-    MOD_GLOBAL._iconlist[_i] = sprite_add(_f,1,false,false,0,0)
+    MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
     _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
 }
 _iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist))
