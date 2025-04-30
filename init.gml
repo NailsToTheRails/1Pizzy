@@ -55,6 +55,7 @@ MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
 MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
 MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
+MOD_GLOBAL.pizzyost[9,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
 
 /*
 MOD_GLOBAL.pizzyost = {
@@ -82,7 +83,8 @@ MOD_GLOBAL.pizzyost = {
 	Unexpection : "event:/sugary/music/(L3)UNEXPECTION",
 	SugarCube : "event:/sugary/music/(L3)Sugarcube Hailstorm",
 	ThickOfIt : "event:/sugary/music/(L3)thickofit",
-	BrainFreezin' : "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
+	BrainFreezin' : "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'",
+	Coneball : "event:/sugary/music/(L3)Coneball Lapping Two"
 }*/
 var i = 0
 while i <array_length(global.mods)
@@ -114,7 +116,7 @@ if instance_exists(obj_modlist)
 		i++
 	}
 }
-MOD_GLOBAL.CustomThemesCheck = ["event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)","event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)","event:/sugary/music/(L1)Glucose Getaway (Construct)","event:/sugary/music/(L1)Glucose Getaway","event:/sugary/music/(L1)It's SugaryPizza Time!","event:/sugary/music/(L1)Midi Getaway (Construct)","event:/sugary/music/(L1)Midi Getaway (Demo 1)","event:/sugary/music/(L1)Sugar Rush (Exhibition Night)","event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT","event:/sugary/music/(L1)Sugar Rush (Lila Mix)","event:/sugary/music/(L2)Sweet Release of Death (Demo 1)","event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)","event:/sugary/music/(L2)Sweet Release of Death (EN)","event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)","event:/sugary/music/(L2)Sweet Release of MIDI","event:/sugary/music/(L2)Sweet Release of Jam","event:/sugary/music/(L2)I'm in The Thick of Death","event:/sugary/music/(L3)Blue Licorice","event:/sugary/music/(L3)Clockin' Out Late","event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)","event:/sugary/music/(L2)(L3)Harry's Despair-y","event/:sugary/music/(L3)UNEXPECTION","event/:sugary/music/(L3)Sugarcube Hailstorm","event:/sugary/music/(L3)thickofit","event:/sugary/music/(L3)Gummy Harry's Brain Freezin'","event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2",]
+MOD_GLOBAL.CustomThemesCheck = ["event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)","event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)","event:/sugary/music/(L1)Glucose Getaway (Construct)","event:/sugary/music/(L1)Glucose Getaway","event:/sugary/music/(L1)It's SugaryPizza Time!","event:/sugary/music/(L1)Midi Getaway (Construct)","event:/sugary/music/(L1)Midi Getaway (Demo 1)","event:/sugary/music/(L1)Sugar Rush (Exhibition Night)","event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT","event:/sugary/music/(L1)Sugar Rush (Lila Mix)","event:/sugary/music/(L2)Sweet Release of Death (Demo 1)","event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)","event:/sugary/music/(L2)Sweet Release of Death (EN)","event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)","event:/sugary/music/(L2)Sweet Release of MIDI","event:/sugary/music/(L2)Sweet Release of Jam","event:/sugary/music/(L2)I'm in The Thick of Death","event:/sugary/music/(L3)Blue Licorice","event:/sugary/music/(L3)Clockin' Out Late","event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)","event:/sugary/music/(L2)(L3)Harry's Despair-y","event/:sugary/music/(L3)UNEXPECTION","event/:sugary/music/(L3)Sugarcube Hailstorm","event:/sugary/music/(L3)thickofit","event:/sugary/music/(L3)Gummy Harry's Brain Freezin'","event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2","event:/sugary/music/(L3)Coneball Lapping Two",]
 MOD_GLOBAL.EPIC = sprite_add(MOD_PATH + "/sprites/Epic.png", 1, false, false, 50, 50);
 MOD_GLOBAL.PZ_snd_wallkick = fmod_event_create_instance("event:/sugary/wallkick");
 MOD_GLOBAL.spr_tv_exprmach2 = sprite_add(MOD_PATH + "/sprites/spr_tv_exprmach2.png", 8, false, false, 139, 134);
