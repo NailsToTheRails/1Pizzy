@@ -7,15 +7,17 @@
 -Spliz: Rocket Transformation, Patterns, new sprites,
 -DrTieg: Garage Arm Sprite
 -Roundvii: New pizzelle's knight transformation sprites
--Hell Encyclopedia: Patch for lap 4 music
+-Hell Encyclopedia: Patch for lap 4 music and helped with countless bugs (thanks man <3)
 -Traffizcones, MackNcheese, Madswag, Ruby, Thenoisewoag_(Fish), Ghostkyle95, Roundvii: Helping with sprites
 -NailsRails: Porting the effects for jumping off of a wall then landing, flower petals during an uppercut, and fireass boost, and made 1 lap 3 mashup
--Chezcake: Made the settings menu, made a lap 2 mashup
+-Chezcake: Made the settings menu and multiple lap songs
+-Ashley: Helped out/reworked the lap fmod stuff, icon switching, sugary secret palette, and removed herobrine
+-MackNCheese: Fixed fmod related issues 
 
 
 								~Composers~
 Lap 1:
-	-"Sugar Rush (Lila Mix)" // Guess
+	-"Sugar Rush (Lila Mix)" // Lila
 	-"Sugar Rush (Exhibition Night)" // RodMod, CableChords, The8BitDrummer
 	-"Glucose Getaway" // Rodmod
 	-"Glucose Getaway (Construct)" // RodMod
