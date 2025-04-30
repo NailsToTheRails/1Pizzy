@@ -1,6 +1,8 @@
+if (MOD_GLOBAL.PZ_snd_wallkick) {
 destroy_sounds([
     MOD_GLOBAL.PZ_snd_wallkick
 ]);
+}
 var i = 0
 while i <array_length(global.mods)
 {
