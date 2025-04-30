@@ -34,4 +34,7 @@ add_song("event:/sugary/music/soundtest/blue_licorice", "Blue Licorice - PaperKi
 add_multisong("event:/sugary/music/soundtest/gummy_harry's_brain_freezin'", "Gummy Harry's Brain Freezin' (V1) - MrTenTheCoolest",
 	"event:/sugary/music/soundtest/gummy_harry's_brain_freezin' V2", "Gummy Harry's Brain Freezin' (V2) - MrTenTheCoolest");
 
+add_song("event:/sugary/music/soundtest/coneball_lapping_two", "Coneball Lapping Two - chezcake");
+
+
 }

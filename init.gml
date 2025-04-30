@@ -1,10 +1,18 @@
+randomize()
+MOD_GLOBAL._iconlist = []
 add_sprite = function(name, frames, xorigin, yorigin)
 {
     var s = sprite_add(concat(MOD_PATH, "/sprites/", name, ".png"), frames, false, false, xorigin, yorigin);
     sprite_set_speed(s, 1, spritespeed_framespergameframe);
     return s;
 }
-
+var _f = file_find_first(MOD_PATH + "/sprites/icons/*.png",0)
+for(var _i = 0; _f != "";_i++)
+{
+    MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
+    _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
+}
+_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist))
 ini_open(MOD_PATH + "/saveData.ini");
 // SETTING VARIABLES
 global.combometertype = ini_read_real("modded", "combometertype", 0);
@@ -47,6 +55,7 @@ MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
 MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
 MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
+MOD_GLOBAL.pizzyost[9,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
 
 /*
 MOD_GLOBAL.pizzyost = {
@@ -74,9 +83,40 @@ MOD_GLOBAL.pizzyost = {
 	Unexpection : "event:/sugary/music/(L3)UNEXPECTION",
 	SugarCube : "event:/sugary/music/(L3)Sugarcube Hailstorm",
 	ThickOfIt : "event:/sugary/music/(L3)thickofit",
-	BrainFreezin' : "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
+	BrainFreezin' : "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'",
+	Coneball : "event:/sugary/music/(L3)Coneball Lapping Two"
 }*/
-MOD_GLOBAL.CustomThemesCheck = ["event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)","event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)","event:/sugary/music/(L1)Glucose Getaway (Construct)","event:/sugary/music/(L1)Glucose Getaway","event:/sugary/music/(L1)It's SugaryPizza Time!","event:/sugary/music/(L1)Midi Getaway (Construct)","event:/sugary/music/(L1)Midi Getaway (Demo 1)","event:/sugary/music/(L1)Sugar Rush (Exhibition Night)","event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT","event:/sugary/music/(L1)Sugar Rush (Lila Mix)","event:/sugary/music/(L2)Sweet Release of Death (Demo 1)","event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)","event:/sugary/music/(L2)Sweet Release of Death (EN)","event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)","event:/sugary/music/(L2)Sweet Release of MIDI","event:/sugary/music/(L2)Sweet Release of Jam","event:/sugary/music/(L2)I'm in The Thick of Death","event:/sugary/music/(L3)Blue Licorice","event:/sugary/music/(L3)Clockin' Out Late","event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)","event:/sugary/music/(L2)(L3)Harry's Despair-y","event/:sugary/music/(L3)UNEXPECTION","event/:sugary/music/(L3)Sugarcube Hailstorm","event:/sugary/music/(L3)thickofit","event:/sugary/music/(L3)Gummy Harry's Brain Freezin'","event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2",]
+var i = 0
+while i <array_length(global.mods)
+{
+    if variable_struct_exists(global.mods[i],"name")
+    {
+        var name = variable_struct_get(global.mods[i],"name")
+        if name = "Pizzelle"
+        {	
+			MOD_GLOBAL.ogicon = variable_struct_get(global.mods[i],"icon")
+            variable_struct_set(global.mods[i],"icon", MOD_GLOBAL._iconlist[_iconrandom])
+        }
+    }
+    i++
+}
+var i = 0
+if instance_exists(obj_modlist)
+{
+	while i < array_length(obj_modlist.mods)
+	{
+		if variable_struct_exists(obj_modlist.mods[i],"name")
+		{
+			var name = variable_struct_get(obj_modlist.mods[i],"name")
+			if name = "Pizzelle"
+			{	
+				variable_struct_set(obj_modlist.mods[i],"icon", MOD_GLOBAL._iconlist[_iconrandom])
+			}
+		}
+		i++
+	}
+}
+MOD_GLOBAL.CustomThemesCheck = ["event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)","event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)","event:/sugary/music/(L1)Glucose Getaway (Construct)","event:/sugary/music/(L1)Glucose Getaway","event:/sugary/music/(L1)It's SugaryPizza Time!","event:/sugary/music/(L1)Midi Getaway (Construct)","event:/sugary/music/(L1)Midi Getaway (Demo 1)","event:/sugary/music/(L1)Sugar Rush (Exhibition Night)","event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT","event:/sugary/music/(L1)Sugar Rush (Lila Mix)","event:/sugary/music/(L2)Sweet Release of Death (Demo 1)","event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)","event:/sugary/music/(L2)Sweet Release of Death (EN)","event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)","event:/sugary/music/(L2)Sweet Release of MIDI","event:/sugary/music/(L2)Sweet Release of Jam","event:/sugary/music/(L2)I'm in The Thick of Death","event:/sugary/music/(L3)Blue Licorice","event:/sugary/music/(L3)Clockin' Out Late","event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)","event:/sugary/music/(L2)(L3)Harry's Despair-y","event/:sugary/music/(L3)UNEXPECTION","event/:sugary/music/(L3)Sugarcube Hailstorm","event:/sugary/music/(L3)thickofit","event:/sugary/music/(L3)Gummy Harry's Brain Freezin'","event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2","event:/sugary/music/(L3)Coneball Lapping Two",]
 MOD_GLOBAL.EPIC = sprite_add(MOD_PATH + "/sprites/Epic.png", 1, false, false, 50, 50);
 MOD_GLOBAL.PZ_snd_wallkick = fmod_event_create_instance("event:/sugary/wallkick");
 MOD_GLOBAL.spr_tv_exprmach2 = sprite_add(MOD_PATH + "/sprites/spr_tv_exprmach2.png", 8, false, false, 139, 134);
