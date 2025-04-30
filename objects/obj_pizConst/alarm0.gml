@@ -1,5 +1,5 @@
 if !instance_exists(obj_player1) exit;
-if (!global.leveltosave == "entrance") exit;
+if global.snickchallenge exit;
 if global.panic exit;
 if room == entrance_1 && obj_player1.character == "PZ" && obj_music.music.event_name != "event:/sugary/music/entrance"
 {
