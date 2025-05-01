@@ -37,7 +37,6 @@ MOD_GLOBAL.pizzyost[6,0] = "event:/sugary/music/(L1)Midi Getaway (Construct)"
 MOD_GLOBAL.pizzyost[7,0] = "event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT"
 MOD_GLOBAL.pizzyost[8,0] = "event:/sugary/music/(L1)It's SugaryPizza Time!"
 MOD_GLOBAL.pizzyost[9,0] = "event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)"
-
 MOD_GLOBAL.pizzyost[0,1] = "event:/sugary/music/(L2)Sweet Release of Death (EN)"
 MOD_GLOBAL.pizzyost[1,1] = "event:/sugary/music/(L2)Sweet Release of Death (Demo 1)"
 MOD_GLOBAL.pizzyost[2,1] = "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)"
@@ -45,7 +44,6 @@ MOD_GLOBAL.pizzyost[3,1] = "event:/sugary/music/(L2)Sweet Release of MIDI"
 MOD_GLOBAL.pizzyost[4,1] = "event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)"
 MOD_GLOBAL.pizzyost[5,1] = "event:/sugary/music/(L2)Sweet Release of Jam"
 MOD_GLOBAL.pizzyost[6,1] = "event:/sugary/music/(L2)I'm in The Thick of Death"
-
 MOD_GLOBAL.pizzyost[0,2] = "event:/sugary/music/(L3)Clockin' Out Late"
 MOD_GLOBAL.pizzyost[1,2] = "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)"
 MOD_GLOBAL.pizzyost[2,2] = "event:/sugary/music/(L3)Harry's Despair-y"
@@ -55,7 +53,8 @@ MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
 MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
 MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
-
+// I don't know what to do this is the best i got :sob: - Ashley
+MOD_GLOBAL.pizzyosttimes[99,100,70,20,60,66,63]
 /*
 MOD_GLOBAL.pizzyost = {
 	GlucoseGetawayBewitched : "event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)",
