@@ -54,7 +54,16 @@ MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
 MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
 // I don't know what to do this is the best i got :sob: - Ashley
-MOD_GLOBAL.pizzyosttimes[99,100,70,20,60,66,63]
+MOD_GLOBAL.pizzyosttimes[0] = 99
+MOD_GLOBAL.pizzyosttimes[1] = 100
+MOD_GLOBAL.pizzyosttimes[2] = 70
+MOD_GLOBAL.pizzyosttimes[3] = 66
+MOD_GLOBAL.pizzyosttimes[4] = 60
+MOD_GLOBAL.pizzyosttimes[5] = 70
+MOD_GLOBAL.pizzyosttimes[6] = 66
+MOD_GLOBAL.pizzyosttimes[7] = 63
+MOD_GLOBAL.pizzyosttimes[8] = 20
+MOD_GLOBAL.pizzyosttimes[9] = 94
 /*
 MOD_GLOBAL.pizzyost = {
 	GlucoseGetawayBewitched : "event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)",
