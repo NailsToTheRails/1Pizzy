@@ -48,6 +48,11 @@
         "spr_tv_exprhurt10": {"images": 2},
         "spr_tv_exprhurt11": {"images": 2},
         "spr_tv_scaredjump": {"images": 2},
+		
+		"spr_tv_idleG": {"images": 14},
+		"spr_tv_happyG": {"images": 9},
+		"spr_tv_hurtG": {"images": 8},
+		"spr_tv_escapeG": {"images": 8},
 
 
 	"spr_rankD": {"images": 10, "speed": 0.9},

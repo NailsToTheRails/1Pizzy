@@ -23,5 +23,9 @@ if obj_player1.paletteselect != 52 && obj_player1.character = "PZ"
         }
     }
     }
+    if (sprite_index == spr_pepdance)
+    {
+        return MOD_GLOBAL.spr_PZdance;
+    }
 }
 }
