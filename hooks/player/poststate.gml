@@ -3,6 +3,7 @@ static PZ_texture_previous = undefined;
 static PZ_state_previous = undefined;
 static blue_color = undefined;
 static blue_color_dark = undefined;
+state PZ_imagedex_previous = undefined;
 var mod_instance_exists = function(_object)
 {
     with obj_mod_object
@@ -313,6 +314,36 @@ if character == "PZ"
 
         break;
 
+        #endregion
+               #region FIREMOUTH
+        case states.firemouth:
+            if (grounded && image_index > 8)
+            {
+                if (key_jump2)
+                { vsp = -20;}
+                else
+                {
+                vsp = -14;
+                //PZ_imagedex_previous = image_index; 
+                }
+            }
+          /*  if (!grounded && !instance_exists(obj_firemouthflame) && !key_jump2 && vsp >= -8)
+            {
+                if vsp < 8
+                {
+                    if (sprite_index != spr_firemouth)
+                    {
+                    sprite_index = spr_firemouth;
+                    
+                    }
+                }
+                else
+                {sprite_index = spr_firemouthspin;}
+            }
+            */
+
+        break;
+        
         #endregion
 
 		  #region FIRE ASS
