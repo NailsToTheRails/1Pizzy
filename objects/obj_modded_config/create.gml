@@ -52,7 +52,7 @@ options = [
             {
                 name: "Gameplay Style",
                 variable: "walljumptype",
-                options: ["Exhibition Night", "Scoutdigo", "NJA Style"],
+                options: ["Exhibition Night", "Scoutdigo", "NJA Style", "Frenzy Worlds"],
                 desc: "Modifies certain parts of Pizzelle's moveset."
             },
             {
