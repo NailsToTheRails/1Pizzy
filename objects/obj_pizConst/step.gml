@@ -23,6 +23,14 @@ if instance_exists(obj_skinchoice)
     MOD_GLOBAL.pizzloaded = false;
 }
 
+if instance_exists(obj_lapportal)
+{
+    with (obj_lapportal)
+    {
+        spr_enter = MOD_GLOBAL.spr_PZLapPortalEnd
+    }
+}
+
 // Its Quite That Simple Really.
 with (obj_combotitle) {
 	if (global.combonames) {
