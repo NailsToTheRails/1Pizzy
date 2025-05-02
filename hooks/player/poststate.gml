@@ -19,6 +19,7 @@ var mod_instance_exists = function(_object)
 
 if character == "PZ"
 {
+	if sprite_index == spr_playerN_mach3 sprite_index = spr_mach4
     if PZ_sprite_previous != sprite_index
     {
         // Always start his idle animation from first frame

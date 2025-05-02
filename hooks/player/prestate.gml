@@ -172,9 +172,9 @@ with (obj_keyfollow)
 	if (other.character == "PZ") sprite_index = MOD_GLOBAL.KEYFOLLOW;
 }
 
-if global.walljumptype == 3
+if global.walljumptype == 3 && character == "PZ"
 {
-	if (state == states.mach3 || state == states.mach2 || state == states.mach1 || state == 104) && state != states.machcancel && !grounded && scr_check_groundpound2()
+	if (state == states.mach3 || state == states.mach2 || state == states.mach1 || state == 104 || state == 5) && state != states.machcancel && !grounded && scr_check_groundpound2()
 	{
 		sprite_index = spr_playerN_divebombfall;
 		state = states.machcancel;
