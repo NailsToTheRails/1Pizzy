@@ -67,34 +67,7 @@ MOD_GLOBAL.pizzyosttimes[6] = 66
 MOD_GLOBAL.pizzyosttimes[7] = 63
 MOD_GLOBAL.pizzyosttimes[8] = 20
 MOD_GLOBAL.pizzyosttimes[9] = 94
-/*
-MOD_GLOBAL.pizzyost = {
-	GlucoseGetawayBewitched : "event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)",
-	GlucoseGetawayConstruct : "event:/sugary/music/(L1)Glucose Getaway (Construct)",
-	GlucoseGetaway : "event:/sugary/music/(L1)Glucose Getaway",
-	SugaryPizza : "event:/sugary/music/(L1)It's SugaryPizza Time!",
-	MidiGetawayConstruct : "event:/sugary/music/(L1)Midi Getaway (Construct)",
-	MidiGetawayDemo1 : "event:/sugary/music/(L1)Midi Getaway (Demo 1)",
-	SugarRush : "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)",
-	PizzyDoingIt : "event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT",
-	SugarRushLila : "event:/sugary/music/(L1)Sugar Rush (Lila Mix)",
-	SugarRushDemo2 : "event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)",
-	SweetReleaseDemo2 : "event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)",
-	SweetReleaseDemo1 : "event:/sugary/music/(L2)Sweet Release of Death (Demo 1)",
-	SweetReleaseEN : "event:/sugary/music/(L2)Sweet Release of Death (EN)",
-	SweetReleaseESQUIZ : "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)",
-	SweetReleaseMIDI : "event:/sugary/music/(L2)Sweet Release of MIDI",
-	SweetReleaseJAM : "event:/sugary/music/(L2)Sweet Release of Jam",
-	ThickOfDeath : "event:/sugary/music/(L2)I'm in The Thick of Death",
-	BlueLicorace : "event:/sugary/music/(L3)Blue Licorice",
-	ClockinOutLate : "event:/sugary/music/(L3)Clockin' Out Late",
-	HarryBilk : "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)",
-	Harry : "event:/sugary/music/(L3)Harry's Despair-y",
-	Unexpection : "event:/sugary/music/(L3)UNEXPECTION",
-	SugarCube : "event:/sugary/music/(L3)Sugarcube Hailstorm",
-	ThickOfIt : "event:/sugary/music/(L3)thickofit",
-	BrainFreezin' : "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
-}*/
+
 var i = 0
 while i <array_length(global.mods)
 {
