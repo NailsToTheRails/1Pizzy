@@ -3,7 +3,8 @@ static PZ_texture_previous = undefined;
 static PZ_state_previous = undefined;
 static blue_color = undefined;
 static blue_color_dark = undefined;
-state PZ_imagedex_previous = undefined;
+static PZ_imagedex_previous = undefined;
+
 var mod_instance_exists = function(_object)
 {
     with obj_mod_object
