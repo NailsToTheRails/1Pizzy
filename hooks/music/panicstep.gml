@@ -13,8 +13,8 @@ if array_contains(MOD_GLOBAL.CustomThemesCheck,argument1)
     var time = global.fill;
     var laphell = check_lap_mode(2);
     if (!lap) // pizza time
-    {
-        var secs = 50 // idk do a switch case with global.pizzyost
+    {	
+        var secs = MOD_GLOBAL.pizzyosttimes[global.escapetheme]
         if (time < secs * 12)
             curState += 0.5;
     }
