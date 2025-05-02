@@ -26,6 +26,7 @@ global.combonames = ini_read_real("modded", "combonames", 0);
 global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
+global.experimenPZ = ini_read_real("dev","experimental",0);
 ini_close();
 MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
@@ -37,7 +38,6 @@ MOD_GLOBAL.pizzyost[6,0] = "event:/sugary/music/(L1)Midi Getaway (Construct)"
 MOD_GLOBAL.pizzyost[7,0] = "event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT"
 MOD_GLOBAL.pizzyost[8,0] = "event:/sugary/music/(L1)It's SugaryPizza Time!"
 MOD_GLOBAL.pizzyost[9,0] = "event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)"
-
 MOD_GLOBAL.pizzyost[0,1] = "event:/sugary/music/(L2)Sweet Release of Death (EN)"
 MOD_GLOBAL.pizzyost[1,1] = "event:/sugary/music/(L2)Sweet Release of Death (Demo 1)"
 MOD_GLOBAL.pizzyost[2,1] = "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)"
@@ -45,7 +45,6 @@ MOD_GLOBAL.pizzyost[3,1] = "event:/sugary/music/(L2)Sweet Release of MIDI"
 MOD_GLOBAL.pizzyost[4,1] = "event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)"
 MOD_GLOBAL.pizzyost[5,1] = "event:/sugary/music/(L2)Sweet Release of Jam"
 MOD_GLOBAL.pizzyost[6,1] = "event:/sugary/music/(L2)I'm in The Thick of Death"
-
 MOD_GLOBAL.pizzyost[0,2] = "event:/sugary/music/(L3)Clockin' Out Late"
 MOD_GLOBAL.pizzyost[1,2] = "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)"
 MOD_GLOBAL.pizzyost[2,2] = "event:/sugary/music/(L3)Harry's Despair-y"
@@ -57,35 +56,18 @@ MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
 MOD_GLOBAL.pizzyost[9,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
 
-/*
-MOD_GLOBAL.pizzyost = {
-	GlucoseGetawayBewitched : "event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)",
-	GlucoseGetawayConstruct : "event:/sugary/music/(L1)Glucose Getaway (Construct)",
-	GlucoseGetaway : "event:/sugary/music/(L1)Glucose Getaway",
-	SugaryPizza : "event:/sugary/music/(L1)It's SugaryPizza Time!",
-	MidiGetawayConstruct : "event:/sugary/music/(L1)Midi Getaway (Construct)",
-	MidiGetawayDemo1 : "event:/sugary/music/(L1)Midi Getaway (Demo 1)",
-	SugarRush : "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)",
-	PizzyDoingIt : "event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT",
-	SugarRushLila : "event:/sugary/music/(L1)Sugar Rush (Lila Mix)",
-	SugarRushDemo2 : "event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)",
-	SweetReleaseDemo2 : "event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)",
-	SweetReleaseDemo1 : "event:/sugary/music/(L2)Sweet Release of Death (Demo 1)",
-	SweetReleaseEN : "event:/sugary/music/(L2)Sweet Release of Death (EN)",
-	SweetReleaseESQUIZ : "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)",
-	SweetReleaseMIDI : "event:/sugary/music/(L2)Sweet Release of MIDI",
-	SweetReleaseJAM : "event:/sugary/music/(L2)Sweet Release of Jam",
-	ThickOfDeath : "event:/sugary/music/(L2)I'm in The Thick of Death",
-	BlueLicorace : "event:/sugary/music/(L3)Blue Licorice",
-	ClockinOutLate : "event:/sugary/music/(L3)Clockin' Out Late",
-	HarryBilk : "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)",
-	Harry : "event:/sugary/music/(L3)Harry's Despair-y",
-	Unexpection : "event:/sugary/music/(L3)UNEXPECTION",
-	SugarCube : "event:/sugary/music/(L3)Sugarcube Hailstorm",
-	ThickOfIt : "event:/sugary/music/(L3)thickofit",
-	BrainFreezin' : "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'",
-	Coneball : "event:/sugary/music/(L3)Coneball Lapping Two"
-}*/
+// I don't know what to do this is the best i got :sob: - Ashley
+MOD_GLOBAL.pizzyosttimes[0] = 99
+MOD_GLOBAL.pizzyosttimes[1] = 100
+MOD_GLOBAL.pizzyosttimes[2] = 70
+MOD_GLOBAL.pizzyosttimes[3] = 66
+MOD_GLOBAL.pizzyosttimes[4] = 60
+MOD_GLOBAL.pizzyosttimes[5] = 70
+MOD_GLOBAL.pizzyosttimes[6] = 66
+MOD_GLOBAL.pizzyosttimes[7] = 63
+MOD_GLOBAL.pizzyosttimes[8] = 20
+MOD_GLOBAL.pizzyosttimes[9] = 94
+
 var i = 0
 while i <array_length(global.mods)
 {
@@ -164,6 +146,16 @@ MOD_GLOBAL.PZPatLoaded = false;
 
 //          EXTRA PLAYER SPR / FRENZ-E / CHEESED UP LEGACY ASSETS
 MOD_GLOBAL.spr_rocketturnair = sprite_add(MOD_PATH + "/sprites/spr_rocketturnair.png", 15, false, false, 50, 50);
+MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 22, false, false, 50, 100);
+MOD_GLOBAL.spr_PZKnightGlide = sprite_add(MOD_PATH + "/sprites/exPlayer/KnightGlide.png", 3, false, false, 60, 50);
+MOD_GLOBAL.spr_PZtrashstart = sprite_add(MOD_PATH + "/sprites/exPlayer/trashstart.png", 10, false, false, 50, 50);
+MOD_GLOBAL.spr_PZtrashjump = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump.png", 12, false, false, 50, 50);
+MOD_GLOBAL.spr_PZtrashjump2 = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump2.png", 5, false, false, 50, 50);
+MOD_GLOBAL.spr_PZtrashfall = sprite_add(MOD_PATH + "/sprites/exPlayer/trashfall.png", 3, false, false, 50, 50);
+MOD_GLOBAL.spr_PZtrashslide = sprite_add(MOD_PATH + "/sprites/exPlayer/trashslide.png", 7, false, false, 50, 50);
+sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump, 1, spritespeed_framespergameframe);
+sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump2, 1, spritespeed_framespergameframe);
+sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe);
 MOD_GLOBAL.spr_PZCpat1 = sprite_add(MOD_PATH + "/sprites/pat/cuDouble.png", 1, false, false, 8, 8);
 MOD_GLOBAL.spr_PZCpat2 = sprite_add(MOD_PATH + "/sprites/pat/cuSugary.png", 1, false, false, 16, 16);
 
