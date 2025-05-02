@@ -373,6 +373,58 @@ if character == "PZ"
             break;
         
         #endregion
+        #region KNIGHT
+        case 38:
+          if (global.experimenPZ = 1)
+        {
+            if(PZ_sprite_previous == spr_knightpepdoublejump && key_jump2 && !grounded)
+            {
+                state = "PZknightGlide"
+            }
+        }
+        break;
+        #endregion
+        #region KNIGHT ACTUAL GLIDE
+        case "PZknightGlide":
+            sprite_index = MOD_GLOBAL.spr_PZKnightGlide;
+            move = key_left + key_right;
+            if (!key_jump2)
+            {
+                vsp = Approach(vsp,4,0.5)
+            }
+            else
+            {
+                vsp = Approach(vsp,-4,0.5)
+            }
+            movespeed = hsp;
+            hsp = Approach(hsp,10*move,0.6);
+            if (move != 0)
+            {
+                obj_player1.xscale = move;
+            }
+
+            if (key_down)
+            {
+                state = 47;
+                vsp = 7;
+                sprite_index = spr_knightpepdowntrust;
+            }
+            if (grounded)
+            {
+                if (move != 0)
+                {
+                state = 38;
+                sprite_index = spr_knightpepcharge;
+                hsp = -8 * image_xscale;
+                }
+                else
+                {
+                state = 47;
+                sprite_index = spr_knightpepland;
+                }
+            }
+        break;
+        #endregion
 
 	  #region UPPERCUT PETALS
 
