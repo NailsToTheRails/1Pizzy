@@ -27,5 +27,28 @@ if obj_player1.paletteselect != 52 && obj_player1.character = "PZ"
     {
         return MOD_GLOBAL.spr_PZdance;
     }
+    switch obj_player1.sprite_index
+        {
+           case spr_player_trashjump:
+            return MOD_GLOBAL.spr_PZtrashjump;
+            
+        break;
+        case spr_player_trashjump2:
+            return MOD_GLOBAL.spr_PZtrashjump2;
+            
+        break;
+        case spr_player_trashfall:
+            return MOD_GLOBAL.spr_PZtrashfall;
+            
+        break;
+        case spr_player_trashstart:
+            return MOD_GLOBAL.spr_PZtrashstart;
+            
+        break;
+        case spr_player_trashslide:
+            return MOD_GLOBAL.spr_PZtrashslide;
+            
+        break;
+        }
 }
 }
