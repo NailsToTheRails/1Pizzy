@@ -12,7 +12,7 @@ for(var _i = 0; _f != "";_i++)
     MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
     _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
 }
-_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist))
+_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist) - 1)
 ini_open(MOD_PATH + "/saveData.ini");
 // SETTING VARIABLES
 global.combometertype = ini_read_real("modded", "combometertype", 0);
