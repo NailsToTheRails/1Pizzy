@@ -12,10 +12,10 @@ var mod_instance_exists = function(_object)
 
 with (obj_pizzakinparent)
 {
-if (global.toppinstyle == 0) {
+	if (global.toppinstyle == 0) 
+	{
     switch (object_index)
     {
-	
 	case obj_pizzakinshroom:  
 		image_speed = 0.35
 		if (sprite_index == spr_taunt) image_speed = 0
@@ -171,19 +171,21 @@ with (obj_keyfollow)
 {
 	if (other.character == "PZ") sprite_index = MOD_GLOBAL.KEYFOLLOW;
 }
-/*
-//FRENZY WORLDS
-if (state == states.mach3 || state == states.mach2 || state == states.mach1 || state == states.jump) && state != states.machcancel && scr_check_groundpound2()
+
+if global.walljumptype == 3 && character == "PZ"
 {
-	sprite_index = spr_playerN_divebombfall;
-	state = states.machcancel;
-	movespeed = movespeed * sign(hsp)
-	vsp = 20;
-	input_buffer_slap = 0;
-	input_buffer_jump = 0;
-	image_index = 0;
-	return 0;
-}*/
+	if (state == states.mach3 || state == states.mach2 || state == states.mach1 || state == 104 || state == 5) && state != states.machcancel && !grounded && scr_check_groundpound2()
+	{
+		sprite_index = spr_playerN_divebombfall;
+		state = states.machcancel;
+		movespeed = movespeed * sign(hsp)
+		vsp = 20;
+		input_buffer_slap = 0;
+		input_buffer_jump = 0;
+		image_index = 0;
+		return 0;
+	}
+}
 switch(state) 
 {
 	case "fireassdash":

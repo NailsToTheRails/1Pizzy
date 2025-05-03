@@ -19,6 +19,7 @@ var mod_instance_exists = function(_object)
 
 if character == "PZ"
 {
+	if sprite_index == spr_playerN_mach3 sprite_index = spr_mach4
     if PZ_sprite_previous != sprite_index
     {
         // Always start his idle animation from first frame
@@ -229,15 +230,12 @@ if character == "PZ"
                 
                 if key_attack
                 {
-                    
                     repeat (5)
                     {
                         with instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_secretpoof) {
-				sprite_index = MOD_GLOBAL.spr_spinningFireParticle			
-			}
-                    }
-                    
-                    
+						sprite_index = MOD_GLOBAL.spr_spinningFireParticle			
+					}
+                }
                     movespeed = 12;
                     hsp = movespeed * dir;
                     state = states.mach3;
@@ -427,33 +425,33 @@ if character == "PZ"
         break;
         #endregion
 
-	  #region UPPERCUT PETALS
+		#region UPPERCUT PETALS
 
         case states.punch:
     	static petal_timer = 2;
-if (sprite_index = spr_breakdanceuppercut) {
-	 if (!petal_timer-- && vsp <= 0)
-  	  {
-    	    with (instance_create(x + random_range(-40, 40), y + random_range(-40, 40), obj_moddeddebris))
-   	     {
-     	       image_angle = 0;
-     	       image_alpha = 5;
-      	      image_speed = 0.35;
-        	    vsp = 2;
-            	hsp = 0;
-            	grav = 0.35;
-            	terminalVelocity = 1;
-        	}
-        
-        	petal_timer = 4;
-    	}
-}
-            break;
+		if (sprite_index = spr_breakdanceuppercut)
+		{
+			if (!petal_timer-- && vsp <= 0)
+		  	{
+				with (instance_create(x + random_range(-40, 40), y + random_range(-40, 40), obj_moddeddebris))
+				{
+					image_angle = 0;
+					image_alpha = 5;
+					image_speed = 0.35;
+	        	    vsp = 2;
+	            	hsp = 0;
+	            	grav = 0.35;
+	            	terminalVelocity = 1;
+				}
+	        	petal_timer = 4;
+	    	}
+		}
+        break;
         
         #endregion
-case states.keyget:
-
-return false;
-break;
+		case states.keyget:
+		
+		return false;
+		break;
     }
 }
