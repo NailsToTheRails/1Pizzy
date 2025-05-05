@@ -164,7 +164,7 @@
 	"spr_piledriverland": {"images": 6, "xorigin": 71, "yorigin": 53},
 	"spr_freefall": {"images": 3, "xorigin": 50, "yorigin": 50},
 	"spr_keyget": {"images": 45, "xorigin": 74, "yorigin": 56},
-	"spr_3hpidle": {"images": 36, "xorigin": 50, "yorigin": 50},
+	"spr_3hpidle": {"images": 37, "xorigin": 50, "yorigin": 50},
 	"spr_3hpwalk": {"images": 12, "xorigin": 50, "yorigin": 50},
 	"spr_hurtidle": {"images": 8, "xorigin": 50, "yorigin": 50},
 	"spr_hurtwalk": {"images": 12},
@@ -285,6 +285,9 @@
         "spr_kungfujump": {"images": 10, "xorigin": 111, "yorigin": 58},
 		"spr_chainsawdash": {"images": 26, "xorigin": 75, "yorigin": 85},
         "spr_chainsawhit": {"images": 20, "xorigin": 75, "yorigin": 85},
-        "spr_punch": {"images": 4, "xorigin": 50, "yorigin": 50}
+        "spr_punch": {"images": 4, "xorigin": 50, "yorigin": 50},
+	"spr_airdash1": {"images": 2, "xorigin": 50, "yorigin": 50},
+	"spr_airdash2": {"images": 4, "xorigin": 50, "yorigin": 50},
+	"spr_bossintro": {"images": 18, "xorigin": 50, "yorigin": 50}
         
 }
