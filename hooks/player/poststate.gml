@@ -374,9 +374,9 @@ if character == "PZ"
         #endregion
         #region KNIGHT
         case 38:
-          if (global.experimenPZ = 1 && obj_player1.character == "PZ")
+        if (global.experimenPZ = 1 && character == "PZ")
         {
-            if(PZ_sprite_previous == spr_knightpepdoublejump && key_jump2 && !grounded)
+            if (PZ_sprite_previous == spr_knightpepdoublejump && key_jump2 && !grounded)
             {
                 state = "PZknightGlide"
             }
@@ -399,14 +399,13 @@ if character == "PZ"
             hsp = Approach(hsp,10*move,0.6);
             if (move != 0)
             {
-                obj_player1.xscale = move;
+                xscale = move;
             }
 
             if (key_down)
             {
                 state = states.knightpep;
-		with (instance_create(x, y - 16, obj_parryeffect))
-			sprite_index = spr_knightpep_downcloud;
+				with (instance_create(x, y - 16, obj_parryeffect)) sprite_index = spr_knightpep_downcloud;
                 vsp = 7;
                 sprite_index = spr_knightpepdowntrust;
             }
@@ -414,26 +413,27 @@ if character == "PZ"
             {
                 if (move != 0)
                 {
-                state = 38;
-                sprite_index = spr_knightpepcharge;
-                hsp = -8 * move;
+	                state = 38;
+	                sprite_index = spr_knightpepcharge;
+	                hsp = -8 * move;
+	                movespeed = hsp * -move //random bullshit go!
                 }
                 else
                 {
-                state = 47;
-                sprite_index = spr_knightpepland;
+	                state = 47;
+	                sprite_index = spr_knightpepland;
                 }
             }
-	if (scr_solid(x + sign(hsp), y) && (!scr_slope() || check_solid(x + sign(hsp), y - 2)) && !check_slope(x + sign(hsp), y) && !place_meeting(x + sign(hsp), y, obj_destructibles))
-	{
-			instance_create(x + (xscale * 40), y, obj_bumpeffect);
-			movespeed = 0;
-			vsp = -6;
-			sprite_index = spr_knightpepbump;
-			image_index = floor(image_number - 1);
-			state = states.knightpepbump;
-			sound_play_3d("event:/sfx/pep/groundpound", x, y);
-	}
+			if (scr_solid(x + sign(hsp), y) && (!scr_slope() || check_solid(x + sign(hsp), y - 2)) && !check_slope(x + sign(hsp), y) && !place_meeting(x + sign(hsp), y, obj_destructibles))
+			{
+				instance_create(x + (xscale * 40), y, obj_bumpeffect);
+				movespeed = 0;
+				vsp = -6;
+				sprite_index = spr_knightpepbump;
+				image_index = floor(image_number - 1);
+				state = states.knightpepbump;
+				sound_play_3d("event:/sfx/pep/groundpound", x, y);
+			}
         break;
         #endregion
 
