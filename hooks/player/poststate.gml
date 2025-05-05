@@ -374,7 +374,7 @@ if character == "PZ"
         #endregion
         #region KNIGHT
         case 38:
-          if (global.experimenPZ = 1)
+          if (global.experimenPZ = 1 && obj_player1.character == "PZ")
         {
             if(PZ_sprite_previous == spr_knightpepdoublejump && key_jump2 && !grounded)
             {
@@ -404,7 +404,9 @@ if character == "PZ"
 
             if (key_down)
             {
-                state = 47;
+                state = states.knightpep;
+		with (instance_create(x, y - 16, obj_parryeffect))
+			sprite_index = spr_knightpep_downcloud;
                 vsp = 7;
                 sprite_index = spr_knightpepdowntrust;
             }
@@ -414,7 +416,7 @@ if character == "PZ"
                 {
                 state = 38;
                 sprite_index = spr_knightpepcharge;
-                hsp = -8 * image_xscale;
+                hsp = -8 * move;
                 }
                 else
                 {
@@ -422,6 +424,16 @@ if character == "PZ"
                 sprite_index = spr_knightpepland;
                 }
             }
+	if (scr_solid(x + sign(hsp), y) && (!scr_slope() || check_solid(x + sign(hsp), y - 2)) && !check_slope(x + sign(hsp), y) && !place_meeting(x + sign(hsp), y, obj_destructibles))
+	{
+			instance_create(x + (xscale * 40), y, obj_bumpeffect);
+			movespeed = 0;
+			vsp = -6;
+			sprite_index = spr_knightpepbump;
+			image_index = floor(image_number - 1);
+			state = states.knightpepbump;
+			sound_play_3d("event:/sfx/pep/groundpound", x, y);
+	}
         break;
         #endregion
 

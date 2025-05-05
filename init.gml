@@ -26,7 +26,7 @@ global.combonames = ini_read_real("modded", "combonames", 0);
 global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
-global.experimenPZ = ini_read_real("dev","experimental",0);
+global.experimenPZ = ini_read_real("modded","experimenPZ",0);
 ini_close();
 MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
@@ -296,6 +296,5 @@ MOD_GLOBAL.spr_candy_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_t
 MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_supertaunt.png", 10, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
-
 
 instance_create(0,0,obj_pizConst);

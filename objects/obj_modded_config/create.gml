@@ -62,6 +62,12 @@ options = [
                 desc: "Changes the Toppins to match the Confecti sprites. BUGGY"
             },
             {
+                name: "Experimental Mode",
+                variable: "experimenPZ",
+                options: ["OFF", "ON"],
+                desc: "Experimental Stuff Ahead! Changes alot."
+            },
+            {
                 name: "Pizzelle's Pronouns",
                 variable: "pizzypronoun",
                 options: ["he/him", "she/her", "they/them"],
