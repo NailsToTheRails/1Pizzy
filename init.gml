@@ -15,7 +15,7 @@ for(var _i = 0; _f != "";_i++)
     MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
     _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
 }
-_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist))
+_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist)-1)
 ini_open(MOD_PATH + "/saveData.ini");
 // SETTING VARIABLES
 global.combometertype = ini_read_real("modded", "combometertype", 0);
@@ -30,7 +30,7 @@ global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 
 global.extremevisual = ini_read_real("modded", "extremevisual", 0);
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
-global.experimenPZ = ini_read_real("dev","experimental",0);
+global.experimenPZ = ini_read_real("modded","experimenPZ",0);
 ini_close();
 MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
@@ -157,12 +157,22 @@ MOD_GLOBAL.spr_PZtrashjump = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump.
 MOD_GLOBAL.spr_PZtrashjump2 = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump2.png", 5, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashfall = sprite_add(MOD_PATH + "/sprites/exPlayer/trashfall.png", 3, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashslide = sprite_add(MOD_PATH + "/sprites/exPlayer/trashslide.png", 7, false, false, 50, 50);
+
+MOD_GLOBAL.frenzy = {
+ 	wallbounce : sprite_add(MOD_PATH + "/sprites/exPlayer/wallbounce.png", 9, false, false, 50, 50),
+ 	divebombland : sprite_add(MOD_PATH + "/sprites/exPlayer/divebombland.png", 3, false, false, 50, 50),
+ 	divebombfall : sprite_add(MOD_PATH + "/sprites/exPlayer/divebombfall.png", 4, false, false, 50, 50),
+ 	divebomb : sprite_add(MOD_PATH + "/sprites/exPlayer/divebomb.png", 4, false, false, 50, 50),
+}
+
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump2, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe);
 MOD_GLOBAL.spr_PZCpat1 = sprite_add(MOD_PATH + "/sprites/pat/cuDouble.png", 1, false, false, 8, 8);
 MOD_GLOBAL.spr_PZCpat2 = sprite_add(MOD_PATH + "/sprites/pat/cuSugary.png", 1, false, false, 16, 16);
 
+
+ 
 // COMBO METER EXHIBITION NIGHT
 MOD_GLOBAL.spr_tvHUD_comboMeter = sprite_add(MOD_PATH + "/sprites/spr_tvHUD_comboMeter.png", 13, false, false, 137, 80);
 MOD_GLOBAL.spr_tvHUD_comboMeter_fill = sprite_add(MOD_PATH + "/sprites/spr_tvHUD_comboMeter_fill.png", 12, false, false, 0, 0);

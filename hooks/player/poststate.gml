@@ -114,6 +114,7 @@ if character == "PZ"
             break;
         
         #endregion
+
         #region CLIMBWALL
 
         case states.climbwall:
