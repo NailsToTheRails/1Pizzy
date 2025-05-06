@@ -1,4 +1,6 @@
-if character != "PZ" exit;
+if object_index = obj_player1 {
+// Do this so cosmic wouldnt crash
+if character != "PZ" exit; 
 if paletteselect == 52 return MOD_GLOBAL.EPIC;
 //хуета
 if state == states.firemouth
@@ -23,4 +25,5 @@ switch sprite_index
     case spr_playerN_divebombland: return MOD_GLOBAL.frenzy.divebombland; break;
     case spr_playerN_divebombfall: return MOD_GLOBAL.frenzy.divebombfall; break;
     case spr_playerN_divebomb: return MOD_GLOBAL.frenzy.divebomb; break;
+}
 }
