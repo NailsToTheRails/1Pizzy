@@ -188,6 +188,51 @@ if global.walljumptype == 3 && character == "PZ"
 }
 switch(state) 
 {
+	case states.machcancel:
+	image_speed = 0.5;
+    move = key_left + key_right;
+    
+    if key_jump
+    {
+    	vsp = -20
+    }
+    if (scr_slapbuffercheck() > 0 && !key_up)
+    {
+        if (!shotgunAnim || move != 0 || global.shootbutton != 0)
+        {
+            input_buffer_shoot = 0;
+            
+            if (move != 0)
+                xscale = move;
+            
+            scr_resetslapbuffer();
+            key_slap = false;
+            key_slap2 = false;
+            jumpstop = true;
+            
+            if (vsp > -5)
+                vsp = -5;
+            
+            state = 104;
+            movespeed = 12;
+            sprite_index = spr_playerN_sidewayspin;
+            
+            with (instance_create(x, y, obj_crazyrunothereffect))
+                copy_player_scale(other);
+            
+            image_index = 0;
+            particle_set_scale(5, xscale, 1);
+            create_particle(x, y, 5, 0);
+        }
+        else
+        {
+            if (savedmove != 0)
+                xscale = savedmove;
+            
+            scr_shotgunshoot();
+        }
+    }
+	break;
 	case "fireassdash":
 	hsp = movespeed * xscale;
 	movespeed = Approach(movespeed, 11, 0.15);
