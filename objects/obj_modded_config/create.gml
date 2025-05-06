@@ -66,7 +66,13 @@ options = [
                 variable: "pizzypronoun",
                 options: ["he/him", "she/her", "they/them"],
                 desc: "Modifies Pizzelle's pronouns throughout the mod."
-            }
+            },
+            {
+                name: "Extreme Exhibition Visuals",
+                variable: "extremevisual",
+                options: ["OFF", "LAP 4", "LAP 3+"],
+                desc: "Adds the Lap 4 visuals from Extreme Exhibition. Only when Lap 3 is enabled."
+            },
         ]
     }
 ]

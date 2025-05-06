@@ -1,11 +1,14 @@
 randomize()
 MOD_GLOBAL._iconlist = []
-add_sprite = function(name, frames, xorigin, yorigin)
+
+add_sprite = function(name, frames, xorigin, yorigin, spritefps = -1)
 {
+    spritefps = spritefps == 0 ? -1 : spritefps;
     var s = sprite_add(concat(MOD_PATH, "/sprites/", name, ".png"), frames, false, false, xorigin, yorigin);
-    sprite_set_speed(s, 1, spritespeed_framespergameframe);
-    return s;
+    sprite_set_speed(s, abs(spritefps), spritefps ? spritespeed_framespersecond : spritespeed_framespergameframe);
+    return s ?? undefined;
 }
+
 var _f = file_find_first(MOD_PATH + "/sprites/icons/*.png",0)
 for(var _i = 0; _f != "";_i++)
 {
@@ -24,6 +27,7 @@ global.walljumptype = ini_read_real("modded", "walljumptype", 0);
 global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
 global.combonames = ini_read_real("modded", "combonames", 0);
 global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
+global.extremevisual = ini_read_real("modded", "extremevisual", 0);
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
 global.experimenPZ = ini_read_real("dev","experimental",0);
@@ -288,6 +292,11 @@ MOD_GLOBAL.spr_candy_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_t
 MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_supertaunt.png", 10, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
+
+// extreme exhibition lap 4 visuals
+MOD_GLOBAL.spr_yogurtfirebg2 = add_sprite("extreme/spr_yogurtfirebg2", 1, 0, 270);
+MOD_GLOBAL.spr_yogurtfirebg = add_sprite("extreme/spr_yogurtfirebg", 2, 480, 270);
+MOD_GLOBAL.bg_yogurtDebris = add_sprite("extreme/bg_yogurtDebris", 2, 0, 0);
 
 
 instance_create(0,0,obj_pizConst);
