@@ -469,7 +469,7 @@ if character == "PZ"
         
         #endregion
 		case states.keyget:
-		
+		tv_do_expression(MOD_GLOBAL.spr_tv_keyget);    
 		return false;
 		break;
     }

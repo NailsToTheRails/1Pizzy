@@ -171,7 +171,7 @@ sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe)
 MOD_GLOBAL.spr_PZCpat1 = sprite_add(MOD_PATH + "/sprites/pat/cuDouble.png", 1, false, false, 8, 8);
 MOD_GLOBAL.spr_PZCpat2 = sprite_add(MOD_PATH + "/sprites/pat/cuSugary.png", 1, false, false, 16, 16);
 
-
+MOD_GLOBAL.spr_tv_keyget = sprite_add(MOD_PATH + "/sprites/spr_tv_keyget.png", 21, false, false, 139, 134);
  
 // COMBO METER EXHIBITION NIGHT
 MOD_GLOBAL.spr_tvHUD_comboMeter = sprite_add(MOD_PATH + "/sprites/spr_tvHUD_comboMeter.png", 13, false, false, 137, 80);
