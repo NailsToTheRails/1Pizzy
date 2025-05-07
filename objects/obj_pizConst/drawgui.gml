@@ -1,4 +1,4 @@
-if (global.walljumptype == 2) {
+if (global.walljumptype == 2 && obj_player1.character == "PZ") {
 draw_set_font(global.font_small);
 draw_set_align(fa_middle);
 var _xspeed = string(round(abs(obj_player1.movespeed)))
