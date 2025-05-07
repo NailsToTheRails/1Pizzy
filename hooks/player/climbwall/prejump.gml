@@ -84,16 +84,8 @@ switch (global.walljumptype)
 	} 
 	else 
 	{
-		if movespeed > 12  
-		{
-	 		state = states.mach3
-			movespeed = 50
-	 	}
-		else if movespeed < 12  
-	 	{
-	 		state = states.mach2
-			movespeed = 50
-	 	}
+	 	state = states.mach3
+		movespeed = 50
 	}
 	return false;
 	break;
