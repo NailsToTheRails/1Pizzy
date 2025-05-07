@@ -309,7 +309,7 @@ switch(state)
 				} 
 				else 
 				{
-					movespeed = 40;
+					movespeed = 45; // nja buff 40 > 45
 				}
 		
 			}

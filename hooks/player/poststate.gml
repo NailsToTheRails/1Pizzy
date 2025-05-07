@@ -295,28 +295,33 @@ if character == "PZ"
         #endregion
          #region ROCKET
         case states.rocket:
-      
-            if (key_left == -1 && xscale == 1 && !grounded)
-             state = 185;
-            
-            if (key_right && xscale == -1 && !grounded)
-            state = 185;
-
+      	if (global.experimenPZ) {
+            if (move != xscale && move != 0 && sprite_index != spr_rocketstart && !grounded) {
+	     image_speed = 0.55
+             state = states.rocketslide;
+	     sound_play_3d("event:/sfx/pep/machslideboost", x, y);
+	    }
+	}
         break;
 
         case states.rocketslide:
+	if (global.experimenPZ) {
             if (!grounded) 
-           {sprite_index = MOD_GLOBAL.spr_rocketturnair;
-           movespeed *= 1.01;;
+           {
+	   	sprite_index = MOD_GLOBAL.spr_rocketturnair;
+          	movespeed *= 1.01;;
            }
-            else
-            {movespeed *= 1.022;}
-
+           else
+           {
+		movespeed *= 1.022;
+	   }
+	}
         break;
 
         #endregion
                #region FIREMOUTH
         case states.firemouth:
+	if (global.experimenPZ) {
             if (grounded && image_index > 8)
             {
                 if (key_jump2)
@@ -341,6 +346,7 @@ if character == "PZ"
                 {sprite_index = spr_firemouthspin;}
             }
             */
+	}
 
         break;
         

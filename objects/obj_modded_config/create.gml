@@ -47,7 +47,7 @@ options = [
                 name: "Combo Names",
                 variable: "combonames",
                 options: ["OFF", "ON"],
-                desc: "Changes the Combo names to be Sugary Spire's Combo names."
+                desc: "Enables the Sugary Spire combo names."
             },
             {
                 name: "Gameplay Style",
@@ -62,10 +62,10 @@ options = [
                 desc: "Changes the Toppins to match the Confecti sprites. BUGGY"
             },
             {
-                name: "Experimental Mode",
+                name: "Transformation Changes",
                 variable: "experimenPZ",
                 options: ["OFF", "ON"],
-                desc: "Experimental Stuff Ahead! Changes alot."
+                desc: "Changes the transformation movesets."
             },
             {
                 name: "Pizzelle's Pronouns",
@@ -77,7 +77,7 @@ options = [
                 name: "Extreme Exhibition Visuals",
                 variable: "extremevisual",
                 options: ["OFF", "LAP 4", "LAP 3+"],
-                desc: "Adds the Lap 4 visuals from Extreme Exhibition. Only when Lap 3 is enabled."
+                desc: "Adds the Lap 4 visuals from Extreme Exhibition."
             },
         ]
     }
