@@ -1,6 +1,7 @@
 if (instance_exists(obj_player1)) {
 if (global.walljumptype == 2 && obj_player1.character == "PZ") {
 draw_set_font(global.font_small);
+draw_set_colour(c_white);
 draw_set_align(fa_middle);
 var _xspeed = string(round(abs(obj_player1.movespeed)))
 if obj_player1.grounded
