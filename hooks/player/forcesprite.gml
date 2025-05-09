@@ -19,4 +19,5 @@ switch sprite_index
     case spr_player_trashfall: return MOD_GLOBAL.spr_PZtrashfall; break;
     case spr_player_trashstart: return MOD_GLOBAL.spr_PZtrashstart; break;
     case spr_player_trashslide: return MOD_GLOBAL.spr_PZtrashslide; break;
+    case spr_player_jetpackend: return MOD_GLOBAL.spr_PZjetpackend; break;
 }

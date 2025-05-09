@@ -153,6 +153,7 @@ MOD_GLOBAL.spr_PZtrashjump = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump.
 MOD_GLOBAL.spr_PZtrashjump2 = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump2.png", 5, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashfall = sprite_add(MOD_PATH + "/sprites/exPlayer/trashfall.png", 3, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashslide = sprite_add(MOD_PATH + "/sprites/exPlayer/trashslide.png", 7, false, false, 50, 50);
+MOD_GLOBAL.spr_PZjetpackend = sprite_add(MOD_PATH + "/sprites/exPlayer/jetpackend.png", 3, false, false, 60, 60);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump2, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe);
