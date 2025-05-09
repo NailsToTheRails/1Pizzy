@@ -53,6 +53,7 @@
 		"spr_tv_happyG": {"images": 9},
 		"spr_tv_hurtG": {"images": 8},
 		"spr_tv_escapeG": {"images": 8},
+		"spr_tv_clown": {"images": 2},
 
 
 	"spr_rankD": {"images": 10, "speed": 0.9},
@@ -258,6 +259,11 @@
 	"spr_cheesepepjumpstart": {"images": 7,"yorigin":50},
 	"spr_cheesepepfall": {"images": 12,"yorigin":50},
 	"spr_cheesepepland": {"images": 6,"yorigin":50},
+
+	"spr_clown": {"images": 15,"yorigin":50,"speed":0.3},
+	"spr_clownjump": {"images": 7,"yorigin":50},
+	"spr_clownfall": {"images": 3,"yorigin":50},
+	"spr_clownwallclimb": {"images": 15,"yorigin":50,"xorigin":75},
 
 		"spr_attackdash": {"images": 16,"yorigin": 50},
         "spr_breakdancemove": {"images": 15, "xorigin": 50, "yorigin": 50},
