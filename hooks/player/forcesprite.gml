@@ -22,6 +22,7 @@ if object_index = obj_player1
         case spr_player_trashfall: return MOD_GLOBAL.spr_PZtrashfall; break;
         case spr_player_trashstart: return MOD_GLOBAL.spr_PZtrashstart; break;
         case spr_player_trashslide: return MOD_GLOBAL.spr_PZtrashslide; break;
+	case spr_player_jetpackend: return MOD_GLOBAL.spr_PZjetpackend; break;
         case spr_playerN_wallbounce: return MOD_GLOBAL.frenzy.wallbounce; break;
         case spr_playerN_divebombland: return MOD_GLOBAL.frenzy.divebombland; break;
         case spr_playerN_divebombfall: return MOD_GLOBAL.frenzy.divebombfall; break;
