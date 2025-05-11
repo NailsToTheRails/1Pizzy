@@ -169,7 +169,7 @@ with (obj_key)
 }
 with (obj_keyfollow)
 {
-	if (other.character == "PZ") sprite_index = MOD_GLOBAL.KEYFOLLOW;
+	if (other.character == "PZ" && sprite_index == spr_key) sprite_index = MOD_GLOBAL.KEYFOLLOW;
 }
 
 if global.walljumptype == 3 && character == "PZ"
