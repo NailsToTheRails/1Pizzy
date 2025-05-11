@@ -31,7 +31,17 @@ if instance_exists(obj_lapportal)
 	image_speed = 0.75
     }
 }
-
+if instance_exists(obj_bosscontroller)
+{
+    with (obj_bosscontroller)
+    {
+        player_hpsprite = MOD_GLOBAL.spr_PZbossHP;
+    }
+} // todo: change most of these sets to a switch later
+with (obj_superattackeffect)
+{
+    sprite_index = MOD_GLOBAL.spr_PZbossSuperHUD;
+}
 // Its Quite That Simple Really.
 with (obj_combotitle) {
 	if (global.combonames) {

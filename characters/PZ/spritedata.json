@@ -53,6 +53,8 @@
 		"spr_tv_happyG": {"images": 9},
 		"spr_tv_hurtG": {"images": 8},
 		"spr_tv_escapeG": {"images": 8},
+		"spr_tv_clown": {"images": 2},
+		"spr_tv_ghost": {"images": 2},
 
 
 	"spr_rankD": {"images": 10, "speed": 0.9},
@@ -221,11 +223,13 @@
     "spr_weenieturn": {"images": 7, "xorigin": 50, "yorigin": 50},
 	"spr_playercorpsesurf": {"images": 3, "yorigin": 100, "xorigin": 70},	
 	"spr_playercorpsestart": {"images": 11, "yorigin": 100, "xorigin": 70},
+	"spr_ghostidle":{"images":14,"yorigin":50},
+	"spr_ghostjump":{"images":11,"yorigin":50},
 	"spr_firemouthintro":{"images":26,"yorigin":50},
 	"spr_firemouthend":{"images":1,"yorigin":50},
 	"spr_firemouth":{"images":14,"yorigin":50},
 	"spr_firemouthspin":{"images":7,"yorigin":50},
-	"spr_firemouthdash":{"images":9,"yorigin":50},
+	"spr_firemouthdash":{"images":9,"yorigin":50,"xorigin":135},
 	"spr_firemouthidle":{"images":14,"yorigin":50},
 
 	"spr_barrelidle": {"images": 34},
@@ -258,6 +262,14 @@
 	"spr_cheesepepjumpstart": {"images": 7,"yorigin":50},
 	"spr_cheesepepfall": {"images": 12,"yorigin":50},
 	"spr_cheesepepland": {"images": 6,"yorigin":50},
+	"spr_jetpackstart2": {"images": 8,"yorigin":62,"speed":0.8},
+
+	"spr_clown": {"images": 15,"yorigin":50,"speed":0.3},
+	"spr_clownjump": {"images": 7,"yorigin":50},
+	"spr_clownfall": {"images": 3,"yorigin":50},
+	"spr_clownwallclimb": {"images": 15,"yorigin":50,"xorigin":75},
+	"spr_slipnslide": {"images": 3,"yorigin": 50},
+	"spr_squished": {"images": 30,"yorigin":50},
 
 		"spr_attackdash": {"images": 16,"yorigin": 50},
         "spr_breakdancemove": {"images": 15, "xorigin": 50, "yorigin": 50},
@@ -271,7 +283,8 @@
         "spr_kungfuair3": {"images": 4, "xorigin": 111, "yorigin": 50},
         "spr_kungfuair2transition": {"images": 5, "xorigin": 111, "yorigin": 58},
         "spr_kungfuair3transition": {"images": 5, "xorigin": 111, "yorigin": 58},
-		"spr_lunge": {"images": 13,"yorigin": 50, "speed":0.6},
+		"spr_lunge": {"images": 33,"yorigin": 50},
+		"spr_lungehit": {"images": 10,"yorigin": 50},
 		"spr_suplexmash1": {"images": 5, "xorigin": 50, "yorigin": 50, "speed": 0.7},
         "spr_suplexmash2": {"images": 4, "xorigin": 50, "yorigin": 50, "speed": 0.7},
         "spr_suplexmash3": {"images": 5, "xorigin": 50, "yorigin": 50, "speed": 0.7},

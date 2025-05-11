@@ -188,6 +188,38 @@ if global.walljumptype == 3 && character == "PZ"
 }
 switch(state) 
 {
+	case states.freefallland:
+	if (global.walljumptype == 2 && character == "PZ") {
+		if (key_attack) {
+			movespeed = 50
+			state = states.mach3
+		}
+	}
+	break;
+	case states.machslide:
+	if (global.walljumptype == 2 && (sprite_index == spr_machslide || sprite_index == spr_machslidestart)) {
+		movespeed = 0;
+		hsp = lerp(hsp, 0, 0.6);
+	}
+	break;
+	case states.freefall:
+	if (global.walljumptype == 2 && character == "PZ") {
+		// No Cheats Used Here - NJA
+		if not (sprite_index == spr_poundcancel1 or sprite_index == spr_poundcancelstart) {
+		freefallsmash = 50
+		freefallvsp = 50
+		vsp = 50
+		}
+	}
+	break;
+	case states.shotgun:
+	if (global.walljumptype == 2 && sprite_index == spr_shotgunpullout && character == "PZ") {
+			// No Promises - NJA
+			movespeed = 50
+			state = states.mach3
+			exit;
+	}
+	break;
 	case states.machcancel:
 	image_speed = 0.5;
     move = key_left + key_right;
@@ -297,6 +329,7 @@ switch(state)
 			break;
 			case 1:
 			case 2:
+			sjumpvsp -= 5
 			if (sprite_index == spr_Sjumpcancelstart)
 			{
 				sprite_index = spr_mach4;
@@ -309,7 +342,7 @@ switch(state)
 				} 
 				else 
 				{
-					movespeed = 40;
+					movespeed = 45; // nja buff 40 > 45
 				}
 		
 			}

@@ -135,6 +135,7 @@ global.pm_shed_PZ =
     guy_gustavo_section_fall: -4,
 };
 
+MOD_GLOBAL.prankanim = sprite_add(MOD_PATH + "/sprites/prankanim.png", 38, false, false, 480, 270)
 
 MOD_GLOBAL.bg_SSjukeboxdisc = sprite_add(MOD_PATH + "/sprites/bg_SSjukeboxdisc.png", 1, false, false, 101, 101);
 MOD_GLOBAL.spr_taxitransitionPZ = sprite_add(MOD_PATH + "/sprites/spr_taxitransition.png", 1, false, false, 22, 16)
@@ -165,13 +166,17 @@ MOD_GLOBAL.frenzy = {
  	divebomb : sprite_add(MOD_PATH + "/sprites/exPlayer/divebomb.png", 4, false, false, 50, 50),
 }
 
+MOD_GLOBAL.spr_PZjetpackend = sprite_add(MOD_PATH + "/sprites/exPlayer/jetpackend.png", 3, false, false, 60, 60);
+
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump2, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe);
+MOD_GLOBAL.spr_PZbossHP = sprite_add(MOD_PATH + "/sprites/exPlayer/bossHP.png", 19, false, false, 32, 32);
+MOD_GLOBAL.spr_PZbossSuperHUD = sprite_add(MOD_PATH + "/sprites/exPlayer/superattackHUD.png", 2, false, false, 20, 122.5);
 MOD_GLOBAL.spr_PZCpat1 = sprite_add(MOD_PATH + "/sprites/pat/cuDouble.png", 1, false, false, 8, 8);
 MOD_GLOBAL.spr_PZCpat2 = sprite_add(MOD_PATH + "/sprites/pat/cuSugary.png", 1, false, false, 16, 16);
 
-
+MOD_GLOBAL.spr_tv_keyget = sprite_add(MOD_PATH + "/sprites/spr_tv_keyget.png", 21, false, false, 139, 134);
  
 // COMBO METER EXHIBITION NIGHT
 MOD_GLOBAL.spr_tvHUD_comboMeter = sprite_add(MOD_PATH + "/sprites/spr_tvHUD_comboMeter.png", 13, false, false, 137, 80);
