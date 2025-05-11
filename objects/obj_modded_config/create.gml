@@ -77,7 +77,7 @@ options = [
                 name: "Extreme Exhibition Visuals",
                 variable: "extremevisual",
                 options: ["OFF", "LAP 4", "LAP 3+"],
-                desc: "Adds the Lap 4 visuals from Extreme Exhibition. Only when Lap 3 is enabled."
+                desc: "Adds the Lap 4 visuals from SS:EE."
             },
         ]
     }

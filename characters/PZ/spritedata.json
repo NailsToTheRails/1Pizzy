@@ -288,6 +288,24 @@
         "spr_punch": {"images": 4, "xorigin": 50, "yorigin": 50},
 	"spr_airdash1": {"images": 2, "xorigin": 50, "yorigin": 50},
 	"spr_airdash2": {"images": 4, "xorigin": 50, "yorigin": 50},
-	"spr_bossintro": {"images": 18, "xorigin": 50, "yorigin": 50}
-        
+	"spr_bossintro": {"images": 18, "xorigin": 50, "yorigin": 50},
+
+
+	"spr_practice_plasterface_normal": {"images": 18},
+	"spr_practice_plasterface_slowed": {"images": 8},
+	"spr_practice_plasterface_icon": {"images": 2, "speed": 0.3},
+	"spr_practice_plasterface_dead": {"images": 1},
+
+	"spr_practice_garage_spr": {"images": 1, "xorigin": 96, "yorigin": 144},
+	"spr_practice_garage_door": {"images": 1, "xorigin": 96, "yorigin": 144},
+	"spr_practice_interior_bg": {"images": 1, "xorigin": 0, "yorigin": 0},
+	"spr_practice_interior_tiles": {"images": 1, "xorigin": 0, "yorigin": 0},
+	"spr_practice_interior_window_overlay": {"images": 1, "xorigin": 0, "yorigin": 0},
+	"spr_practice_interior_door": {"images": 1, "xorigin": 0, "yorigin": 0},
+	"spr_practice_guy": {"images": 3, "xorigin": 100, "yorigin": 95},
+	"spr_practice_guy_arm": {"images": 1, "xorigin": 5, "yorigin": 81},
+	"spr_practice_guy_pointer": {"images": 12, "xorigin": 55, "yorigin": 50},
+	"spr_practice_guy_pointer_fall": {"images": 12, "xorigin": 55, "yorigin": 50},
+	"spr_practice_guy_gustavo_section": {"images": 2, "xorigin": 50, "yorigin": 50},
+	"spr_practice_guy_gustavo_section_left": {"images": 2, "xorigin": 50, "yorigin": 50}
 }
