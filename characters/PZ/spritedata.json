@@ -304,7 +304,7 @@
 	"spr_bossintro": {"images": 18, "xorigin": 50, "yorigin": 50},
 
 
-	"spr_practice_plasterface_normal": {"images": 18},
+	"spr_practice_plasterface_normal": {"images": 1},
 	"spr_practice_plasterface_slowed": {"images": 8},
 	"spr_practice_plasterface_icon": {"images": 2, "speed": 0.3},
 	"spr_practice_plasterface_dead": {"images": 1},
@@ -320,5 +320,8 @@
 	"spr_practice_guy_pointer": {"images": 12, "xorigin": 55, "yorigin": 50},
 	"spr_practice_guy_pointer_fall": {"images": 12, "xorigin": 55, "yorigin": 50},
 	"spr_practice_guy_gustavo_section": {"images": 2, "xorigin": 50, "yorigin": 50},
-	"spr_practice_guy_gustavo_section_left": {"images": 2, "xorigin": 50, "yorigin": 50}
+	"spr_practice_guy_gustavo_section_left": {"images": 2, "xorigin": 50, "yorigin": 50},
+	"spr_practice_clipboard_spr": {"images": 3, "xorigin": 41, "yorigin": 50},
+	"spr_practice_key_collect": {"images": 1, "xorigin": 0, "yorigin": 0},
+	"spr_practice_switcher": {"images": 5, "xorigin": 0, "yorigin": 0}
 }
