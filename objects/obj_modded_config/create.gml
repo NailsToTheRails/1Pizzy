@@ -35,7 +35,7 @@ options = [
         ]
     },
     {
-        name: "Other",
+        name: "Cosmetic",
         variables: [
             {
                 name: "Combo Meter Type",
@@ -50,22 +50,16 @@ options = [
                 desc: "Enables the Sugary Spire combo names."
             },
             {
-                name: "Gameplay Style",
-                variable: "walljumptype",
-                options: ["Exhibition Night", "Scoutdigo", "NJA Style", "Frenzy Worlds"],
-                desc: "Modifies certain parts of Pizzelle's moveset."
-            },
-            {
                 name: "Confectis",
                 variable: "toppinstyle",
                 options: ["OFF", "ON"],
                 desc: "Changes the Toppins to match the Confecti sprites. BUGGY"
             },
             {
-                name: "Transformation Changes",
-                variable: "experimenPZ",
-                options: ["OFF", "ON"],
-                desc: "Changes the transformation movesets."
+                name: "Taunt Sounds",
+                variable: "tauntstyle",
+                options: ["Exhibition Night", "Demo 1", "Pizza Tower"],
+                desc: "Changes the taunt sound."
             },
             {
                 name: "Pizzelle's Pronouns",
@@ -80,7 +74,24 @@ options = [
                 desc: "Adds the Lap 4 visuals from Extreme Exhibition."
             },
         ]
-    }
+    },
+	{
+        name: "Gameplay",
+        variables: [
+	     {
+                name: "Transformation Changes",
+                variable: "experimenPZ",
+                options: ["OFF", "ON"],
+                desc: "Changes the transformation movesets."
+            },
+	            {
+                name: "Gameplay Style",
+                variable: "walljumptype",
+                options: ["Exhibition Night", "Scoutdigo", "NJA Style", "Frenzy Worlds"],
+                desc: "Modifies certain parts of Pizzelle's moveset."
+            },
+        ]
+    },
 ]
 
 category = 0;

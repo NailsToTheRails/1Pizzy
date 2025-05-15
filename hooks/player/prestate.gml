@@ -9,6 +9,19 @@ var mod_instance_exists = function(_object)
     }
     return false
 } // made by gryphon ^^ thanks gryphon
+if (obj_player.character == "PZ") {
+	switch (global.tauntstyle) {
+		case 0:
+		obj_player.tauntsnd = fmod_event_create_instance("event:/sugary/taunt");
+		break;
+		case 1:
+		obj_player.tauntsnd = fmod_event_create_instance("event:/sugary/tauntOLD");
+		break;
+		case 2:
+		obj_player.tauntsnd = fmod_event_create_instance("event:/sfx/pep/taunt");
+		break;
+	}
+}
 
 with (obj_pizzakinparent)
 {

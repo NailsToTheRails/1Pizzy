@@ -28,6 +28,7 @@ global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
 global.combonames = ini_read_real("modded", "combonames", 0);
 global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
 global.extremevisual = ini_read_real("modded", "extremevisual", 0);
+global.tauntstyle = ini_read_real("modded", "tauntstyle", 0);
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
 global.experimenPZ = ini_read_real("modded","experimenPZ",0);
