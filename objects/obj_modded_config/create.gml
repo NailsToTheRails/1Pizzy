@@ -35,7 +35,7 @@ options = [
         ]
     },
     {
-        name: "Other",
+        name: "Cosmetic",
         variables: [
             {
                 name: "Combo Meter Type",
@@ -47,13 +47,7 @@ options = [
                 name: "Combo Names",
                 variable: "combonames",
                 options: ["OFF", "ON"],
-                desc: "Changes the Combo names to be Sugary Spire's Combo names."
-            },
-            {
-                name: "Gameplay Style",
-                variable: "walljumptype",
-                options: ["Exhibition Night", "Scoutdigo", "NJA Style"],
-                desc: "Modifies certain parts of Pizzelle's moveset."
+                desc: "Enables the Sugary Spire combo names."
             },
             {
                 name: "Confectis",
@@ -62,13 +56,42 @@ options = [
                 desc: "Changes the Toppins to match the Confecti sprites. BUGGY"
             },
             {
+                name: "Taunt Sounds",
+                variable: "tauntstyle",
+                options: ["Exhibition Night", "Demo 1", "Pizza Tower"],
+                desc: "Changes the taunt sound."
+            },
+            {
                 name: "Pizzelle's Pronouns",
                 variable: "pizzypronoun",
                 options: ["he/him", "she/her", "they/them"],
                 desc: "Modifies Pizzelle's pronouns throughout the mod."
-            }
+            },
+            {
+                name: "Extreme Exhibition Visuals",
+                variable: "extremevisual",
+                options: ["OFF", "LAP 4", "LAP 3+"],
+                desc: "Adds the Lap 4 visuals from Extreme Exhibition."
+            },
         ]
-    }
+    },
+	{
+        name: "Gameplay",
+        variables: [
+	     {
+                name: "Transformation Changes",
+                variable: "experimenPZ",
+                options: ["OFF", "ON"],
+                desc: "Changes the transformation movesets."
+            },
+	            {
+                name: "Gameplay Style",
+                variable: "walljumptype",
+                options: ["Exhibition Night", "Scoutdigo", "NJA Style", "Frenzy Worlds"],
+                desc: "Modifies certain parts of Pizzelle's moveset."
+            },
+        ]
+    },
 ]
 
 category = 0;

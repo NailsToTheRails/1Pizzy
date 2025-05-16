@@ -1,5 +1,6 @@
 with new JukeboxSection("The Pizzelle Mod", 4)
 {
+sprite = MOD_GLOBAL.bg_SSjukeboxdisc;
 add_multisong("event:/sugary/music/soundtest/sugar_rush", "Sugar Rush (Lila Remix) - Lila",
 	"event:/sugary/music/soundtest/sugar_rush_en", "Sugar Rush (Exhibition Night) - RodMod, CableChords, The8BitDrummer");
 add_multisong("event:/sugary/music/soundtest/glucose_getaway", "Glucose Getaway - RodMod",
@@ -24,11 +25,15 @@ add_multisong("event:/sugary/music/soundtest/sweet_release", "Sweet Release of D
 add_separator();
 
 add_song("event:/sugary/music/soundtest/clockin_out", "Clockin' Out Late - dexiedoo_octo");
+
 add_multisong("event:/sugary/music/soundtest/harry's_despair-y_bilk_mix", "Harry's Despair-y (Bilk Remix) - BilkShaked",
 	"event:/sugary/music/soundtest/thickofit", "KSI's Despair-y (Bilk Of It) - NailsRails", 
 	"event:/sugary/music/soundtest/harry's_despair-y", "Harry's Despair-y - Inceptra‬");
+
 add_song("event:/sugary/music/soundtest/sugarcube_hailstorm", "Sugarcube Hailstorm - PaperKitty");
+
 add_song("event:/sugary/music/soundtest/unexpection", "UNEXPECTION - Zeus_073");
+
 add_song("event:/sugary/music/soundtest/blue_licorice", "Blue Licorice - PaperKitty");
 
 add_multisong("event:/sugary/music/soundtest/gummy_harry's_brain_freezin'", "Gummy Harry's Brain Freezin' (V1) - MrTenTheCoolest",

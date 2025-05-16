@@ -28,6 +28,7 @@ if instance_exists(obj_lapportal)
     with (obj_lapportal)
     {
         spr_enter = MOD_GLOBAL.spr_PZLapPortalEnd
+	image_speed = 0.75
     }
 }
 if instance_exists(obj_bosscontroller)
