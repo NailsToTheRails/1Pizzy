@@ -122,7 +122,7 @@
 	"spr_entergate": {"images": 47, "xorigin": 50, "yorigin": 50},
 	"spr_walkfront": {"images": 18, "xorigin": 50, "yorigin": 50},
 	"spr_Timesup": {"images": 17, "xorigin": 50, "yorigin": 50},
-	"spr_deathend": {"images": 11, "xorigin": 50, "yorigin": 50},
+	"spr_deathend": {"images": 1, "xorigin": 50, "yorigin": 50},
 	"spr_crouchslip": {"images": 3, "xorigin": 50, "yorigin": 50},
 	"spr_crouch": {"images": 24, "xorigin": 50, "yorigin": 50},
 	"spr_couchstart": {"images": 3, "xorigin": 50, "yorigin": 50},

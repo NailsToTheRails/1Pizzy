@@ -160,7 +160,7 @@ MOD_GLOBAL.spr_PZtrashjump = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump.
 MOD_GLOBAL.spr_PZtrashjump2 = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump2.png", 5, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashfall = sprite_add(MOD_PATH + "/sprites/exPlayer/trashfall.png", 3, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashslide = sprite_add(MOD_PATH + "/sprites/exPlayer/trashslide.png", 7, false, false, 50, 50);
-
+MOD_GLOBAL.spr_PZwatermach = sprite_add(MOD_PATH + "/sprites/exPlayer/watermach.png", 4, false, false, 50, 50);
 MOD_GLOBAL.frenzy = {
  	wallbounce : sprite_add(MOD_PATH + "/sprites/exPlayer/wallbounce.png", 9, false, false, 50, 50),
  	divebombland : sprite_add(MOD_PATH + "/sprites/exPlayer/divebombland.png", 3, false, false, 50, 50),
@@ -174,6 +174,7 @@ sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump2, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZLapPortalStart, 1, spritespeed_framespergameframe);
+sprite_set_speed(MOD_GLOBAL.spr_PZwatermach, 1, spritespeed_framespergameframe);
 MOD_GLOBAL.spr_PZbossHP = sprite_add(MOD_PATH + "/sprites/exPlayer/bossHP.png", 19, false, false, 32, 32);
 MOD_GLOBAL.spr_PZbossSuperHUD = sprite_add(MOD_PATH + "/sprites/exPlayer/superattackHUD.png", 2, false, false, 20, 122.5);
 MOD_GLOBAL.spr_PZCpat1 = sprite_add(MOD_PATH + "/sprites/pat/cuDouble.png", 1, false, false, 8, 8);
