@@ -147,6 +147,7 @@ MOD_GLOBAL.PZPatLoaded = false;
 //          EXTRA PLAYER SPR / FRENZ-E / CHEESED UP LEGACY ASSETS
 MOD_GLOBAL.spr_rocketturnair = sprite_add(MOD_PATH + "/sprites/spr_rocketturnair.png", 15, false, false, 50, 50);
 MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 22, false, false, 50, 100);
+MOD_GLOBAL.spr_PZLapPortalStart = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalStart.png", 12, false, false, 100, 100);
 MOD_GLOBAL.spr_PZKnightGlide = sprite_add(MOD_PATH + "/sprites/exPlayer/KnightGlide.png", 3, false, false, 60, 50);
 MOD_GLOBAL.spr_PZtrashstart = sprite_add(MOD_PATH + "/sprites/exPlayer/trashstart.png", 10, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashjump = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump.png", 12, false, false, 50, 50);
@@ -157,6 +158,7 @@ MOD_GLOBAL.spr_PZjetpackend = sprite_add(MOD_PATH + "/sprites/exPlayer/jetpacken
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump2, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe);
+sprite_set_speed(MOD_GLOBAL.spr_PZLapPortalStart, 1, spritespeed_framespergameframe);
 MOD_GLOBAL.spr_PZbossHP = sprite_add(MOD_PATH + "/sprites/exPlayer/bossHP.png", 19, false, false, 32, 32);
 MOD_GLOBAL.spr_PZbossSuperHUD = sprite_add(MOD_PATH + "/sprites/exPlayer/superattackHUD.png", 2, false, false, 20, 122.5);
 MOD_GLOBAL.spr_PZCpat1 = sprite_add(MOD_PATH + "/sprites/pat/cuDouble.png", 1, false, false, 8, 8);

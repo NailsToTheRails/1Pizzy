@@ -30,6 +30,13 @@ if instance_exists(obj_lapportal)
         spr_enter = MOD_GLOBAL.spr_PZLapPortalEnd
     }
 }
+if instance_exists(obj_lapportalentrance)
+{
+    with (obj_lapportalentrance)
+    {
+        spr_spit = MOD_GLOBAL.spr_PZLapPortalStart
+    }
+}
 if instance_exists(obj_bosscontroller)
 {
     with (obj_bosscontroller)
