@@ -9,6 +9,15 @@ switch expressionsprite
                 other.expressionsprite = noone;
             }
         }
+    case MOD_GLOBAL.spr_tv_keyget:
+        with obj_player1
+        {
+            if state != states.keyget
+            {
+                other.state = states.tv_whitenoise;
+                other.expressionsprite = noone;
+            }
+        }
         return false;
 
     /*case MOD_GLOBAL.spr_tv_exprConfect1:

@@ -25,9 +25,9 @@ var _l = string_width(options[category].name);
 draw_set_font(lang_get_font("font_small"));
 draw_set_color(selection == -1 ? c_white : c_grey);
 draw_set_halign(fa_right);
-draw_text(SCREEN_WIDTH/2 - max(_l, 90) + min(0, arrow), 42, "<");
+draw_text(SCREEN_WIDTH/2 - max(_l, 120) + min(0, arrow), 42, "<");
 draw_set_halign(fa_left);
-draw_text(SCREEN_WIDTH/2 + max(_l, 90) + max(0, arrow), 42, ">");
+draw_text(SCREEN_WIDTH/2 + max(_l, 120) + max(0, arrow), 42, ">");
 
 if selection > -1
 {

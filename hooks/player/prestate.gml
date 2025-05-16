@@ -9,13 +9,26 @@ var mod_instance_exists = function(_object)
     }
     return false
 } // made by gryphon ^^ thanks gryphon
+if (obj_player.character == "PZ") {
+	switch (global.tauntstyle) {
+		case 0:
+		obj_player.tauntsnd = fmod_event_create_instance("event:/sugary/taunt");
+		break;
+		case 1:
+		obj_player.tauntsnd = fmod_event_create_instance("event:/sugary/tauntOLD");
+		break;
+		case 2:
+		obj_player.tauntsnd = fmod_event_create_instance("event:/sfx/pep/taunt");
+		break;
+	}
+}
 
 with (obj_pizzakinparent)
 {
-if (global.toppinstyle == 0) {
+	if (global.toppinstyle == 0) 
+	{
     switch (object_index)
     {
-	
 	case obj_pizzakinshroom:  
 		image_speed = 0.35
 		if (sprite_index == spr_taunt) image_speed = 0
@@ -169,23 +182,102 @@ with (obj_key)
 }
 with (obj_keyfollow)
 {
-	if (other.character == "PZ") sprite_index = MOD_GLOBAL.KEYFOLLOW;
+	if (other.character == "PZ" && sprite_index == spr_key) sprite_index = MOD_GLOBAL.KEYFOLLOW;
 }
-/*
-//FRENZY WORLDS
-if (state == states.mach3 || state == states.mach2 || state == states.mach1 || state == states.jump) && state != states.machcancel && scr_check_groundpound2()
+
+if global.walljumptype == 3 && character == "PZ"
 {
-	sprite_index = spr_playerN_divebombfall;
-	state = states.machcancel;
-	movespeed = movespeed * sign(hsp)
-	vsp = 20;
-	input_buffer_slap = 0;
-	input_buffer_jump = 0;
-	image_index = 0;
-	return 0;
-}*/
+	if (state == states.mach3 || state == states.mach2 || state == states.mach1 || state == 104 || state == 5) && state != states.machcancel && !grounded && scr_check_groundpound2()
+	{
+		sprite_index = spr_playerN_divebombfall;
+		state = states.machcancel;
+		movespeed = movespeed * sign(hsp)
+		vsp = 20;
+		input_buffer_slap = 0;
+		input_buffer_jump = 0;
+		image_index = 0;
+		return 0;
+	}
+}
 switch(state) 
 {
+	case states.freefallland:
+	if (global.walljumptype == 2 && character == "PZ") {
+		if (key_attack) {
+			movespeed = 50
+			state = states.mach3
+		}
+	}
+	break;
+	case states.machslide:
+	if (global.walljumptype == 2 && (sprite_index == spr_machslide || sprite_index == spr_machslidestart)) {
+		movespeed = 0;
+		hsp = lerp(hsp, 0, 0.6);
+	}
+	break;
+	case states.freefall:
+	if (global.walljumptype == 2 && character == "PZ") {
+		// No Cheats Used Here - NJA
+		if not (sprite_index == spr_poundcancel1 or sprite_index == spr_poundcancelstart) {
+		freefallsmash = 50
+		freefallvsp = 50
+		vsp = 50
+		}
+	}
+	break;
+	case states.shotgun:
+	if (global.walljumptype == 2 && sprite_index == spr_shotgunpullout && character == "PZ") {
+			// No Promises - NJA
+			movespeed = 50
+			state = states.mach3
+			exit;
+	}
+	break;
+	case states.machcancel:
+	image_speed = 0.5;
+    move = key_left + key_right;
+    
+    if key_jump
+    {
+    	vsp = -20
+    }
+    if (scr_slapbuffercheck() > 0 && !key_up)
+    {
+        if (!shotgunAnim || move != 0 || global.shootbutton != 0)
+        {
+            input_buffer_shoot = 0;
+            
+            if (move != 0)
+                xscale = move;
+            
+            scr_resetslapbuffer();
+            key_slap = false;
+            key_slap2 = false;
+            jumpstop = true;
+            
+            if (vsp > -5)
+                vsp = -5;
+            
+            state = 104;
+            movespeed = 12;
+            sprite_index = spr_playerN_sidewayspin;
+            
+            with (instance_create(x, y, obj_crazyrunothereffect))
+                copy_player_scale(other);
+            
+            image_index = 0;
+            particle_set_scale(5, xscale, 1);
+            create_particle(x, y, 5, 0);
+        }
+        else
+        {
+            if (savedmove != 0)
+                xscale = savedmove;
+            
+            scr_shotgunshoot();
+        }
+    }
+	break;
 	case "fireassdash":
 	hsp = movespeed * xscale;
 	movespeed = Approach(movespeed, 11, 0.15);
@@ -250,6 +342,7 @@ switch(state)
 			break;
 			case 1:
 			case 2:
+			sjumpvsp -= 5
 			if (sprite_index == spr_Sjumpcancelstart)
 			{
 				sprite_index = spr_mach4;
@@ -262,7 +355,7 @@ switch(state)
 				} 
 				else 
 				{
-					movespeed = 40;
+					movespeed = 45; // nja buff 40 > 45
 				}
 		
 			}

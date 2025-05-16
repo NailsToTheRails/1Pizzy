@@ -1,18 +1,21 @@
 randomize()
 MOD_GLOBAL._iconlist = []
-add_sprite = function(name, frames, xorigin, yorigin)
+
+add_sprite = function(name, frames, xorigin, yorigin, spritefps = -1)
 {
+    spritefps = spritefps == 0 ? -1 : spritefps;
     var s = sprite_add(concat(MOD_PATH, "/sprites/", name, ".png"), frames, false, false, xorigin, yorigin);
-    sprite_set_speed(s, 1, spritespeed_framespergameframe);
-    return s;
+    sprite_set_speed(s, abs(spritefps), spritefps ? spritespeed_framespersecond : spritespeed_framespergameframe);
+    return s ?? undefined;
 }
+
 var _f = file_find_first(MOD_PATH + "/sprites/icons/*.png",0)
 for(var _i = 0; _f != "";_i++)
 {
     MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
     _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
 }
-_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist))
+_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist)-1)
 ini_open(MOD_PATH + "/saveData.ini");
 // SETTING VARIABLES
 global.combometertype = ini_read_real("modded", "combometertype", 0);
@@ -24,9 +27,11 @@ global.walljumptype = ini_read_real("modded", "walljumptype", 0);
 global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
 global.combonames = ini_read_real("modded", "combonames", 0);
 global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
+global.extremevisual = ini_read_real("modded", "extremevisual", 0);
+global.tauntstyle = ini_read_real("modded", "tauntstyle", 0);
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
-global.experimenPZ = ini_read_real("dev","experimental",0);
+global.experimenPZ = ini_read_real("modded","experimenPZ",0);
 ini_close();
 MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
@@ -131,8 +136,9 @@ global.pm_shed_PZ =
     guy_gustavo_section_fall: -4,
 };
 
+MOD_GLOBAL.prankanim = sprite_add(MOD_PATH + "/sprites/prankanim.png", 38, false, false, 480, 270)
 
-MOD_GLOBAL.bg_SSjukeboxdisc = sprite_add(MOD_PATH + "/sprites/bg_SSjukeboxdisc.png", 1, false, false, 101, 101);
+MOD_GLOBAL.bg_SSjukeboxdisc = sprite_add(MOD_PATH + "/sprites/bg_SSjukeboxdisc.png", 1, false, false, 202, 202);
 MOD_GLOBAL.spr_taxitransitionPZ = sprite_add(MOD_PATH + "/sprites/spr_taxitransition.png", 1, false, false, 22, 16)
 MOD_GLOBAL.spr_taxitransitionPZCOP = sprite_add(MOD_PATH + "/sprites/spr_taxitransition_cop.png", 1, false, false,  22, 16)
 MOD_GLOBAL.spr_taxitransitionPZPIZZA = sprite_add(MOD_PATH + "/sprites/spr_taxitransition_pizza.png", 1, false, false,  22, 16)
@@ -146,7 +152,7 @@ MOD_GLOBAL.PZPatLoaded = false;
 
 //          EXTRA PLAYER SPR / FRENZ-E / CHEESED UP LEGACY ASSETS
 MOD_GLOBAL.spr_rocketturnair = sprite_add(MOD_PATH + "/sprites/spr_rocketturnair.png", 15, false, false, 50, 50);
-MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 22, false, false, 50, 100);
+MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 13, false, false, 100, 100);
 MOD_GLOBAL.spr_PZLapPortalStart = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalStart.png", 12, false, false, 100, 100);
 MOD_GLOBAL.spr_PZKnightGlide = sprite_add(MOD_PATH + "/sprites/exPlayer/KnightGlide.png", 3, false, false, 60, 50);
 MOD_GLOBAL.spr_PZtrashstart = sprite_add(MOD_PATH + "/sprites/exPlayer/trashstart.png", 10, false, false, 50, 50);
@@ -154,7 +160,16 @@ MOD_GLOBAL.spr_PZtrashjump = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump.
 MOD_GLOBAL.spr_PZtrashjump2 = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump2.png", 5, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashfall = sprite_add(MOD_PATH + "/sprites/exPlayer/trashfall.png", 3, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashslide = sprite_add(MOD_PATH + "/sprites/exPlayer/trashslide.png", 7, false, false, 50, 50);
+
+MOD_GLOBAL.frenzy = {
+ 	wallbounce : sprite_add(MOD_PATH + "/sprites/exPlayer/wallbounce.png", 9, false, false, 50, 50),
+ 	divebombland : sprite_add(MOD_PATH + "/sprites/exPlayer/divebombland.png", 3, false, false, 50, 50),
+ 	divebombfall : sprite_add(MOD_PATH + "/sprites/exPlayer/divebombfall.png", 4, false, false, 50, 50),
+ 	divebomb : sprite_add(MOD_PATH + "/sprites/exPlayer/divebomb.png", 4, false, false, 50, 50),
+}
+
 MOD_GLOBAL.spr_PZjetpackend = sprite_add(MOD_PATH + "/sprites/exPlayer/jetpackend.png", 3, false, false, 60, 60);
+
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump2, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe);
@@ -164,6 +179,8 @@ MOD_GLOBAL.spr_PZbossSuperHUD = sprite_add(MOD_PATH + "/sprites/exPlayer/superat
 MOD_GLOBAL.spr_PZCpat1 = sprite_add(MOD_PATH + "/sprites/pat/cuDouble.png", 1, false, false, 8, 8);
 MOD_GLOBAL.spr_PZCpat2 = sprite_add(MOD_PATH + "/sprites/pat/cuSugary.png", 1, false, false, 16, 16);
 
+MOD_GLOBAL.spr_tv_keyget = sprite_add(MOD_PATH + "/sprites/spr_tv_keyget.png", 21, false, false, 139, 134);
+ 
 // COMBO METER EXHIBITION NIGHT
 MOD_GLOBAL.spr_tvHUD_comboMeter = sprite_add(MOD_PATH + "/sprites/spr_tvHUD_comboMeter.png", 13, false, false, 137, 80);
 MOD_GLOBAL.spr_tvHUD_comboMeter_fill = sprite_add(MOD_PATH + "/sprites/spr_tvHUD_comboMeter_fill.png", 12, false, false, 0, 0);
@@ -294,5 +311,9 @@ MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_ca
 MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
 
+// extreme exhibition lap 4 visuals
+MOD_GLOBAL.spr_yogurtfirebg2 = add_sprite("extreme/spr_yogurtfirebg2", 1, 0, 270);
+MOD_GLOBAL.spr_yogurtfirebg = add_sprite("extreme/spr_yogurtfirebg", 2, 480, 270);
+MOD_GLOBAL.bg_yogurtDebris = add_sprite("extreme/bg_yogurtDebris", 2, 0, 0);
 
 instance_create(0,0,obj_pizConst);
