@@ -178,11 +178,11 @@ with (obj_pizzakinparent)
 }
 with (obj_key)
 {
-	if (other.character == "PZ") sprite_index = MOD_GLOBAL.KEY;
+	if (global.spookeytoggle) sprite_index = MOD_GLOBAL.KEY;
 }
 with (obj_keyfollow)
 {
-	if (other.character == "PZ" && sprite_index == spr_key) sprite_index = MOD_GLOBAL.KEYFOLLOW;
+	if (global.spookeytoggle && sprite_index == spr_key) sprite_index = MOD_GLOBAL.KEYFOLLOW;
 }
 
 if global.walljumptype == 3 && character == "PZ"
@@ -390,16 +390,10 @@ switch(state)
 		state = states.normal;
 		if isgustavo state = states.ratmount;
 		image_index = 0;
-		if (character == "PZ") 
-		{
-			if IT_final_key() 
-			{
-				ds_list_add(global.KeyFollowerList, instance_create(x, y, obj_spookeyMODfollow));
-			} 
-			else 
-			{
-				if IT_final_key() ds_list_add(global.KeyFollowerList, instance_create(x, y, obj_keyfollow));
-			}
+		if (global.spookeytoggle) {
+			ds_list_add(global.KeyFollowerList, instance_create(x, y, obj_spookeyMODfollow));
+		} else {
+			if IT_final_key() ds_list_add(global.KeyFollowerList, instance_create(x, y, obj_keyfollow));
 		}
 	}
 	break;

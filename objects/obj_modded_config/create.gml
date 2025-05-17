@@ -68,6 +68,12 @@ options = [
                 desc: "Modifies Pizzelle's pronouns throughout the mod."
             },
             {
+                name: "Spookey Toggle",
+                variable: "spookeytoggle",
+                options: ["OFF", "ON"],
+                desc: "Replaces the key with Spookey."
+            },
+            {
                 name: "Extreme Exhibition Visuals",
                 variable: "extremevisual",
                 options: ["OFF", "LAP 4", "LAP 3+"],
