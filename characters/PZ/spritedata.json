@@ -325,5 +325,9 @@
 	"spr_practice_key_collect": {"images": 1, "xorigin": 0, "yorigin": 0},
 	"spr_practice_switcher": {"images": 5, "xorigin": 0, "yorigin": 0},
 	"spr_practice_snick": {"images": 2, "xorigin": 50, "yorigin": 50},
-	"spr_practice_snick_debris": {"images": 4, "xorigin": 20, "yorigin": 20}
+	"spr_practice_snick_debris": {"images": 4, "xorigin": 20, "yorigin": 20},
+	"spr_practice_approved": {"images": 1, "xorigin": 0, "yorigin": 0},
+	"spr_practice_key_follow": {"images": 1, "xorigin": 15, "yorigin": 15},
+	"spr_practice_collect": {"images": 1, "xorigin": 0, "yorigin": 0},
+	"spr_practice_collectbig": {"images": 1, "xorigin": 0, "yorigin": 0}
 }

@@ -23,21 +23,43 @@ if instance_exists(obj_skinchoice)
     MOD_GLOBAL.pizzloaded = false;
 }
 
-if instance_exists(obj_lapportal)
+var portalobjs = [obj_lapportal, obj_lapportalentrance, "obj_practiceportal", "obj_practiceportal_exit", "obj_lotw_enterportal", "obj_lotw_exitportal"];
+for (var i = 0; i < array_length(portalobjs); i++)
 {
-    with (obj_lapportal)
-    {
-        spr_enter = MOD_GLOBAL.spr_PZLapPortalEnd
-	image_speed = 0.75
-    }
+	var index = i;
+	var obj = portalobjs[index];
+	var isModded = is_string(obj);
+	if (isModded)
+	{
+		with (obj_mod_object)
+		{
+			if (__OBJECT.name == obj)
+			{
+				if (index % 2 == 0)
+				{
+					spr_enter = MOD_GLOBAL.spr_PZLapPortalEnd
+					image_speed = 0.75;
+				}
+				else
+					spr_spit = MOD_GLOBAL.spr_PZLapPortalStart;
+			}
+		}
+	}
+	else
+	{
+		with (obj)
+		{
+			if (index % 2 == 0)
+			{
+				spr_enter = MOD_GLOBAL.spr_PZLapPortalEnd
+				image_speed = 0.75;
+			}
+			else
+				spr_spit = MOD_GLOBAL.spr_PZLapPortalStart;
+		}
+	}
 }
-if instance_exists(obj_lapportalentrance)
-{
-    with (obj_lapportalentrance)
-    {
-        spr_spit = MOD_GLOBAL.spr_PZLapPortalStart
-    }
-}
+
 if instance_exists(obj_bosscontroller)
 {
     with (obj_bosscontroller)
