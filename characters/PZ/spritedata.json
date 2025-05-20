@@ -225,6 +225,8 @@
 	"spr_playercorpsestart": {"images": 11, "yorigin": 100, "xorigin": 70},
 	"spr_ghostidle":{"images":14,"yorigin":50},
 	"spr_ghostjump":{"images":11,"yorigin":50},
+	"spr_ghostdashup":{"images":4,"yorigin":50},
+	"spr_ghostdashdown":{"images":4,"yorigin":50},
 	"spr_firemouthintro":{"images":26,"yorigin":50},
 	"spr_firemouthend":{"images":1,"yorigin":50},
 	"spr_firemouth":{"images":14,"yorigin":50},
