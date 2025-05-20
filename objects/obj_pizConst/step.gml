@@ -49,6 +49,10 @@ with (obj_superattackeffect)
 {
     sprite_index = MOD_GLOBAL.spr_PZbossSuperHUD;
 }
+with (obj_ghostdrapes)
+{
+    sprite_index = MOD_GLOBAL.spr_PZghostdrape;
+}
 // Its Quite That Simple Really.
 with (obj_combotitle) {
 	if (global.combonames) {
