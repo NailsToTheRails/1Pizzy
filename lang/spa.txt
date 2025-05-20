@@ -141,50 +141,74 @@ dresser_PZ35_mix = "Sombra"
 # ------------------
 # DRESSER PATTERNS
 # ------------------
-pattern_PZEN_1 = "Inteligente"
-pattern_PZEN_1D = "Enfrenta tu juicio."
+pattern_PZEN_1 = "Cerebral"
+pattern_PZEN_1D = "Enfrenta el juicio."
+dresser_Brainy = "Enfrenta el pintor y juicio."
 
 pattern_PZEN_2 = "Cerebro de oro"
-pattern_PZEN_2D = "Piensa bien"
+pattern_PZEN_2D = "Piensalo bien"
+dresser_BrainyG = "Recive commendaciones perfectas del pintor."
 
-pattern_PZEN_3 = "Hazardous"
+pattern_PZEN_3 = "Riesgo"
 pattern_PZEN_3D = "¡Vuelve a trabajar!"
+dresser_Hazard = "Limpia el sitio de construccion."
 
 pattern_PZEN_4 = "Vapor"
-pattern_PZEN_4D = "Creo que todos sabemos por qué lo llamaron Cottontown."
+pattern_PZEN_4D = "Creo que todos sabemos porque lo llaman Cottontown."
+dresser_Steamy = "Navega por algodón de azucar por 10 segundos."
 
 pattern_PZEN_5 = "Elección de Fred"
 pattern_PZEN_5D = "¿Referencia?"
+dresser_Worm = "Molesta un gusano en especial."
 
 pattern_PZEN_6 = "Pijama de rana"
 pattern_PZEN_6D = "Ahora puedes tener sueños húmedos."
+dresser_Frog = "Absolutamente destruye algunas ranas."
 
-pattern_PZEN_7 = "Computadora portátil"
-pattern_PZEN_7D = "¿Como esto afecta a Lebrom James?"
+pattern_PZEN_7 = "Libreta"
+pattern_PZEN_7D = "¿Como afecta esto a Lebron James?"
+dresser_Notebook = "Atinaste un tiro de 3 puntos."
 
 pattern_alright = "Bro."
 pattern_alrightD = "Escuchame..."
+dresser_Alright = "Hiciste trampa idiota."
 
 pattern_smooth = "Fluido"
 pattern_smoothD = "Pero no del todo..."
+dresser_Smooth = "Evitaste chocar mientras estabas en Deep Dish 9."
 
 pattern_lookingood = "Luciendo bueno"
 pattern_lookingoodD = "¡Gracias!"
+dresser_LookinGood = "Completaste 5 niveles con differente ropa."
 
 pattern_fruity = "Sabroso"
 pattern_fruityD = "Viejo sabroso...."
+dresser_Fruity = "Comprado en el Weekend Delight."
 
 pattern_mesmerizing = "Fascinante"
 pattern_mesmerizingD = "Realmente un espectáculo digno de contemplar."
+dresser_Mesmerizing = "Tienes un total minimo de 1000 colleccionables grandes."
 
 pattern_striking = "Llamativo"
 pattern_strikingD = "¡Mantén la calma con estos tonos!"
+dresser_Striking = "Diste 2000 goples extras de PUMMEL."
 
-pattern_soulcrushing = "Alma Aplastada"
-pattern_soulcrushingD = "Ouch..."
+pattern_soulcrushing = "Destruye almas"
+pattern_soulcrushingD = "Duele..."
+dresser_Soulcr = "Terminaste un combo con el titulo Destructor."
 
 pattern_awesome = "Impresionante"
 pattern_awesomeD = "Que guay."
+dresser_Awesome = "Alcansaste el titulo de combo Impresionante."
 
 pattern_wtf = "WTF!!!"
 pattern_wtfD = "¡Piensen en los nenes!"
+dresser_WTF = "Terminaste un combo en el titulo de combo WTF!"
+
+pattern_mytime = "Machina Palida"
+pattern_mytimeD = "Me siento bien, digamos que lo vacio en mi vida se ha ido."
+dresser_PaleMachine = "Eres una maquina palida."
+
+pattern_sugarysecret = "Secreto Azucarado"
+pattern_sugarysecretD = "Tengo pintura en el ojo y arde como el infierno!"
+dresser_SugarySecret = "Obtenido por entrar un secreto en Sugary Spire"
