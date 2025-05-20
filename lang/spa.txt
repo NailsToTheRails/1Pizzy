@@ -141,17 +141,17 @@ dresser_PZ35_mix = "Sombra"
 # ------------------
 # DRESSER PATTERNS
 # ------------------
-pattern_PZEN_1 = "Inteligente"
-pattern_PZEN_1D = "Enfrenta tu juicio."
+pattern_PZEN_1 = "Cerebral"
+pattern_PZEN_1D = "Enfrenta el juicio."
 
 pattern_PZEN_2 = "Cerebro de oro"
-pattern_PZEN_2D = "Piensa bien"
+pattern_PZEN_2D = "Piensalo bien"
 
-pattern_PZEN_3 = "Hazardous"
+pattern_PZEN_3 = "Riesgo"
 pattern_PZEN_3D = "¡Vuelve a trabajar!"
 
 pattern_PZEN_4 = "Vapor"
-pattern_PZEN_4D = "Creo que todos sabemos por qué lo llamaron Cottontown."
+pattern_PZEN_4D = "Creo que todos sabemos porque lo llaman Cottontown."
 
 pattern_PZEN_5 = "Elección de Fred"
 pattern_PZEN_5D = "¿Referencia?"
@@ -159,8 +159,8 @@ pattern_PZEN_5D = "¿Referencia?"
 pattern_PZEN_6 = "Pijama de rana"
 pattern_PZEN_6D = "Ahora puedes tener sueños húmedos."
 
-pattern_PZEN_7 = "Computadora portátil"
-pattern_PZEN_7D = "¿Como esto afecta a Lebrom James?"
+pattern_PZEN_7 = "Libreta"
+pattern_PZEN_7D = "¿Como afecta esto a Lebron James?"
 
 pattern_alright = "Bro."
 pattern_alrightD = "Escuchame..."
@@ -180,11 +180,18 @@ pattern_mesmerizingD = "Realmente un espectáculo digno de contemplar."
 pattern_striking = "Llamativo"
 pattern_strikingD = "¡Mantén la calma con estos tonos!"
 
-pattern_soulcrushing = "Alma Aplastada"
-pattern_soulcrushingD = "Ouch..."
+pattern_soulcrushing = "Destruye almas"
+pattern_soulcrushingD = "Duele..."
 
 pattern_awesome = "Impresionante"
 pattern_awesomeD = "Que guay."
 
 pattern_wtf = "WTF!!!"
 pattern_wtfD = "¡Piensen en los nenes!"
+
+pattern_mytime = "Machina Palida"
+pattern_mytimeD = "Me siento bien, digamos que lo vacio en mi vida se ha ido."
+
+pattern_sugarysecret = "Secreto Azucarado"
+pattern_sugarysecretD = "Tengo pintura en el ojo y arde como el infierno!"
+dresser_SugarySecret = "Obtenido por entrar un secreto en Sugary Spire"
