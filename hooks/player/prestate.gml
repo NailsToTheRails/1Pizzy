@@ -342,7 +342,8 @@ switch(state)
 			break;
 			case 1:
 			case 2:
-			sjumpvsp -= 5
+			if (global.walljumptyle == 2)
+				sjumpvsp -= 5
 			if (sprite_index == spr_Sjumpcancelstart)
 			{
 				sprite_index = spr_mach4;
