@@ -1,0 +1,40 @@
+lang = "spa"
+
+# ------------------
+# okee dokee
+# ------------------
+
+remuNotiX = "Para activar toda la ropa collecionable, activa Remux!"
+
+PZConfigT1 = "Musica"
+PZConfigT2 = "Visual"
+PZConfigT3 = "Juego"
+
+PZConfigM1 = "Tema de Panico"
+PZConfigM1D = "Escoge la musica que tocara durante Sugar Rush cuando juegas como Pizzelle."
+PZConfigM2 = "Tema de Vuelta 2"
+PZConfigM2D = "Escoge la music que tocara durante la segunda vuelta cuando juegas como Pizzelle."
+PZConfigM3 = "Tema de Vuelta 3"
+PZConfigM3D = "Escoge la musica que tocara durante la tercer vuelta cuando juegas como Pizzelle."
+PZConfigM4 = "Vuelta 3 en modo Infinito"
+PZConfigM4D = "Toca la musica de la tercer vuelta mientras estas en modo de infinitas vueltas."
+
+PZConfigC1 = "Estilo de Combo"
+PZConfigC1D = "Cambia el estilo de como se mide tu combo."
+PZConfigC2 = "Nombres de Combo"
+PZConfigC2D = "Cambia los nombres de combo por los de Sugary Spire."
+PZConfigC3 = "Confectis"
+PZConfigC3D = "Cambia los Toppins por los Confectis. INCOMPLETO"
+PZConfigC4 = "Sonido Taunt"
+PZConfigC4D = "Cambia el sonido de tu Taunt."
+PZConfigC5 = "Genero"
+PZConfigC5D = "Cambia como se refiere a pizzelle en texto."
+PZConfigC6 = "Spookey"
+PZConfigC6D = "Cambia la llave normal a spookey!"
+PZConfigC7 = "Visuals Extreme Exhibition"
+PZConfigC7D = "Elige cuando apareceran los visuales especiales de Vuelta 4 Extreme Exhibition."
+
+PZConfigG1 = "Cambios de Transformaciones"
+PZConfigG1D = "Cambia como Pizzelle interactua con transformaciones."
+PZConfigG2 = "Estilo de Movimiento"
+PZConfigG2D = "Cambia las abilidades de Pizzelle."
