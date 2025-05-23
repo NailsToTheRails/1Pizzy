@@ -1,0 +1,42 @@
+lang = "en"
+
+# ------------------
+# This lang file is dedicated to the large amount of config text for organization,
+# but it still loads at the same time, so you only need to remember -
+# to make any mod *that adds the new lang text* load AFTER pizzelle
+# ------------------
+
+remuNotiX = "To toggle the full array of patterns, turn on Remux!"
+
+PZConfigT1 = "Music"
+PZConfigT2 = "Cosmetic"
+PZConfigT3 = "Gameplay"
+
+PZConfigM1 = "Escape Theme"
+PZConfigM1D = "Change the music that plays during Sugar Rush as Pizzelle."
+PZConfigM2 = "Lap 2 Theme"
+PZConfigM2D = "Change the music that plays during Lap 2 as Pizzelle."
+PZConfigM3 = "Lap 3 Theme"
+PZConfigM3D = "Change the music that plays during Lap 3 as Pizzelle."
+PZConfigM4 = "Lap 3 Theme During Infinite Lapping"
+PZConfigM4D = "Plays the lap 3 music during infinite lapping."
+
+PZConfigC1 = "Combo Meter Type"
+PZConfigC1D = "Modifies how the combo meter looks."
+PZConfigC2 = "Combo Names"
+PZConfigC2D = "Enables the Sugary Spire combo names."
+PZConfigC3 = "Confectis"
+PZConfigC3D = "Changes the Toppins to match the Confecti sprites. BUGGY"
+PZConfigC4 = "Taunt Sounds"
+PZConfigC4D = "Changes the taunt sound."
+PZConfigC5 = "Pizzelle's Pronouns"
+PZConfigC5D = "Modifies Pizzelle's pronouns throughout the mod."
+PZConfigC6 = "Spookey Toggle"
+PZConfigC6D = "Replaces the key with Spookey."
+PZConfigC7 = "Extreme Exhibition Visuals"
+PZConfigC7D = "Adds the Lap 4 visuals from Extreme Exhibition"
+
+PZConfigG1 = "Transformation Changes"
+PZConfigG1D = "Changes some transformation movesets."
+PZConfigG2 = "Gameplay Style"
+PZConfigG2D = "Modifies certain parts of Pizzelle's moveset."
