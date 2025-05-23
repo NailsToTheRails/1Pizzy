@@ -1,10 +1,15 @@
 var event = argument0;
 if global.laps == 3 exit;
-//show_message(event)
+// BETTER DEBUGING (for me but idk if u wanna use it too ig)
+// if instance_exists(obj_shell) 
+// {
+	// array_push(obj_shell.history,event)
+	// obj_shell.saveHistory = 1
+// }
 if obj_player1.character == "PZ"
 {
 	if event == "event:/modded/cosmicclone" return "event:/sugary/music/cosmicclone";
-    if event == "event:/music/pizzatime"
+    if event == "event:/music/pizzatime" || event == "event:/modded/lap3"
 	{
 		var ass = 0;
 		if (global.lapmode != 2) && (!global.lap3duringinf) ass = 1;
