@@ -12,7 +12,7 @@ add_sprite = function(name, frames, xorigin, yorigin, spritefps = -1)
 var _f = file_find_first(MOD_PATH + "/sprites/icons/*.png",0)
 for(var _i = 0; _f != "";_i++)
 {
-    MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
+    MOD_GLOBAL._iconlist[_i] = MOD_PATH + "/sprites/icons/" + _f
     _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
 }
 _iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist)-1)
@@ -92,7 +92,7 @@ while i <array_length(global.mods)
         if name = "Pizzelle"
         {	
 			MOD_GLOBAL.ogicon = variable_struct_get(global.mods[i],"icon")
-            variable_struct_set(global.mods[i],"icon", MOD_GLOBAL._iconlist[_iconrandom])
+            variable_struct_set(global.mods[i],"icon", sprite_add(MOD_GLOBAL._iconlist[_iconrandom],1,false,false,0,0))
         }
     }
     i++
@@ -107,7 +107,7 @@ if instance_exists(obj_modlist)
 			var name = variable_struct_get(obj_modlist.mods[i],"name")
 			if name = "Pizzelle"
 			{	
-				variable_struct_set(obj_modlist.mods[i],"icon", MOD_GLOBAL._iconlist[_iconrandom])
+				variable_struct_set(obj_modlist.mods[i],"icon", sprite_add(MOD_GLOBAL._iconlist[_iconrandom],1,false,false,0,0))
 			}
 		}
 		i++
