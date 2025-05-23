@@ -68,12 +68,6 @@ options = [
                 desc: lang_get_value("PZConfigC5D")
             },
             {
-                name: "Spookey Toggle",
-                variable: "spookeytoggle",
-                options: ["OFF", "ON"],
-                desc: "Replaces the key with Spookey."
-            },
-            {
                 name: lang_get_value("PZConfigC6"),// Spookey Toggle
                 variable: "spookeytoggle",
                 options: ["OFF", "ON"],
