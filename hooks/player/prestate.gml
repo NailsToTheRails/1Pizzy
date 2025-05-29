@@ -342,7 +342,7 @@ switch(state)
 			break;
 			case 1:
 			case 2:
-			if (global.walljumptyle == 2)
+			if (global.walljumptype == 2)
 				sjumpvsp -= 5
 			if (sprite_index == spr_Sjumpcancelstart)
 			{
