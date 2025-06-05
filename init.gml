@@ -12,26 +12,36 @@ add_sprite = function(name, frames, xorigin, yorigin, spritefps = -1)
 var _f = file_find_first(MOD_PATH + "/sprites/icons/*.png",0)
 for(var _i = 0; _f != "";_i++)
 {
-    MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
+    MOD_GLOBAL._iconlist[_i] = MOD_PATH + "/sprites/icons/" + _f
     _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
 }
 _iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist)-1)
 ini_open(MOD_PATH + "/saveData.ini");
 // SETTING VARIABLES
+
+// COSMETIC
 global.combometertype = ini_read_real("modded", "combometertype", 0);
+global.spookeytoggle = ini_read_real("modded", "spookeytoggle", 0);
+global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
+global.combonames = ini_read_real("modded", "combonames", 0);
+global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
+MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
+global.extremevisual = ini_read_real("modded", "extremevisual", 0);
+global.tauntstyle = ini_read_real("modded", "tauntstyle", 0);
+
+// MUSIC
 global.escapetheme = ini_read_real("modded", "escapetheme", 0);
 global.lap2theme = ini_read_real("modded", "lap2theme", 0);
 global.lap3theme = ini_read_real("modded", "lap3theme", 0);
 global.lap3duringinf = ini_read_real("modded", "lap3duringinf", 0);
+
+// GAMEPLAY
 global.walljumptype = ini_read_real("modded", "walljumptype", 0);
-global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
-global.combonames = ini_read_real("modded", "combonames", 0);
-global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
-global.extremevisual = ini_read_real("modded", "extremevisual", 0);
-global.tauntstyle = ini_read_real("modded", "tauntstyle", 0);
-MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
-global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
 global.experimenPZ = ini_read_real("modded","experimenPZ",0);
+
+
+global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
+
 ini_close();
 MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
@@ -82,7 +92,7 @@ while i <array_length(global.mods)
         if name = "Pizzelle"
         {	
 			MOD_GLOBAL.ogicon = variable_struct_get(global.mods[i],"icon")
-            variable_struct_set(global.mods[i],"icon", MOD_GLOBAL._iconlist[_iconrandom])
+            variable_struct_set(global.mods[i],"icon", sprite_add(MOD_GLOBAL._iconlist[_iconrandom],1,false,false,0,0))
         }
     }
     i++
@@ -97,7 +107,7 @@ if instance_exists(obj_modlist)
 			var name = variable_struct_get(obj_modlist.mods[i],"name")
 			if name = "Pizzelle"
 			{	
-				variable_struct_set(obj_modlist.mods[i],"icon", MOD_GLOBAL._iconlist[_iconrandom])
+				variable_struct_set(obj_modlist.mods[i],"icon", sprite_add(MOD_GLOBAL._iconlist[_iconrandom],1,false,false,0,0))
 			}
 		}
 		i++
