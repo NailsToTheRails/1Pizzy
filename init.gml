@@ -19,6 +19,14 @@ _iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist)-1)
 ini_open(MOD_PATH + "/saveData.ini");
 // SETTING VARIABLES
 
+MOD_GLOBAL.cakehud = add_sprite("spr_cakehud",1,135,87)
+MOD_GLOBAL.btop = add_sprite("spr_branktopping",1,135,87)
+MOD_GLOBAL.ctop = add_sprite("spr_cranktopping",1,135,87)
+MOD_GLOBAL.atop = add_sprite("spr_aranktopping",1,135,87)
+MOD_GLOBAL.stop = add_sprite("spr_sranktopping",1,135,87)
+MOD_GLOBAL.pzcol = add_sprite("spr_fontcandle",10,0,0)
+global.PZcollectfont = font_add_sprite_ext(MOD_GLOBAL.pzcol, "0123456789", true, 0);
+
 // COSMETIC
 global.combometertype = ini_read_real("modded", "combometertype", 0);
 global.spookeytoggle = ini_read_real("modded", "spookeytoggle", 0);
