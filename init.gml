@@ -131,7 +131,7 @@ global.pm_shed_PZ =
     guy_gustavo_section_fall: -4,
 };
 
-
+MOD_GLOBAL.spr_chargeeffectsjump = sprite_add(MOD_PATH + "/sprites/spr_chargeeffectsjump.png", 11, false, false, 50, 50);
 MOD_GLOBAL.bg_SSjukeboxdisc = sprite_add(MOD_PATH + "/sprites/bg_SSjukeboxdisc.png", 1, false, false, 101, 101);
 MOD_GLOBAL.spr_taxitransitionPZ = sprite_add(MOD_PATH + "/sprites/spr_taxitransition.png", 1, false, false, 22, 16)
 MOD_GLOBAL.spr_taxitransitionPZCOP = sprite_add(MOD_PATH + "/sprites/spr_taxitransition_cop.png", 1, false, false,  22, 16)

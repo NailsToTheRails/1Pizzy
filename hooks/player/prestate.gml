@@ -225,6 +225,9 @@ switch(state)
 	case states.Sjump:
 	if (character == "PZ") 
 	{
+		if (sprite_index == spr_superjump && !instance_exists(obj_chargeeffect))
+		    instance_create(x, y, obj_chargeeffect)
+
 		switch (global.walljumptype) 
 		{
 			case 0:

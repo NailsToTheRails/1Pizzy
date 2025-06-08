@@ -17,4 +17,10 @@ if playerid.character == "PZ"
         x -= (20 * playerid.xscale);
         y -= (20 * playerid.yscale);
     }
+    if (playerid.state == states.Sjump && playerid.vsp != 0.5)
+    {
+        sprite_index = MOD_GLOBAL.spr_chargeeffectsjump
+        y -= (20 * playerid.yscale);
+	image_speed = 1;
+    }
 }
