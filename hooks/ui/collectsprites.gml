@@ -1,6 +1,7 @@
 if obj_player1.character = "PZ"
 {
- heatfillR = spr_heatmeter_fill;
+/* 
+heatfillR = spr_heatmeter_fill;
 	 heatmeterR = spr_heatmeter;
 	 heatpalR = spr_heatmeter_palette;
 		
@@ -12,4 +13,5 @@ if obj_player1.character = "PZ"
 		
 	 collectfontR = global.PZcollectfont;
 	 collectpaletteR = spr_font_palette;
+*/
 }
