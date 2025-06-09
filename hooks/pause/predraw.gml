@@ -20,24 +20,25 @@ function draw_sprite_ext_flash(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, a
     draw_sprite_ext(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     gpu_set_fog(false, c_black, 0, 0);
 }
+if fade > 0
+{
+	if pause or fade >= 1
+	{
+		draw_set_alpha(1);
+		scr_draw_pause_image();
+	}
 
-global.spr_newpause_bars1 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars1.png", 2, false, false, 160, 48);
-global.spr_newpause_bars2 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars2.png", 2, false, false, 160, 48);
-global.spr_newpause_bars3 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars3.png", 2, false, false, 160, 48);
-global.spr_newpause_bars4 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars4.png", 2, false, false, 160, 48);
-global.spr_newpause_bars5 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars5.png", 2, false, false, 160, 48);
-
-var spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 9, false, false, 36, 36);
-var is_not_level, bar_x_offsets, bar_y_offsets, bar_text, bar_sprite, _length, i, y_pad, x_pos, y_pos, current_bar_chosen, current_bar_x, _txt, entry, mapentry;
-
-var playerPauseSprite = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
+var spr_newpause_icons = MOD_GLOBAL.spr_newpause_icons
+var is_not_level, bar_x_offsets, bar_y_offsets, bar_text, bar_sprite, i, y_pad, x_pos, y_pos, current_bar_chosen, current_bar_x, _txt, entry, mapentry;
+var _length = array_length(pause_menu);
+var playerPauseSprite = MOD_GLOBAL.spr_pizzelle_pause
 var playerPauseIndex = 0;
 
 var pausedSprite = undefined;
-var pauseBorder = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_border.png", 2, false, false, 530, 320);
+var pauseBorder = MOD_GLOBAL.spr_newpause_border
 var secretIconScale = [2, 2, 2];
 var secretIconVisible = [0, 0, 0];
-var bar_sprite = asset_get_index("global.spr_newpause_bars" + string(selected + 1));
+var bar_sprite = asset_get_index("MOD_GLOBAL.spr_newpause_bars" + string(selected + 1));
 var shake = Approach(shake, 0, 1);
 var whitealpha = floor_ext(lerp(whitealpha, 0, 0.3), 100);
 var borderscale = ceil_ext(lerp(borderscale, 4, 0.2), 100);
@@ -51,16 +52,17 @@ if (!is_undefined(pausedSprite))
     draw_sprite_stretched(pausedSprite, 0, 0, 0, 960, 540);
 
 var is_not_level = global.leveltosave == -4
-draw_set_alpha(whitealpha);
-draw_rectangle_color(-5000, 0, 5000, 1080, #0D001B, #0D001B, #0D001B, #0D001B, false);
-draw_set_alpha(1);
-draw_sprite_ext(pauseBorder, is_not_level, 480, 270, borderscale, borderscale, 0, c_white, 1);
+var bordercolor = #0D001B
+draw_set_alpha(fade - 0.5);
+draw_rectangle_color(0, 0, obj_screensizer.actual_width, obj_screensizer.actual_height, bordercolor, bordercolor, bordercolor, bordercolor, false);
+draw_set_alpha(1)
+draw_sprite_ext(pauseBorder, is_not_level ? 1 : 0, 480, 270, borderscale, borderscale, 0, c_white, 1);
 
 if (!is_not_level)
 {
-    draw_sprite_ext(spr_newpause_secreticon, 0, 804, 64, secretIconScale[0], secretIconScale[0], 0, c_white, secretIconVisible[0]);
-    draw_sprite_ext(spr_newpause_secreticon, 1, 855, 54, secretIconScale[1], secretIconScale[1], 0, c_white, secretIconVisible[1]);
-    draw_sprite_ext(spr_newpause_secreticon, 2, 906, 70, secretIconScale[2], secretIconScale[2], 0, c_white, secretIconVisible[2]);
+    draw_sprite_ext(MOD_GLOBAL.spr_newpause_secreticon, 0, 804, 64, secretIconScale[0], secretIconScale[0], 0, c_white, secretIconVisible[0]);
+    draw_sprite_ext(MOD_GLOBAL.spr_newpause_secreticon, 1, 855, 54, secretIconScale[1], secretIconScale[1], 0, c_white, secretIconVisible[1]);
+    draw_sprite_ext(MOD_GLOBAL.spr_newpause_secreticon, 2, 906, 70, secretIconScale[2], secretIconScale[2], 0, c_white, secretIconVisible[2]);
 }
 
 draw_set_font(global.fontSS);
@@ -73,30 +75,30 @@ bar_text = pause_menu;
 switch (selected)
 {
 	default:
-	bar_sprite = global.spr_newpause_bars1;
+	bar_sprite = MOD_GLOBAL.spr_newpause_bars1;
 	break;
 
 	case 0:
-	bar_sprite = global.spr_newpause_bars1;
+	bar_sprite = MOD_GLOBAL.spr_newpause_bars1;
 	break;
 
 	case 1:
-	bar_sprite = global.spr_newpause_bars2;
+	bar_sprite = MOD_GLOBAL.spr_newpause_bars2;
 	break;
 
 	case 2:
-	bar_sprite = global.spr_newpause_bars3;
+	bar_sprite = MOD_GLOBAL.spr_newpause_bars3;
 	break;
 
 	case 3:
-	bar_sprite = global.spr_newpause_bars4;
+	bar_sprite = MOD_GLOBAL.spr_newpause_bars4;
 	break;
 
 	case 4:
-	bar_sprite = global.spr_newpause_bars5;
+	bar_sprite = MOD_GLOBAL.spr_newpause_bars5;
 	break;
 }
-_length = array_length(pause_menu);
+
 
 for (i = 0; i < _length; i++)
 {
@@ -151,5 +153,5 @@ if (transfotext != -4 && !instance_exists(obj_achievement_pause))
             tdp_text_commit();
             draw_set_alpha(1);
         }
-
+}
 return false;

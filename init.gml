@@ -14,21 +14,31 @@ for(var _i = 0; _f != "";_i++)
 }
 _iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist))
 ini_open(MOD_PATH + "/saveData.ini");
-// SETTING VARIABLES
+// SETTING VARIABLES. DONT FUCK WITH THESE OR ELSE SETTINGS WILL CRASH
+
+// COSMETIC
 global.combometertype = ini_read_real("modded", "combometertype", 0);
+global.spookeytoggle = ini_read_real("modded", "spookeytoggle", 0);
+global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
+global.combonames = ini_read_real("modded", "combonames", 0);
+global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
+MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
+global.extremevisual = ini_read_real("modded", "extremevisual", 0);
+global.tauntstyle = ini_read_real("modded", "tauntstyle", 0);
+
+// MUSIC
 global.escapetheme = ini_read_real("modded", "escapetheme", 0);
 global.lap2theme = ini_read_real("modded", "lap2theme", 0);
 global.lap3theme = ini_read_real("modded", "lap3theme", 0);
 global.lap3duringinf = ini_read_real("modded", "lap3duringinf", 0);
+
+// GAMEPLAY
 global.walljumptype = ini_read_real("modded", "walljumptype", 0);
-global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
-global.combonames = ini_read_real("modded", "combonames", 0);
-global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
-global.extremevisual = false;
-global.tauntstyle = 0;
-MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
+global.experimenPZ = ini_read_real("modded","experimenPZ",0);
+
+
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
-global.experimenPZ = ini_read_real("dev","experimental",0);
+
 ini_close();
 MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
@@ -291,6 +301,15 @@ MOD_GLOBAL.spr_candy_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_t
 MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_supertaunt.png", 10, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
+
+MOD_GLOBAL.spr_newpause_bars1 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars1.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars2 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars2.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars3 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars3.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars4 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars4.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars5 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars5.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_border = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_border.png", 2, false, false, 530, 320);
+MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
+MOD_GLOBAL.spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 9, false, false, 36, 36);
 
 //PAUSE SCREEN FUNCTION
 global.fontSS = font_add_sprite_ext(sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0), "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, 0);
