@@ -108,15 +108,15 @@ for (i = 0; i < _length; i++)
     current_bar_chosen = selected == i;
     current_bar_x = x_pos - (pauseslidein * (2 + (i / 2)));
     _txt = lang_get_value(pause_menu[i]);
-    draw_sprite(bar_sprite, current_bar_chosen, xx, y_pos + (shake * current_bar_chosen));
+    draw_sprite(bar_sprite, current_bar_chosen, x_pos, y_pos + (shake * current_bar_chosen));
     entry = pause_menu[i];
     mapentry = array_get(ds_map_find_value(pause_menu_map, b), 0);
     
     if (!is_undefined(mapentry))
         draw_sprite_ext(spr_newpause_icons, mapentry, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
     
-    draw_text_color(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, c_gray, c_gray, c_gray, c_gray, 1);
-    draw_text_color(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, c_white, c_white, c_white, c_white, current_bar_chosen);
+    draw_text_ext_color(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, -5, 100000, c_gray, c_gray, c_gray, c_gray, 1);
+    draw_text_ext_colour(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, -5, 100000, c_white, c_white, c_white, c_white, current_bar_chosen);
 }
 
 if (!is_not_level)

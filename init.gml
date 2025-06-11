@@ -12,6 +12,7 @@ for(var _i = 0; _f != "";_i++)
     MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
     _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
 }
+
 _iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist))
 ini_open(MOD_PATH + "/saveData.ini");
 // SETTING VARIABLES. DONT FUCK WITH THESE OR ELSE SETTINGS WILL CRASH
@@ -54,16 +55,13 @@ MOD_GLOBAL.pizzyost[0,1] = "event:/sugary/music/(L2)Sweet Release of Death (EN)"
 MOD_GLOBAL.pizzyost[1,1] = "event:/sugary/music/(L2)Sweet Release of Death (Demo 1)"
 MOD_GLOBAL.pizzyost[2,1] = "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)"
 MOD_GLOBAL.pizzyost[3,1] = "event:/sugary/music/(L2)Sweet Release of MIDI"
-MOD_GLOBAL.pizzyost[4,1] = "event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)"
-MOD_GLOBAL.pizzyost[5,1] = "event:/sugary/music/(L2)Sweet Release of Jam"
-MOD_GLOBAL.pizzyost[6,1] = "event:/sugary/music/(L2)I'm in The Thick of Death"
+MOD_GLOBAL.pizzyost[4,1] = "event:/sugary/music/(L2)Sweet Release of Jam"
 MOD_GLOBAL.pizzyost[0,2] = "event:/sugary/music/(L3)Clockin' Out Late"
 MOD_GLOBAL.pizzyost[1,2] = "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)"
 MOD_GLOBAL.pizzyost[2,2] = "event:/sugary/music/(L3)Harry's Despair-y"
 MOD_GLOBAL.pizzyost[3,2] = "event:/sugary/music/(L3)Sugarcube Hailstorm"
 MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)UNEXPECTION"
 MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
-MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
 MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
 MOD_GLOBAL.pizzyost[9,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
@@ -302,6 +300,7 @@ MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_ca
 MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
 
+//PAUSE SCREEN
 MOD_GLOBAL.spr_newpause_bars1 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars1.png", 2, false, false, 160, 48);
 MOD_GLOBAL.spr_newpause_bars2 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars2.png", 2, false, false, 160, 48);
 MOD_GLOBAL.spr_newpause_bars3 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars3.png", 2, false, false, 160, 48);
@@ -311,100 +310,5 @@ MOD_GLOBAL.spr_newpause_border = sprite_add(MOD_PATH + "/sprites/pause/spr_newpa
 MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
 MOD_GLOBAL.spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 9, false, false, 36, 36);
 
-//PAUSE SCREEN FUNCTION
-global.fontSS = font_add_sprite_ext(sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0), "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, 0);
-/*
-MOD_GLOBAL.drawpause = function()
-{
-var is_not_level, bar_x_offsets, bar_y_offsets, bar_text, bar_sprite, _length, i, y_pad, x_pos, y_pos, current_bar_chosen, current_bar_x, _txt, entry, mapentry;
-
-var pausedSprite = undefined;
-var pauseBorder = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_border.png", 2, false, false, 530, 320);
-var secretIconScale = [2, 2, 2];
-var secretIconVisible = [0, 0, 0];
-var bar_sprite = asset_get_index("global.spr_newpause_bars" + string(selected + 1));
-
- if (instance_exists(obj_option) || instance_exists(obj_achievement_pause))
-        exit;
-
-if (!is_undefined(pausedSprite))
-    draw_sprite_stretched(pausedSprite, 0, 0, 0, 960, 540);
-
-var is_not_level = global.leveltosave == -4
-draw_set_alpha(whitealpha);
-draw_rectangle_color(-5000, 0, 5000, 1080, #0D001B, #0D001B, #0D001B, #0D001B, false);
-draw_set_alpha(1);
-draw_sprite_ext(pauseBorder, is_not_level, 480, 270, borderscale, borderscale, 0, c_white, 1);
-
-if (!is_not_level)
-{
-    draw_sprite_ext(spr_newpause_secreticon, 0, 804, 64, secretIconScale[0], secretIconScale[0], 0, c_white, secretIconVisible[0]);
-    draw_sprite_ext(spr_newpause_secreticon, 1, 855, 54, secretIconScale[1], secretIconScale[1], 0, c_white, secretIconVisible[1]);
-    draw_sprite_ext(spr_newpause_secreticon, 2, 906, 70, secretIconScale[2], secretIconScale[2], 0, c_white, secretIconVisible[2]);
-}
-
-draw_set_font(global.fontSS);
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-draw_set_color(c_white);
-bar_x_offsets = [507, 495, 478, 460, 443];
-bar_y_offsets = [103, 177, 249, 324, 396];
-bar_text = pause_menu;
-bar_sprite = asset_get_index("spr_newpause_bars" + string(selected + 1));
-_length = array_length(pause_options);
-
-for (i = 0; i < _length; i++)
-{
-    y_pad = 73;
-    x_pos = lerp(507, 443, i / (_length - 1));
-    y_pos = ((camera_get_view_height(view_camera[0]) / 2) - round((y_pad * (_length - 1)) / 2)) + (y_pad * i);
-    current_bar_chosen = selected == i;
-    current_bar_x = x_pos - (pauseslidein * (2 + (i / 2)));
-    _txt = lang_get(pause_options[i]);
-    draw_sprite(bar_sprite, current_bar_chosen, xx, y_pos + (shake * current_bar_chosen));
-    entry = pause_options[selected];
-    mapentry = ds_map_find_value(pause_map, entry);
-    
-    if (!is_undefined(mapentry))
-        draw_sprite_ext(spr_newpause_icons, mapentry, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
-    
-    draw_text_color(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, c_gray, c_gray, c_gray, c_gray, 1);
-    draw_text_color(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, c_white, c_white, c_white, c_white, current_bar_chosen);
-}
-
-if (!is_not_level)
-    draw_sprite(spr_newpause_treasure, treasurefound, 835 + pauseslidein, 400);
-
-if (global.gamePauseState == 1)
-{
-    draw_sprite_ext_flash(playerPauseSprite, playerPauseIndex, 100 - pauseslidein, 422 + pauseslidein, 1, 1, 0, 5183024, 1);
-    draw_player_sprite_ext(playerPauseSprite, playerPauseIndex, 107 - pauseslidein, 411 + pauseslidein, 1, 1, 0, c_white, 1);
-}
-
-if (transfotext != -4 && !instance_exists(obj_achievement_pause))
-        {
-            draw_set_alpha(fade);
-            draw_set_font(lang_get_font("creditsfont"));
-            draw_set_halign(fa_left);
-            draw_set_valign(fa_top);
-            draw_set_color(c_white);
-            var xx = obj_screensizer.actual_width / 2;
-            var yy = obj_screensizer.actual_height - 50;
-            var s = transfotext_size;
-            xx -= (s[0] / 2);
-            yy -= s[1];
-            
-            if (global.jukebox != -4)
-                yy -= 40;
-            
-            xx = floor(xx);
-            yy = floor(yy);
-            global.tdp_text_try_outline = true;
-            scr_draw_text_arr(xx, yy, transfotext, c_white, fade);
-            global.tdp_text_try_outline = false;
-            tdp_text_commit();
-            draw_set_alpha(1);
-        }
-}
-*/
+global.fontSS = font_add_sprite_ext_hook(sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0), "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, 0);
 instance_create(0,0,obj_pizConst);
