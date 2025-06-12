@@ -20,8 +20,23 @@ function draw_sprite_ext_flash(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, a
     draw_sprite_ext(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8);
     gpu_set_fog(false, c_black, 0, 0);
 }
+
+if (!variable_instance_exists(self, "pauseslidein"))
+pauseslidein = 500;
+
+if (!variable_instance_exists(self, "borderscale"))
+borderscale = 4;
+
+if (!pause)
+{
+	pauseslidein = ceil(lerp(pauseslidein, 500, 0.1));
+	borderscale = ceil_ext(lerp(borderscale, 4, 0.2), 100);
+}
+
+
 if fade > 0
 {
+
 	if pause or fade >= 1
 	{
 		draw_set_alpha(1);
@@ -41,8 +56,6 @@ var secretIconVisible = [0, 0, 0];
 var bar_sprite = asset_get_index("MOD_GLOBAL.spr_newpause_bars" + string(selected + 1));
 var shake = Approach(shake, 0, 1);
 var whitealpha = floor_ext(lerp(whitealpha, 0, 0.3), 100);
-var borderscale = ceil_ext(lerp(borderscale, 4, 0.2), 100);
-var pauseslidein = ceil(lerp(pauseslidein, 500, 0.1));
 var b = pause_menu[i];
 
  if (instance_exists(obj_option) || instance_exists(obj_achievement_pause))
@@ -108,7 +121,7 @@ for (i = 0; i < _length; i++)
     current_bar_chosen = selected == i;
     current_bar_x = x_pos - (pauseslidein * (2 + (i / 2)));
     _txt = lang_get_value(pause_menu[i]);
-    draw_sprite(bar_sprite, current_bar_chosen, x_pos, y_pos + (shake * current_bar_chosen));
+    draw_sprite(bar_sprite, current_bar_chosen, current_bar_x, y_pos + (shake * current_bar_chosen));
     entry = pause_menu[i];
     mapentry = array_get(ds_map_find_value(pause_menu_map, b), 0);
     
@@ -120,13 +133,13 @@ for (i = 0; i < _length; i++)
 }
 
 if (!is_not_level)
-    draw_sprite(spr_newpause_treasure, treasurefound, 835 + pauseslidein, 400);
+    draw_sprite(MOD_GLOBAL.spr_newpause_treasure, !treasurefound, 835 + pauseslidein, 400);
 
 draw_sprite_ext_flash(playerPauseSprite, playerPauseIndex, 100 - pauseslidein, 422 + pauseslidein, 1, 1, 0, 5183024, 1);
 shader_set(global.Pal_Shader);
 pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture);
 pal_swap_set(spr_palette, paletteselect, false);
-draw_sprite(playerPauseSprite, playerPauseIndex, 107 - pauseslidein, 411 + pauseslidein, 1, 1, 0, c_white, 1);
+draw_sprite_ext(playerPauseSprite, playerPauseIndex, 107 - pauseslidein, 411 + pauseslidein, 1, 1, 0, c_white, 1);
 pal_swap_reset();
 
 if (transfotext != -4 && !instance_exists(obj_achievement_pause))
