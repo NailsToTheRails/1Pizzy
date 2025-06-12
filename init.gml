@@ -168,6 +168,21 @@ instance_create(0,0,obj_pizConst);
 MOD_GLOBAL.pizzloaded = false;
 MOD_GLOBAL.PZPatLoaded = false;
 
+//	    PAUSE SCREEN ASSETS
+MOD_GLOBAL.spr_newpause_bars1 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars1.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars2 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars2.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars3 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars3.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars4 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars4.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars5 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars5.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_border = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_border.png", 2, false, false, 530, 320);
+MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
+MOD_GLOBAL.spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 10, false, false, 36, 36);
+MOD_GLOBAL.spr_newpause_secreticon = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secreticon.png", 3, false, false, 40, 40);
+MOD_GLOBAL.spr_newpause_treasure = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_treasure.png", 2, false, false, 94, 91);
+
+MOD_GLOBAL.fontSSspr = sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0);
+global.fontSS = font_add_sprite_ext(MOD_GLOBAL.fontSSspr, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, -6);
+
 //          EXTRA PLAYER SPR / FRENZ-E / CHEESED UP LEGACY ASSETS
 MOD_GLOBAL.spr_rocketturnair = sprite_add(MOD_PATH + "/sprites/spr_rocketturnair.png", 15, false, false, 50, 50);
 MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 13, false, false, 100, 100);
@@ -284,7 +299,7 @@ MOD_GLOBAL.spr_fireass_intro = sprite_add(MOD_PATH + "/sprites/spr_fireass_intro
 MOD_GLOBAL.spr_fireass_fall = sprite_add(MOD_PATH + "/sprites/spr_fireass_fall.png", 3, false, false, 50, 50);
 MOD_GLOBAL.spr_fireass_dash = sprite_add(MOD_PATH + "/sprites/spr_fireass_dash.png", 16, false, false, 75, 75);
 
-// TOPPINSSS
+// CONFECTI
 
 //1
 MOD_GLOBAL.spr_marshmallow_appear = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmallow_appear.png", 14, false, false, 50, 50);
