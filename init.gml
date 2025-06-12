@@ -1,21 +1,31 @@
 randomize()
 MOD_GLOBAL._iconlist = []
-add_sprite = function(name, frames, xorigin, yorigin)
+
+add_sprite = function(name, frames, xorigin, yorigin, spritefps = -1)
 {
+    spritefps = spritefps == 0 ? -1 : spritefps;
     var s = sprite_add(concat(MOD_PATH, "/sprites/", name, ".png"), frames, false, false, xorigin, yorigin);
-    sprite_set_speed(s, 1, spritespeed_framespergameframe);
-    return s;
+    sprite_set_speed(s, abs(spritefps), spritefps ? spritespeed_framespersecond : spritespeed_framespergameframe);
+    return s ?? undefined;
 }
+
 var _f = file_find_first(MOD_PATH + "/sprites/icons/*.png",0)
 for(var _i = 0; _f != "";_i++)
 {
-    MOD_GLOBAL._iconlist[_i] = sprite_add(MOD_PATH + "/sprites/icons/" + _f,1,false,false,0,0)
+    MOD_GLOBAL._iconlist[_i] = MOD_PATH + "/sprites/icons/" + _f
     _f = file_find_next(MOD_PATH + "/sprites/icons*.png",0)
 }
-
-_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist))
+_iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist)-1)
 ini_open(MOD_PATH + "/saveData.ini");
-// SETTING VARIABLES. DONT FUCK WITH THESE OR ELSE SETTINGS WILL CRASH
+// SETTING VARIABLES
+
+MOD_GLOBAL.cakehud = add_sprite("spr_cakehud",1,135,87)
+MOD_GLOBAL.btop = add_sprite("spr_branktopping",1,135,87)
+MOD_GLOBAL.ctop = add_sprite("spr_cranktopping",1,135,87)
+MOD_GLOBAL.atop = add_sprite("spr_aranktopping",1,135,87)
+MOD_GLOBAL.stop = add_sprite("spr_sranktopping",1,135,87)
+MOD_GLOBAL.pzcol = add_sprite("spr_fontcandle",10,0,0)
+global.PZcollectfont = font_add_sprite_ext(MOD_GLOBAL.pzcol, "0123456789", true, 0);
 
 // COSMETIC
 global.combometertype = ini_read_real("modded", "combometertype", 0);
@@ -55,13 +65,16 @@ MOD_GLOBAL.pizzyost[0,1] = "event:/sugary/music/(L2)Sweet Release of Death (EN)"
 MOD_GLOBAL.pizzyost[1,1] = "event:/sugary/music/(L2)Sweet Release of Death (Demo 1)"
 MOD_GLOBAL.pizzyost[2,1] = "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)"
 MOD_GLOBAL.pizzyost[3,1] = "event:/sugary/music/(L2)Sweet Release of MIDI"
-MOD_GLOBAL.pizzyost[4,1] = "event:/sugary/music/(L2)Sweet Release of Jam"
+MOD_GLOBAL.pizzyost[4,1] = "event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)"
+MOD_GLOBAL.pizzyost[5,1] = "event:/sugary/music/(L2)Sweet Release of Jam"
+MOD_GLOBAL.pizzyost[6,1] = "event:/sugary/music/(L2)I'm in The Thick of Death"
 MOD_GLOBAL.pizzyost[0,2] = "event:/sugary/music/(L3)Clockin' Out Late"
 MOD_GLOBAL.pizzyost[1,2] = "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)"
 MOD_GLOBAL.pizzyost[2,2] = "event:/sugary/music/(L3)Harry's Despair-y"
 MOD_GLOBAL.pizzyost[3,2] = "event:/sugary/music/(L3)Sugarcube Hailstorm"
 MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)UNEXPECTION"
 MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
+MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
 MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
 MOD_GLOBAL.pizzyost[9,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
@@ -87,7 +100,7 @@ while i <array_length(global.mods)
         if name = "Pizzelle"
         {	
 			MOD_GLOBAL.ogicon = variable_struct_get(global.mods[i],"icon")
-            variable_struct_set(global.mods[i],"icon", MOD_GLOBAL._iconlist[_iconrandom])
+            variable_struct_set(global.mods[i],"icon", sprite_add(MOD_GLOBAL._iconlist[_iconrandom],1,false,false,0,0))
         }
     }
     i++
@@ -102,7 +115,7 @@ if instance_exists(obj_modlist)
 			var name = variable_struct_get(obj_modlist.mods[i],"name")
 			if name = "Pizzelle"
 			{	
-				variable_struct_set(obj_modlist.mods[i],"icon", MOD_GLOBAL._iconlist[_iconrandom])
+				variable_struct_set(obj_modlist.mods[i],"icon", sprite_add(MOD_GLOBAL._iconlist[_iconrandom],1,false,false,0,0))
 			}
 		}
 		i++
@@ -111,9 +124,8 @@ if instance_exists(obj_modlist)
 MOD_GLOBAL.CustomThemesCheck = ["event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)","event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)","event:/sugary/music/(L1)Glucose Getaway (Construct)","event:/sugary/music/(L1)Glucose Getaway","event:/sugary/music/(L1)It's SugaryPizza Time!","event:/sugary/music/(L1)Midi Getaway (Construct)","event:/sugary/music/(L1)Midi Getaway (Demo 1)","event:/sugary/music/(L1)Sugar Rush (Exhibition Night)","event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT","event:/sugary/music/(L1)Sugar Rush (Lila Mix)","event:/sugary/music/(L2)Sweet Release of Death (Demo 1)","event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)","event:/sugary/music/(L2)Sweet Release of Death (EN)","event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)","event:/sugary/music/(L2)Sweet Release of MIDI","event:/sugary/music/(L2)Sweet Release of Jam","event:/sugary/music/(L2)I'm in The Thick of Death","event:/sugary/music/(L3)Blue Licorice","event:/sugary/music/(L3)Clockin' Out Late","event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)","event:/sugary/music/(L2)(L3)Harry's Despair-y","event/:sugary/music/(L3)UNEXPECTION","event/:sugary/music/(L3)Sugarcube Hailstorm","event:/sugary/music/(L3)thickofit","event:/sugary/music/(L3)Gummy Harry's Brain Freezin'","event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2","event:/sugary/music/(L3)Coneball Lapping Two",]
 MOD_GLOBAL.EPIC = sprite_add(MOD_PATH + "/sprites/Epic.png", 1, false, false, 50, 50);
 MOD_GLOBAL.PZ_snd_wallkick = fmod_event_create_instance("event:/sugary/wallkick");
-MOD_GLOBAL.spr_tv_keyget = sprite_add(MOD_PATH + "/sprites/spr_tv_keyget.png", 21, false, false, 139, 134);
-MOD_GLOBAL.spr_tv_exprConfect1 = sprite_add(MOD_PATH + "/sprites/tv_exprConfecti1.png", 1, false, false, 139, 134);
 MOD_GLOBAL.spr_tv_exprmach2 = sprite_add(MOD_PATH + "/sprites/spr_tv_exprmach2.png", 8, false, false, 139, 134);
+MOD_GLOBAL.spr_tv_exprConfect1 = sprite_add(MOD_PATH + "/sprites/tv_exprConfecti1.png", 1, false, false, 139, 134);
 MOD_GLOBAL.KEY = sprite_add(MOD_PATH + "/sprites/spr_key.png", 8, false, false, 50, 100);
 MOD_GLOBAL.KEYIDLE = sprite_add(MOD_PATH + "/sprites/spr_keyidle.png", 8, false, false, 50, 50);
 MOD_GLOBAL.KEYFOLLOW = sprite_add(MOD_PATH + "/sprites/spr_keymove.png", 8, false, false, 50, 50);
@@ -142,7 +154,8 @@ global.pm_shed_PZ =
     guy_gustavo_section_fall: -4,
 };
 
-MOD_GLOBAL.spr_chargeeffectsjump = sprite_add(MOD_PATH + "/sprites/spr_chargeeffectsjump.png", 11, false, false, 50, 50);
+MOD_GLOBAL.prankanim = sprite_add(MOD_PATH + "/sprites/prankanim.png", 38, false, false, 480, 270)
+
 MOD_GLOBAL.bg_SSjukeboxdisc = sprite_add(MOD_PATH + "/sprites/bg_SSjukeboxdisc.png", 1, false, false, 202, 202);
 MOD_GLOBAL.spr_taxitransitionPZ = sprite_add(MOD_PATH + "/sprites/spr_taxitransition.png", 1, false, false, 22, 16)
 MOD_GLOBAL.spr_taxitransitionPZCOP = sprite_add(MOD_PATH + "/sprites/spr_taxitransition_cop.png", 1, false, false,  22, 16)
@@ -157,19 +170,38 @@ MOD_GLOBAL.PZPatLoaded = false;
 
 //          EXTRA PLAYER SPR / FRENZ-E / CHEESED UP LEGACY ASSETS
 MOD_GLOBAL.spr_rocketturnair = sprite_add(MOD_PATH + "/sprites/spr_rocketturnair.png", 15, false, false, 50, 50);
-MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 22, false, false, 50, 100);
+MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 13, false, false, 100, 100);
+MOD_GLOBAL.spr_PZLapPortalStart = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalStart.png", 12, false, false, 100, 100);
 MOD_GLOBAL.spr_PZKnightGlide = sprite_add(MOD_PATH + "/sprites/exPlayer/KnightGlide.png", 3, false, false, 60, 50);
 MOD_GLOBAL.spr_PZtrashstart = sprite_add(MOD_PATH + "/sprites/exPlayer/trashstart.png", 10, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashjump = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump.png", 12, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashjump2 = sprite_add(MOD_PATH + "/sprites/exPlayer/trashjump2.png", 5, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashfall = sprite_add(MOD_PATH + "/sprites/exPlayer/trashfall.png", 3, false, false, 50, 50);
 MOD_GLOBAL.spr_PZtrashslide = sprite_add(MOD_PATH + "/sprites/exPlayer/trashslide.png", 7, false, false, 50, 50);
+MOD_GLOBAL.spr_PZwatermach = sprite_add(MOD_PATH + "/sprites/exPlayer/watermach.png", 4, false, false, 50, 50);
+MOD_GLOBAL.spr_PZoldhookhang = sprite_add(MOD_PATH + "/sprites/exPlayer/oldhookhang.png", 3, false, false, 50, 50);
+MOD_GLOBAL.frenzy = {
+ 	wallbounce : sprite_add(MOD_PATH + "/sprites/exPlayer/wallbounce.png", 9, false, false, 50, 50),
+ 	divebombland : sprite_add(MOD_PATH + "/sprites/exPlayer/divebombland.png", 3, false, false, 50, 50),
+ 	divebombfall : sprite_add(MOD_PATH + "/sprites/exPlayer/divebombfall.png", 4, false, false, 50, 50),
+ 	divebomb : sprite_add(MOD_PATH + "/sprites/exPlayer/divebomb.png", 4, false, false, 50, 50),
+}
+
+MOD_GLOBAL.spr_PZjetpackend = sprite_add(MOD_PATH + "/sprites/exPlayer/jetpackend.png", 3, false, false, 60, 60);
+
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashjump2, 1, spritespeed_framespergameframe);
 sprite_set_speed(MOD_GLOBAL.spr_PZtrashslide, 1, spritespeed_framespergameframe);
+sprite_set_speed(MOD_GLOBAL.spr_PZLapPortalStart, 1, spritespeed_framespergameframe);
+sprite_set_speed(MOD_GLOBAL.spr_PZwatermach, 1, spritespeed_framespergameframe);
+MOD_GLOBAL.spr_PZbossHP = sprite_add(MOD_PATH + "/sprites/exPlayer/bossHP.png", 19, false, false, 32, 32);
+MOD_GLOBAL.spr_PZbossSuperHUD = sprite_add(MOD_PATH + "/sprites/exPlayer/superattackHUD.png", 2, false, false, 20, 122.5);
+MOD_GLOBAL.spr_PZghostdrape = sprite_add(MOD_PATH + "/sprites/exPlayer/ghostdrape.png", 1, false, false, 50, 50);
 MOD_GLOBAL.spr_PZCpat1 = sprite_add(MOD_PATH + "/sprites/pat/cuDouble.png", 1, false, false, 8, 8);
 MOD_GLOBAL.spr_PZCpat2 = sprite_add(MOD_PATH + "/sprites/pat/cuSugary.png", 1, false, false, 16, 16);
 
+MOD_GLOBAL.spr_tv_keyget = sprite_add(MOD_PATH + "/sprites/spr_tv_keyget.png", 21, false, false, 139, 134);
+ 
 // COMBO METER EXHIBITION NIGHT
 MOD_GLOBAL.spr_tvHUD_comboMeter = sprite_add(MOD_PATH + "/sprites/spr_tvHUD_comboMeter.png", 13, false, false, 137, 80);
 MOD_GLOBAL.spr_tvHUD_comboMeter_fill = sprite_add(MOD_PATH + "/sprites/spr_tvHUD_comboMeter_fill.png", 12, false, false, 0, 0);
@@ -300,15 +332,9 @@ MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_ca
 MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
 
-//PAUSE SCREEN
-MOD_GLOBAL.spr_newpause_bars1 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars1.png", 2, false, false, 160, 48);
-MOD_GLOBAL.spr_newpause_bars2 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars2.png", 2, false, false, 160, 48);
-MOD_GLOBAL.spr_newpause_bars3 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars3.png", 2, false, false, 160, 48);
-MOD_GLOBAL.spr_newpause_bars4 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars4.png", 2, false, false, 160, 48);
-MOD_GLOBAL.spr_newpause_bars5 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars5.png", 2, false, false, 160, 48);
-MOD_GLOBAL.spr_newpause_border = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_border.png", 2, false, false, 530, 320);
-MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
-MOD_GLOBAL.spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 9, false, false, 36, 36);
+// extreme exhibition lap 4 visuals
+MOD_GLOBAL.spr_yogurtfirebg2 = add_sprite("extreme/spr_yogurtfirebg2", 1, 0, 270);
+MOD_GLOBAL.spr_yogurtfirebg = add_sprite("extreme/spr_yogurtfirebg", 2, 480, 270);
+MOD_GLOBAL.bg_yogurtDebris = add_sprite("extreme/bg_yogurtDebris", 2, 0, 0);
 
-global.fontSS = font_add_sprite_ext_hook(sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0), "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, 0);
 instance_create(0,0,obj_pizConst);

@@ -8,7 +8,6 @@ switch expressionsprite
                 other.state = states.tv_whitenoise;
                 other.expressionsprite = noone;
             }
-            else image_speed = 1;
         }
     case MOD_GLOBAL.spr_tv_keyget:
         with obj_player1
@@ -18,7 +17,6 @@ switch expressionsprite
                 other.state = states.tv_whitenoise;
                 other.expressionsprite = noone;
             }
-	    else image_speed = 1;
         }
         return false;
 
