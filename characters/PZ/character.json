@@ -12,16 +12,17 @@
     "sounds":
     {
         "taunt": "event:/sugary/taunt",
+        "superjump": "event:/sugary/superjump",
         "rank": "event:/sugary/music/rank",
         "step": "event:/sugary/step",
         "jump": "event:/sugary/jump",
         "break": "event:/sugary/break",
         "machslideboost": "event:/sugary/machslideboost",
         "mach": "event:/sugary/mach",
-		"voicemyea": "event:/sugary/voice/myea",
-		"voiceok": "event:/sugary/voice/ok",
-		"voicehurt": "event:/sugary/voice/hurt",
-		"voicetransfo": "event:/sugary/voice/transfo",
+	"voicemyea": "event:/sugary/voice/myea",
+	"voiceok": "event:/sugary/voice/ok",
+	"voicehurt": "event:/sugary/voice/hurt",
+	"voicetransfo": "event:/sugary/voice/transfo",
         "secretwall": "event:/sugary/secretwall",
         "breakdancemusic": "event:/sugary/breakdancemusic"
     }
