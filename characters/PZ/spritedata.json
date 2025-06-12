@@ -48,6 +48,21 @@
         "spr_tv_exprhurt10": {"images": 2},
         "spr_tv_exprhurt11": {"images": 2},
         "spr_tv_scaredjump": {"images": 2},
+
+	"spr_HUD_angry": {"images": 7},
+	"spr_HUD_bombend": {"images": 1},
+	"spr_HUD_groundpound": {"images": 3},
+	"spr_HUD_happy": {"images": 3},
+	"spr_HUD_hurt": {"images": 3},
+	"spr_HUD_knight": {"images": 3},
+	"spr_HUD_mach1": {"images": 3},
+	"spr_HUD_mach2": {"images": 3},
+	"spr_HUD_mach3": {"images": 3},
+	"spr_HUD_mach4": {"images": 3},
+	"spr_HUD_menacing": {"images": 4},
+	"spr_HUD_thunder": {"images": 5},
+	"spr_HUD_idle": {"images": 52},
+	
 		
 		"spr_tv_idleG": {"images": 14},
 		"spr_tv_happyG": {"images": 9},
