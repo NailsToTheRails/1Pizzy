@@ -11,7 +11,7 @@ options = [
             {
                 name: lang_get_value("PZConfigM1"),//Escape Theme
                 variable: "escapetheme",
-                options: ["Sugar Rush (Lila Mix)", "Sugar Rush (Exhibition Night)", "Glucose Getaway!", "Glucose Getaway! (Construct)", "Glucose Getaway! (Bewitched! Remix)", "Midi Getaway! (Demo 1)", "Midi Getaway! (Construct)", "THE pizzelle's FAVORITE SONG(...)", "Glucose Getaway! (Fanmade Demo 2 ver.)"],
+ 		options: ["Sugar Rush (Lila Mix)", "Sugar Rush (Exhibition Night)", "Glucose Getaway!", "Glucose Getaway! (Construct)", "Glucose Getaway! (Bewitched! Remix)", "Midi Getaway! (Demo 1)", "Midi Getaway! (Construct)", "THE pizzelle's FAVORITE SONG(...)", "It's SugaryPizza Time!", "Glucose Getaway! (Fanmade Demo 2 ver.)"],
                 desc: lang_get_value("PZConfigM1D") // Change the music that plays during Sugar Rush as Pizzelle.
             },
             {
