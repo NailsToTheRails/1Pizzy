@@ -183,6 +183,9 @@ MOD_GLOBAL.spr_newpause_treasure = sprite_add(MOD_PATH + "/sprites/pause/spr_new
 MOD_GLOBAL.fontSSspr = sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0);
 global.fontSS = font_add_sprite_ext(MOD_GLOBAL.fontSSspr, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, -6);
 
+global.MenuNoteArraySelect = 0;
+global.MenuNoteArray = [0, 48]
+
 //          EXTRA PLAYER SPR / FRENZ-E / CHEESED UP LEGACY ASSETS
 MOD_GLOBAL.spr_rocketturnair = sprite_add(MOD_PATH + "/sprites/spr_rocketturnair.png", 15, false, false, 50, 50);
 MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 13, false, false, 100, 100);
