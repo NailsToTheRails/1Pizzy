@@ -1,7 +1,20 @@
-if (character != "PZ") exit;
-
+if (character != "PZ") 
+{
+	PZ_taunt_buffer = 1
+	exit;
+}
 //IDK anymore man
-if tauntsnd != global.yaebal fmod_event_instance_release(tauntsnd)
+//if tauntsnd != global.yaebal fmod_event_instance_release(tauntsnd)
+if PZ_taunt_buffer
+{
+	PZ_taunt_buffer = 0
+	switch (global.tauntstyle) 
+	{
+		case 0: global.yaebal = fmod_event_create_instance("event:/sugary/taunt"); break;
+		case 1: global.yaebal = fmod_event_create_instance("event:/sugary/tauntOLD"); break;
+		case 2: global.yaebal = fmod_event_create_instance("event:/sfx/pep/taunt"); break;
+	}
+}
 tauntsnd = global.yaebal
 
 with (obj_pizzakinparent)

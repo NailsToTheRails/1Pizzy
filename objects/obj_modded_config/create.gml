@@ -4,6 +4,7 @@ scr_init_input();
 selection = -1
 bgscroll = 0
 // decided to do what bronzeclad did
+// THATS MY LAP 4 DELUXE MENU YOU MOTHERFUCKER
 options = [
     {
         name: lang_get_value("PZConfigT1"),// Music
