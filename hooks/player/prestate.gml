@@ -1,3 +1,4 @@
+if (character != "PZ") exit;
 var mod_instance_exists = function(_object)
 {
     with obj_mod_object
@@ -237,10 +238,10 @@ switch(state)
 	image_speed = 0.5;
     move = key_left + key_right;
     
-    if key_jump
+    /*if key_jump
     {
     	vsp = -20
-    }
+    }*/
     if (scr_slapbuffercheck() > 0 && !key_up)
     {
         if (!shotgunAnim || move != 0 || global.shootbutton != 0)
