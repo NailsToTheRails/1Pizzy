@@ -22,4 +22,13 @@ repeat(array_length(options))
     i++;
 }
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
+
+fmod_event_instance_release(global.yaebal)
+switch (global.tauntstyle) 
+{
+	case 0: global.yaebal = fmod_event_create_instance("event:/sugary/taunt"); break;
+	case 1: global.yaebal = fmod_event_create_instance("event:/sugary/tauntOLD"); break;
+	case 2: global.yaebal = fmod_event_create_instance("event:/sfx/pep/taunt"); break;
+}
+
 ini_close();

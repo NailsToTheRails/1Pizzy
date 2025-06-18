@@ -1,3 +1,4 @@
+
 if (obj_player1.character != "PZ") exit;
 switch (global.combometertype) {
 	case 0:

@@ -32,3 +32,4 @@ if instance_exists(obj_modlist)
 		i++
 	}
 }
+fmod_event_instance_release(global.yaebal)

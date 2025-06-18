@@ -91,4 +91,4 @@ with (obj_comboend) {
 	}
 }
 
-instance_activate_object(self);
+//instance_activate_object(self);

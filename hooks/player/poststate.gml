@@ -266,8 +266,7 @@ if character == "PZ"
             if key_shoot2
 			    scr_perform_move(2, state);
 	    
-             if (!mod_instance_exists(obj_wallkickDust))
-       		 instance_create(x + random_range(-40, 40), y + random_range(-40, 40), obj_wallkickDust);
+            if (!mod_instance_exists(obj_wallkickDust)) instance_create(x + random_range(-40, 40), y + random_range(-40, 40), obj_wallkickDust);
 
             if punch_afterimage > 0
                 punch_afterimage--;

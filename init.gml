@@ -51,6 +51,14 @@ global.experimenPZ = ini_read_real("modded","experimenPZ",0);
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
 
 ini_close();
+
+switch (global.tauntstyle) 
+{
+	case 0: global.yaebal = fmod_event_create_instance("event:/sugary/taunt"); break;
+	case 1: global.yaebal = fmod_event_create_instance("event:/sugary/tauntOLD"); break;
+	case 2: global.yaebal = fmod_event_create_instance("event:/sfx/pep/taunt"); break;
+}
+
 MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
 MOD_GLOBAL.pizzyost[2,0] = "event:/sugary/music/(L1)Glucose Getaway"
