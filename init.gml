@@ -186,6 +186,7 @@ MOD_GLOBAL.spr_newpause_border = sprite_add(MOD_PATH + "/sprites/pause/spr_newpa
 MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
 MOD_GLOBAL.spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 10, false, false, 36, 36);
 MOD_GLOBAL.spr_newpause_secreticon = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secreticon.png", 3, false, false, 40, 40);
+MOD_GLOBAL.spr_newpause_secrets = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secrets.png", 3, false, false, 16, 16);
 MOD_GLOBAL.spr_newpause_treasure = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_treasure.png", 2, false, false, 94, 91);
 
 MOD_GLOBAL.fontSSspr = sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0);
