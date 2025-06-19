@@ -47,7 +47,7 @@ global.lap3duringinf = ini_read_real("modded", "lap3duringinf", 0);
 global.walljumptype = ini_read_real("modded", "walljumptype", 0);
 global.experimenPZ = ini_read_real("modded","experimenPZ",0);
 
-
+global.PZ_menu_note_inst = fmod_event_create_instance("event:/sugary/pausemove");
 global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
 
 ini_close();
