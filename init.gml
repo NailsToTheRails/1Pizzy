@@ -27,32 +27,33 @@ MOD_GLOBAL.stop = add_sprite("spr_sranktopping",1,135,87)
 MOD_GLOBAL.pzcol = add_sprite("spr_fontcandle",10,0,0)
 global.PZcollectfont = font_add_sprite_ext(MOD_GLOBAL.pzcol, "0123456789", true, 0);
 
-// COSMETIC
-global.combometertype = ini_read_real("modded", "combometertype", 0);
-global.spookeytoggle = ini_read_real("modded", "spookeytoggle", 0);
-global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
-global.combonames = ini_read_real("modded", "combonames", 0);
-global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
+
+global.PZ_opts = {
+	// COSMETIC
+	combometertype : ini_read_real("modded", "combometertype", 0),
+	spookeytoggle : ini_read_real("modded", "spookeytoggle", 0),
+	toppinstyle : ini_read_real("modded", "toppinstyle", 0),
+	combonames : ini_read_real("modded", "combonames", 0),
+	pizzypronoun : ini_read_real("modded", "pizzypronoun", 1), // 0 he/him 1 she/her 2 they/them
+	extremevisual : ini_read_real("modded", "extremevisual", 0),
+	tauntstyle : ini_read_real("modded", "tauntstyle", 0),
+	// MUSIC
+	escapetheme : ini_read_real("modded", "escapetheme", 0),
+	lap2theme : ini_read_real("modded", "lap2theme", 0),
+	lap3theme : ini_read_real("modded", "lap3theme", 0),
+	lap3duringinf : ini_read_real("modded", "lap3duringinf", 0),
+	// GAMEPLAY
+	walljumptype : ini_read_real("modded", "walljumptype", 0),
+	experimenPZ : ini_read_real("modded","experimenPZ",0),
+}
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
-global.extremevisual = ini_read_real("modded", "extremevisual", 0);
-global.tauntstyle = ini_read_real("modded", "tauntstyle", 0);
-
-// MUSIC
-global.escapetheme = ini_read_real("modded", "escapetheme", 0);
-global.lap2theme = ini_read_real("modded", "lap2theme", 0);
-global.lap3theme = ini_read_real("modded", "lap3theme", 0);
-global.lap3duringinf = ini_read_real("modded", "lap3duringinf", 0);
-
-// GAMEPLAY
-global.walljumptype = ini_read_real("modded", "walljumptype", 0);
-global.experimenPZ = ini_read_real("modded","experimenPZ",0);
 
 global.PZ_menu_note_inst = fmod_event_create_instance("event:/sugary/pausemove");
-global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
+global.pizzyost = [global.PZ_opts.escapetheme, global.PZ_opts.lap2theme, global.PZ_opts.lap3theme];
 
 ini_close();
 
-switch (global.tauntstyle) 
+switch (global.PZ_opts.tauntstyle) 
 {
 	case 0: global.yaebal = fmod_event_create_instance("event:/sugary/taunt"); break;
 	case 1: global.yaebal = fmod_event_create_instance("event:/sugary/tauntOLD"); break;

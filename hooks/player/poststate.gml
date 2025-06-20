@@ -141,7 +141,7 @@ if character == "PZ"
         #region SUPER JUMP
 
         case states.Sjump:
-	if (global.walljumptype == 0) {
+	if (global.PZ_opts.walljumptype == 0) {
             move = key_left + key_right;
             if move != 0 && sprite_index == spr_superjump
             {
@@ -294,7 +294,7 @@ if character == "PZ"
         #endregion
          #region ROCKET
         case states.rocket:
-      	if (global.experimenPZ) {
+      	if (global.PZ_opts.experimenPZ) {
             if (move != xscale && move != 0 && sprite_index != spr_rocketstart && !grounded) {
 	     image_speed = 0.55
              state = states.rocketslide;
@@ -304,7 +304,7 @@ if character == "PZ"
         break;
 
         case states.rocketslide:
-	if (global.experimenPZ) {
+	if (global.PZ_opts.experimenPZ) {
             if (!grounded) 
            {
 	   	sprite_index = MOD_GLOBAL.spr_rocketturnair;
@@ -320,7 +320,7 @@ if character == "PZ"
         #endregion
                #region FIREMOUTH
         case states.firemouth:
-	if (global.experimenPZ) {
+	if (global.PZ_opts.experimenPZ) {
             if (grounded && image_index > 8)
             {
                 if (key_jump2)
@@ -354,7 +354,7 @@ if character == "PZ"
 		  #region FIRE ASS
 
         case states.fireass:
-			if (global.walljumptype == 0) 
+			if (global.PZ_opts.walljumptype == 0) 
 			{
 				if scr_slapbuffercheck()//(input_buffer_slap > 0)
 		        {
@@ -380,7 +380,7 @@ if character == "PZ"
         #endregion
         #region KNIGHT
         case 38:
-        if (global.experimenPZ = 1 && character == "PZ")
+        if (global.PZ_opts.experimenPZ = 1 && character == "PZ")
         {
             if (PZ_sprite_previous == spr_knightpepdoublejump && key_jump2 && !grounded)
             {

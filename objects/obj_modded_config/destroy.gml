@@ -21,10 +21,10 @@ repeat(array_length(options))
     }
     i++;
 }
-global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
+global.pizzyost = [global.PZ_opts.escapetheme, global.PZ_opts.lap2theme, global.PZ_opts.lap3theme];
 
 fmod_event_instance_release(global.yaebal)
-switch (global.tauntstyle) 
+switch (global.PZ_opts.tauntstyle) 
 {
 	case 0: global.yaebal = fmod_event_create_instance("event:/sugary/taunt"); break;
 	case 1: global.yaebal = fmod_event_create_instance("event:/sugary/tauntOLD"); break;

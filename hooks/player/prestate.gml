@@ -9,7 +9,7 @@ if PZ_taunt_buffer or global.yaebal != tauntsnd
 {
 	PZ_taunt_buffer = 0
 	fmod_event_instance_release(tauntsnd)
-	switch (global.tauntstyle) 
+	switch (global.PZ_opts.tauntstyle) 
 	{
 		case 0: global.yaebal = fmod_event_create_instance("event:/sugary/taunt"); break;
 		case 1: global.yaebal = fmod_event_create_instance("event:/sugary/tauntOLD"); break;
@@ -20,7 +20,7 @@ tauntsnd = global.yaebal
 
 with (obj_pizzakinparent)
 {
-	if (global.toppinstyle == 0) 
+	if (global.PZ_opts.toppinstyle == 0) 
 	{
 	    switch (object_index)
 	    {
@@ -173,14 +173,14 @@ with (obj_pizzakinparent)
 }
 with (obj_key)
 {
-	if (global.spookeytoggle) sprite_index = MOD_GLOBAL.KEY;
+	if (global.PZ_opts.spookeytoggle) sprite_index = MOD_GLOBAL.KEY;
 }
 with (obj_keyfollow)
 {
-	if (global.spookeytoggle && sprite_index == spr_key) sprite_index = MOD_GLOBAL.KEYFOLLOW;
+	if (global.PZ_opts.spookeytoggle && sprite_index == spr_key) sprite_index = MOD_GLOBAL.KEYFOLLOW;
 }
 
-if global.walljumptype == 3 && character == "PZ"
+if global.PZ_opts.walljumptype == 3 && character == "PZ"
 {
 	if (state == states.mach3 || state == states.mach2 || state == states.mach1 || state == 104 || state == 5) && state != states.machcancel && !grounded && scr_check_groundpound2()
 	{
@@ -197,7 +197,7 @@ if global.walljumptype == 3 && character == "PZ"
 switch(state) 
 {
 	case states.freefallland:
-	if (global.walljumptype == 2 && character == "PZ") {
+	if (global.PZ_opts.walljumptype == 2 && character == "PZ") {
 		if (key_attack) {
 			movespeed = 50
 			state = states.mach3
@@ -205,13 +205,13 @@ switch(state)
 	}
 	break;
 	case states.machslide:
-	if (global.walljumptype == 2 && (sprite_index == spr_machslide || sprite_index == spr_machslidestart)) {
+	if (global.PZ_opts.walljumptype == 2 && (sprite_index == spr_machslide || sprite_index == spr_machslidestart)) {
 		movespeed = 0;
 		hsp = lerp(hsp, 0, 0.6);
 	}
 	break;
 	case states.freefall:
-	if (global.walljumptype == 2 && character == "PZ") {
+	if (global.PZ_opts.walljumptype == 2 && character == "PZ") {
 		// No Cheats Used Here - NJA
 		if not (sprite_index == spr_poundcancel1 or sprite_index == spr_poundcancelstart) {
 		freefallsmash = 50
@@ -221,7 +221,7 @@ switch(state)
 	}
 	break;
 	case states.shotgun:
-	if (global.walljumptype == 2 && sprite_index == spr_shotgunpullout && character == "PZ") {
+	if (global.PZ_opts.walljumptype == 2 && sprite_index == spr_shotgunpullout && character == "PZ") {
 			// No Promises - NJA
 			movespeed = 50
 			state = states.mach3
@@ -312,7 +312,7 @@ switch(state)
 	case states.Sjump:
 	if (character == "PZ") 
 	{
-		switch (global.walljumptype) 
+		switch (global.PZ_opts.walljumptype) 
 		{
 			case 0:
 			if sprite_index == spr_Sjumpcancelstart
@@ -337,7 +337,7 @@ switch(state)
 			break;
 			case 1:
 			case 2:
-			if (global.walljumptype == 2)
+			if (global.PZ_opts.walljumptype == 2)
 				sjumpvsp -= 5
 			if (sprite_index == spr_Sjumpcancelstart)
 			{
@@ -345,7 +345,7 @@ switch(state)
 				state = states.mach3;
 				vsp = -10;
 				hsp = 0;
-				if (global.walljumptype == 1) 
+				if (global.PZ_opts.walljumptype == 1) 
 				{
 					movespeed = 13;	
 				} 
@@ -386,7 +386,7 @@ switch(state)
 		state = states.normal;
 		if isgustavo state = states.ratmount;
 		image_index = 0;
-		if (global.spookeytoggle) {
+		if (global.PZ_opts.spookeytoggle) {
 			ds_list_add(global.KeyFollowerList, instance_create(x, y, obj_spookeyMODfollow));
 		} else {
 			if IT_final_key() ds_list_add(global.KeyFollowerList, instance_create(x, y, obj_keyfollow));

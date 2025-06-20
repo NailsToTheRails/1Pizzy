@@ -77,14 +77,14 @@ with (obj_ghostdrapes)
 }
 // Its Quite That Simple Really.
 with (obj_combotitle) {
-	if (global.combonames) {
+	if (global.PZ_opts.combonames) {
 	sprite_index = MOD_GLOBAL.spr_SScomboTitles;
 	} else {
 	sprite_index = spr_comboend_title1;
 	}
 }
 with (obj_comboend) {
-	if (global.combonames) {
+	if (global.PZ_opts.combonames) {
 	sprite = MOD_GLOBAL.spr_SScomboTitles;
 	} else {
 	sprite = spr_comboend_title1;

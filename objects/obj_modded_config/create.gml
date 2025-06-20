@@ -7,7 +7,7 @@ bgscroll = 0
 // THATS MY LAP 4 DELUXE MENU YOU MOTHERFUCKER
 
 // My Bad .     
-opt_struct = global
+opt_struct = global.PZ_opts
 options = [
     {
         name: lang_get_value("PZConfigT1"),// Music

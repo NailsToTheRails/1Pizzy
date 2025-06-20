@@ -1,6 +1,6 @@
 if character != "PZ" exit;
 scr_fmod_soundeffect(jumpsnd, x, y);
-switch (global.walljumptype) 
+switch (global.PZ_opts.walljumptype) 
 {
 	case 3:
 	if movespeed < 12 break;
@@ -71,7 +71,7 @@ switch (global.walljumptype)
 
 	jumpstop = false;
 	xscale *= -1;
-	if global.walljumptype == 1 
+	if global.PZ_opts.walljumptype == 1 
 	{
 		if movespeed > 12  
 	 	{
