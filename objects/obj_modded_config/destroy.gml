@@ -16,7 +16,7 @@ repeat(array_length(options))
     var j = 0;
     repeat array_length(options[i].variables)
     {
-        ini_write_real("modded", options[i].variables[j].variable, variable_global_get(options[i].variables[j].variable));
+        ini_write_real("modded", options[i].variables[j].variable, struct_get(opt_struct, options[i].variables[j].variable));
         j++;
     }
     i++;

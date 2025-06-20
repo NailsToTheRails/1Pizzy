@@ -14,7 +14,7 @@ repeat (array_length(options[category].variables)) {
     draw_text(200, SCREEN_HEIGHT/6 + (i * 32), (options[category].variables[i].name))
     draw_set_font(lang_get_font("font_small"))
     draw_set_halign(fa_right);
-    draw_text(SCREEN_WIDTH - 200,SCREEN_HEIGHT/6 + (i * 32), options[category].variables[i].options[variable_global_get(options[category].variables[i].variable)])
+    draw_text(SCREEN_WIDTH - 200,SCREEN_HEIGHT/6 + (i * 32), options[category].variables[i].options[struct_get(opt_struct, options[category].variables[i].variable)])
     i++;
 }
 draw_set_halign(fa_center);
