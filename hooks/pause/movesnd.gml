@@ -12,7 +12,6 @@ _uid = fmod_event_create_instance("event:/sugary/pausemove");
 _note = global.MenuNoteArray[global.MenuNoteArraySelect];
 fmod_event_instance_set_parameter(_uid, "note", _note, true);
 fmod_event_instance_play(_uid);
-fmod_event_instance_release(_uid);
 global.MenuNoteArraySelect++;
 global.MenuNoteArraySelect = wrap(global.MenuNoteArraySelect, 0, array_length(global.MenuNoteArray) - 1);
 return false;

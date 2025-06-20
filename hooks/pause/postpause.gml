@@ -76,6 +76,10 @@ switch (global.leveltosave)
 	 case "ruin":
             note_array = [MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.C6, MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.CS6];
             break;
+
+	case "badland":
+            note_array = [MusicNote.G5, MusicNote.D6, MusicNote.D6, MusicNote.G6, MusicNote.F6, MusicNote.F6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.AS5, MusicNote.C6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.AS5, MusicNote.D6, MusicNote.C6, MusicNote.F6, MusicNote.F6];
+            break;
      }
 
 global.MenuNoteArray = note_array;
