@@ -52,7 +52,7 @@ if (global.sandbox)
 }
 
 // Replace names to have pronouns AFTER REMUX! for pronouns
-var pro = MOD_GLOBAL.pizzypronoun[global.pizzypronoun];
+var pro = MOD_GLOBAL.pizzypronoun[global.PZ_opts.pizzypronoun];
 for(var i = 0, n = array_length(palettes); i < n; ++i)
 {
     var this = palettes[i];

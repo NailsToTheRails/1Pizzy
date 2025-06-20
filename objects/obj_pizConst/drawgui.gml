@@ -1,5 +1,5 @@
 if (instance_exists(obj_player1)) {
-if (global.walljumptype == 2 && obj_player1.character == "PZ") {
+if (global.PZ_opts.walljumptype == 2 && obj_player1.character == "PZ") {
 draw_set_font(global.font_small);
 draw_set_colour(c_white);
 draw_set_align(fa_middle);

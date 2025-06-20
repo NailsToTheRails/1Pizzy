@@ -56,30 +56,27 @@ playerPauseIndex = irandom_range(0, sprite_get_number(MOD_GLOBAL.spr_pizzelle_pa
 borderscale = 4;
 global.MenuNoteArraySelect = 0;
 switch (global.leveltosave)
-    {
-        default:
-            note_array = [MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.G6, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.C7, MusicNote.G6, MusicNote.C6, MusicNote.G6];
-            break;
+{
+	default:
+    note_array = [MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.G6, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.C7, MusicNote.G6, MusicNote.C6, MusicNote.G6];
+    break;
 
-        case "tutorial":
-            note_array = [MusicNote.DS7, MusicNote.CS7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.DS7, MusicNote.CS7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.B6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.E7, MusicNote.FS7, MusicNote.E7, MusicNote.CS7, MusicNote.E7, MusicNote.B6, MusicNote.GS6, MusicNote.GS6, MusicNote.A6, MusicNote.B6, MusicNote.A6, MusicNote.GS6, MusicNote.FS6, MusicNote.E6, MusicNote.E7];
-            break;
-        
-        case "entrance":
-            note_array = [MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.CS6, MusicNote.B5, MusicNote.A5, MusicNote.FS5, MusicNote.D5, MusicNote.A5, MusicNote.B5, MusicNote.CS6, MusicNote.B5, MusicNote.E6, MusicNote.CS6, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.CS6, MusicNote.E6, MusicNote.A6, MusicNote.B6, MusicNote.B6, MusicNote.A6, MusicNote.B6, MusicNote.CS7, MusicNote.D7, MusicNote.CS7, MusicNote.FS6];
-            break;
+	case "tutorial":
+    note_array = [MusicNote.DS7, MusicNote.CS7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.DS7, MusicNote.CS7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.B6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.E7, MusicNote.FS7, MusicNote.E7, MusicNote.CS7, MusicNote.E7, MusicNote.B6, MusicNote.GS6, MusicNote.GS6, MusicNote.A6, MusicNote.B6, MusicNote.A6, MusicNote.GS6, MusicNote.FS6, MusicNote.E6, MusicNote.E7];
+    break;
 
-        case "medieval":
-            note_array = [MusicNote.C6, MusicNote.G6, MusicNote.FS6, MusicNote.C6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.F6, MusicNote.C6, MusicNote.G6, MusicNote.FS6, MusicNote.C6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.F6, MusicNote.C6, MusicNote.G6, MusicNote.FS6, MusicNote.C6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.F6, MusicNote.C6, MusicNote.G6, MusicNote.FS6, MusicNote.C6, MusicNote.DS6, MusicNote.F6, MusicNote.G6, MusicNote.AS6, MusicNote.C7];
-            break;
+	case "entrance":
+    note_array = [MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.CS6, MusicNote.B5, MusicNote.A5, MusicNote.FS5, MusicNote.D5, MusicNote.A5, MusicNote.B5, MusicNote.CS6, MusicNote.B5, MusicNote.E6, MusicNote.CS6, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.CS6, MusicNote.E6, MusicNote.A6, MusicNote.B6, MusicNote.B6, MusicNote.A6, MusicNote.B6, MusicNote.CS7, MusicNote.D7, MusicNote.CS7, MusicNote.FS6];
+    break;
 
-	 case "ruin":
-            note_array = [MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.C6, MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.CS6];
-            break;
+	case "medieval":
+    note_array = [MusicNote.C6, MusicNote.G6, MusicNote.FS6, MusicNote.C6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.F6, MusicNote.C6, MusicNote.G6, MusicNote.FS6, MusicNote.C6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.F6, MusicNote.C6, MusicNote.G6, MusicNote.FS6, MusicNote.C6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.DS6, MusicNote.F6, MusicNote.C6, MusicNote.G6, MusicNote.FS6, MusicNote.C6, MusicNote.DS6, MusicNote.F6, MusicNote.G6, MusicNote.AS6, MusicNote.C7];
+    break;
 
-	case "badland":
-            note_array = [MusicNote.G5, MusicNote.D6, MusicNote.D6, MusicNote.G6, MusicNote.F6, MusicNote.F6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.AS5, MusicNote.C6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.AS5, MusicNote.D6, MusicNote.C6, MusicNote.F6, MusicNote.F6];
-            break;
-     }
-
+	case "ruin":
+    note_array = [MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.C6, MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.CS6];
+    break;
+}
 global.MenuNoteArray = note_array;
+fmod_event_instance_set_paused(global.PZ_menu_note_inst, false);
+//show_message("test")

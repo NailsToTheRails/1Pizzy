@@ -12,7 +12,7 @@ if obj_player1.character == "PZ"
     if event == "event:/music/pizzatime" || event == "event:/modded/lap3"
 	{
 		var ass = 0;
-		if (global.lapmode != 2) && (!global.lap3duringinf) ass = 1;
+		if (global.lapmode != 2) && (!global.PZ_opts.lap3duringinf) ass = 1;
 		var current_lap = clamp(global.laps,0,2-ass)
 		//show_message(current_lap)
 		//if current_lap != global.laps return false;
@@ -20,7 +20,7 @@ if obj_player1.character == "PZ"
 		/*
 		if global.laps = 0
 		{
-			switch (global.escapetheme) {
+			switch (global.PZ_opts.escapetheme) {
 			case 0 :
 			return MOD_GLOBAL.pizzyost.SugarRushLila
 			break;
@@ -58,7 +58,7 @@ if obj_player1.character == "PZ"
 	{
 	if global.laps = 1
 			{
-			switch (global.lap2theme) {
+			switch (global.PZ_opts.lap2theme) {
 			case 0 :
 			return MOD_GLOBAL.pizzyost.SweetReleaseEN
 			break;
@@ -87,7 +87,7 @@ if obj_player1.character == "PZ"
 	{
 	if global.laps = 2
 			{
-			switch (global.lap3theme) {
+			switch (global.PZ_opts.lap3theme) {
 			case 0 :
 			return MOD_GLOBAL.pizzyost.ClockinOutLate
 			break;

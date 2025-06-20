@@ -8,10 +8,11 @@ function wrap(arg0, arg1, arg2)
     return ((((arg0 - _min) % range) + range) % range) + _min;
 }
 
-_uid = fmod_event_create_instance("event:/sugary/pausemove");
+//
+
 _note = global.MenuNoteArray[global.MenuNoteArraySelect];
-fmod_event_instance_set_parameter(_uid, "note", _note, true);
-fmod_event_instance_play(_uid);
+fmod_event_instance_set_parameter(global.PZ_menu_note_inst, "note", _note, true);
+fmod_event_instance_play(global.PZ_menu_note_inst);
 global.MenuNoteArraySelect++;
 global.MenuNoteArraySelect = wrap(global.MenuNoteArraySelect, 0, array_length(global.MenuNoteArray) - 1);
 return false;
