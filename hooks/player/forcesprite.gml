@@ -27,9 +27,6 @@ if object_index = obj_player1
         case spr_playerN_divebombland: return MOD_GLOBAL.frenzy.divebombland; break;
         case spr_playerN_divebombfall: return MOD_GLOBAL.frenzy.divebombfall; break;
         case spr_playerN_divebomb: return MOD_GLOBAL.frenzy.divebomb; break;
-        case spr_mach4:
-        if place_meeting(x,y+5,obj_water)
-        {return MOD_GLOBAL.spr_PZwatermach;}
-        break;
+        case spr_mach4: if place_meeting(x,y+5,obj_water) {return MOD_GLOBAL.spr_PZwatermach;} break;
     }
 }

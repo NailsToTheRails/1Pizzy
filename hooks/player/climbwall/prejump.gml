@@ -3,7 +3,39 @@ scr_fmod_soundeffect(jumpsnd, x, y);
 switch (global.PZ_opts.walljumptype) 
 {
 	case 3:
-	if movespeed < 12 break;
+	if movespeed < 12
+	{
+		repeat (5)
+		{
+		    with instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_secretpoof) {
+			sprite_index = MOD_GLOBAL.spr_spinningFireParticle			
+		}
+		}
+		
+		with (instance_create(x, y, obj_jumpdust, 
+		{
+		    playerID: id
+		}))
+		{
+			image_speed = 0.85
+		    image_xscale = other.xscale;
+		    sprite_index = MOD_GLOBAL.spr_wallkick_effect;
+		}
+	
+		input_buffer_jump = 0;
+		key_jump = false;
+		railmovespeed = 0;
+	
+		sprite_index = spr_mach4;
+		state = states.mach3;
+		vsp = -10;
+	
+		jumpstop = false;
+		xscale *= -1;
+ 		state = states.mach2
+		return false;
+		break;
+	}
 	case 0:
     input_buffer_jump = 0;
     key_jump = false;
