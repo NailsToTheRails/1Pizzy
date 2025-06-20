@@ -5,9 +5,10 @@ if (character != "PZ")
 }
 //IDK anymore man
 //if tauntsnd != global.yaebal fmod_event_instance_release(tauntsnd)
-if PZ_taunt_buffer
+if PZ_taunt_buffer or global.yaebal != tauntsnd
 {
 	PZ_taunt_buffer = 0
+	fmod_event_instance_release(tauntsnd)
 	switch (global.tauntstyle) 
 	{
 		case 0: global.yaebal = fmod_event_create_instance("event:/sugary/taunt"); break;
