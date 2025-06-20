@@ -188,7 +188,7 @@ dresser_PZ49 = "Doizelle"
 dresser_PZ49D = "Can PRONOUN_1 die already...?"
 
 dresser_PZ50 = "Daedalend"
-dresser_PZ50D = "The legend"
+dresser_PZ50D = "Rest in peace, may you rest happily."
 
 dresser_PZ51 = "NJA"
 dresser_PZ51D = "I LOVE IT!!!!."
