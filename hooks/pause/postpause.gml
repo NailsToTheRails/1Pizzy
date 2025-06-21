@@ -79,4 +79,12 @@ switch (global.leveltosave)
 }
 global.MenuNoteArray = note_array;
 fmod_event_instance_set_paused(global.PZ_menu_note_inst, false);
-//show_message("test")
+
+/*
+//stupidest way to get the player's character
+instance_activate_object(obj_player1)
+with (obj_player1)
+{
+	other.pl_character = character
+}
+instance_deactivate_object(obj_player1)

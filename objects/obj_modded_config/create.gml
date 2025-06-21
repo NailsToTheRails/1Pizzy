@@ -83,6 +83,12 @@ options = [
                 options: ["OFF", "LAP 4", "LAP 3+"],
                 desc: lang_get_value("PZConfigC7D")
             },
+            {
+                name: lang_get_value("PZConfigC8"),// Extreme Exhibition Visuals
+                variable: "SSENmenu",
+                options: ["OFF", "ON"/*, "Pizzelle Only"*/],
+                desc: lang_get_value("PZConfigC8D")
+            },
         ]
     },
 	{

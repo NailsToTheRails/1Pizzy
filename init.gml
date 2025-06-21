@@ -37,6 +37,7 @@ global.PZ_opts = {
 	pizzypronoun : ini_read_real("modded", "pizzypronoun", 1), // 0 he/him 1 she/her 2 they/them
 	extremevisual : ini_read_real("modded", "extremevisual", 0),
 	tauntstyle : ini_read_real("modded", "tauntstyle", 0),
+	SSENmenu : ini_read_real("modded", "SSENmenu", 1),
 	// MUSIC
 	escapetheme : ini_read_real("modded", "escapetheme", 0),
 	lap2theme : ini_read_real("modded", "lap2theme", 0),

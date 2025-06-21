@@ -8,7 +8,7 @@ function wrap(arg0, arg1, arg2)
     return ((((arg0 - _min) % range) + range) % range) + _min;
 }
 
-//
+if (global.PZ_opts.SSENmenu == 0) /*or (global.PZ_opts.SSENmenu == 2 && pl_character != "PZ")*/ exit;
 
 _note = global.MenuNoteArray[global.MenuNoteArraySelect];
 fmod_event_instance_set_parameter(global.PZ_menu_note_inst, "note", _note, true);
