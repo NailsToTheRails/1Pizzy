@@ -1,3 +1,28 @@
+version_check = function(ver_allowed, show_error = 1)
+{
+    var suka = string_split(global.game_version,".",false)
+    suka[0] = string_copy(suka[0], 2, 1);
+    repeat(array_length(suka)-array_length(ver_allowed)) array_push(ver_allowed,0)
+    repeat(array_length(ver_allowed)-array_length(suka)) array_push(suka,0)
+    for (var i = 0; i < array_length(suka); i++)
+    {
+        if ver_allowed[i] > real(suka[i]) 
+        {
+        	var WHAT_THE_FUCK = "";
+			for(var o = 0; o < array_length(ver_allowed); o++)
+			{
+				WHAT_THE_FUCK = WHAT_THE_FUCK+string(ver_allowed[o])+"."
+			}
+            if show_error show_message("ERROR\n-----------"+"\nOutdated CUM+ version for mod: "+global.processing_mod.name+"\nVersion Needed: "+WHAT_THE_FUCK+"\nCurrent Version: "+global.game_version+"\nThe mod may not work correctly,\nUse at your own risk"+"\n-----------")
+            return false;
+        }
+        else if ver_allowed[i] != real(suka[i]) return true;
+    }
+	return true;
+}
+
+version_check([3])
+
 randomize()
 MOD_GLOBAL._iconlist = []
 
