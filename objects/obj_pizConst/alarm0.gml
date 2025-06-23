@@ -1,18 +1,6 @@
 if !instance_exists(obj_player1) exit;
 if !variable_global_exists("leveltosave") exit;
 
-
-if (global.PZ_opts.extremevisual && check_lap_mode(2) && global.panic && room != rank_room && global.leveltosave != "practice")
-{
-    var lap = global.PZ_opts.extremevisual == 1 ? 3 : 2;
-    if (global.laps >= lap)
-    {
-        instance_create(0, 0, obj_yogurtdebriseffect);
-        instance_create(0, 0, obj_yogurtfirebg);
-    }
-    obj_panicdebris.draw = false;
-}
-
 if global.panic exit;
 if global.timeattack exit;
 if global.snickchallenge exit;

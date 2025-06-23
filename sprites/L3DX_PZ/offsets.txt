@@ -1,2 +1,0 @@
-spr_arm: 5, 81
-spr_gusgarage and spr_gusgarage_door: 96, 144
