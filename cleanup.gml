@@ -32,3 +32,5 @@ if instance_exists(obj_modlist)
 		i++
 	}
 }
+fmod_event_instance_release(global.yaebal)
+fmod_event_instance_release(global.PZ_menu_note_inst)

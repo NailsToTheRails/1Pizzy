@@ -9,7 +9,7 @@ if character == "PZ" && sprite_index == attackdash
 	
         if key_down
             vsp = 6;
-	if (global.walljumptype == 0) {
+	if (global.PZ_opts.walljumptype == 0) {
         if key_down or image_index >= image_number - 4
         {
             sprite_index = spr_suplexdashjumpstart;
@@ -20,7 +20,7 @@ if character == "PZ" && sprite_index == attackdash
 	}
         else
             vsp = min(vsp, 0);
-	if (global.walljumptype == 2) {
+	if (global.PZ_opts.walljumptype == 2) {
 	// NJATASTIC
 	if key_down
         {

@@ -35,6 +35,8 @@ PZConfigC6 = "Spookey Toggle"
 PZConfigC6D = "Replaces the key with Spookey."
 PZConfigC7 = "Extreme Exhibition Visuals"
 PZConfigC7D = "Adds the Lap 4 visuals from Extreme Exhibition"
+PZConfigC8 = "SS:EN Pause Screen"
+PZConfigC8D = "Toggles the pause screen from SS:EN"
 
 PZConfigG1 = "Transformation Changes"
 PZConfigG1D = "Changes some transformation movesets."

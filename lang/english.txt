@@ -188,7 +188,7 @@ dresser_PZ49 = "Doizelle"
 dresser_PZ49D = "Can PRONOUN_1 die already...?"
 
 dresser_PZ50 = "Daedalend"
-dresser_PZ50D = "The legend"
+dresser_PZ50D = "Rest in peace, may you rest happily."
 
 dresser_PZ51 = "NJA"
 dresser_PZ51D = "I LOVE IT!!!!."
@@ -350,7 +350,7 @@ dresser_VLC = "Bought in the VLC MEDIA PLAYER!"
 
 pattern_PZQ_1 = "Alright"
 pattern_PZQ_1D = "Hear me out."
-dresser_Alright = "You activated noclip, you baby."
+dresser_Alright = "You activated noclip like a little bitch."
 pattern_PZQ_2 = "Smooth"
 pattern_PZQ_2D = "But not quite."
 dresser_Smooth = "Unlocked by not crashing the rocket transformation in Deep Dish 9."

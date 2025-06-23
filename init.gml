@@ -19,30 +19,48 @@ _iconrandom = irandom_range(0,array_length(MOD_GLOBAL._iconlist)-1)
 ini_open(MOD_PATH + "/saveData.ini");
 // SETTING VARIABLES
 
-// COSMETIC
-global.combometertype = ini_read_real("modded", "combometertype", 0);
-global.spookeytoggle = ini_read_real("modded", "spookeytoggle", 0);
-global.toppinstyle = ini_read_real("modded", "toppinstyle", 0);
-global.combonames = ini_read_real("modded", "combonames", 0);
-global.pizzypronoun = ini_read_real("modded", "pizzypronoun", 1); // 0 he/him 1 she/her 2 they/them
+MOD_GLOBAL.cakehud = add_sprite("spr_cakehud",1,135,87)
+MOD_GLOBAL.btop = add_sprite("spr_branktopping",1,135,87)
+MOD_GLOBAL.ctop = add_sprite("spr_cranktopping",1,135,87)
+MOD_GLOBAL.atop = add_sprite("spr_aranktopping",1,135,87)
+MOD_GLOBAL.stop = add_sprite("spr_sranktopping",1,135,87)
+MOD_GLOBAL.pzcol = add_sprite("spr_fontcandle",10,0,0)
+global.PZcollectfont = font_add_sprite_ext(MOD_GLOBAL.pzcol, "0123456789", true, 0);
+
+
+global.PZ_opts = {
+	// COSMETIC
+	combometertype : ini_read_real("modded", "combometertype", 0),
+	spookeytoggle : ini_read_real("modded", "spookeytoggle", 0),
+	toppinstyle : ini_read_real("modded", "toppinstyle", 0),
+	combonames : ini_read_real("modded", "combonames", 0),
+	pizzypronoun : ini_read_real("modded", "pizzypronoun", 1), // 0 he/him 1 she/her 2 they/them
+	extremevisual : ini_read_real("modded", "extremevisual", 0),
+	tauntstyle : ini_read_real("modded", "tauntstyle", 0),
+	SSENmenu : ini_read_real("modded", "SSENmenu", 1),
+	// MUSIC
+	escapetheme : ini_read_real("modded", "escapetheme", 0),
+	lap2theme : ini_read_real("modded", "lap2theme", 0),
+	lap3theme : ini_read_real("modded", "lap3theme", 0),
+	lap3duringinf : ini_read_real("modded", "lap3duringinf", 0),
+	// GAMEPLAY
+	walljumptype : ini_read_real("modded", "walljumptype", 0),
+	experimenPZ : ini_read_real("modded","experimenPZ",0),
+}
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
-global.extremevisual = ini_read_real("modded", "extremevisual", 0);
-global.tauntstyle = ini_read_real("modded", "tauntstyle", 0);
 
-// MUSIC
-global.escapetheme = ini_read_real("modded", "escapetheme", 0);
-global.lap2theme = ini_read_real("modded", "lap2theme", 0);
-global.lap3theme = ini_read_real("modded", "lap3theme", 0);
-global.lap3duringinf = ini_read_real("modded", "lap3duringinf", 0);
-
-// GAMEPLAY
-global.walljumptype = ini_read_real("modded", "walljumptype", 0);
-global.experimenPZ = ini_read_real("modded","experimenPZ",0);
-
-
-global.pizzyost = [global.escapetheme, global.lap2theme, global.lap3theme];
+global.PZ_menu_note_inst = fmod_event_create_instance("event:/sugary/pausemove");
+global.pizzyost = [global.PZ_opts.escapetheme, global.PZ_opts.lap2theme, global.PZ_opts.lap3theme];
 
 ini_close();
+
+switch (global.PZ_opts.tauntstyle) 
+{
+	case 0: global.yaebal = fmod_event_create_instance("event:/sugary/taunt"); break;
+	case 1: global.yaebal = fmod_event_create_instance("event:/sugary/tauntOLD"); break;
+	case 2: global.yaebal = fmod_event_create_instance("event:/sfx/pep/taunt"); break;
+}
+
 MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
 MOD_GLOBAL.pizzyost[2,0] = "event:/sugary/music/(L1)Glucose Getaway"
@@ -160,6 +178,25 @@ instance_create(0,0,obj_pizConst);
 MOD_GLOBAL.pizzloaded = false;
 MOD_GLOBAL.PZPatLoaded = false;
 
+//	    PAUSE SCREEN ASSETS
+MOD_GLOBAL.spr_newpause_bars1 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars1.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars2 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars2.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars3 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars3.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars4 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars4.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_bars5 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars5.png", 2, false, false, 160, 48);
+MOD_GLOBAL.spr_newpause_border = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_border.png", 2, false, false, 530, 320);
+MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
+MOD_GLOBAL.spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 10, false, false, 36, 36);
+MOD_GLOBAL.spr_newpause_secreticon = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secreticon.png", 3, false, false, 40, 40);
+MOD_GLOBAL.spr_newpause_secrets = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secrets.png", 3, false, false, 16, 16);
+MOD_GLOBAL.spr_newpause_treasure = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_treasure.png", 2, false, false, 94, 91);
+
+MOD_GLOBAL.fontSSspr = sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0);
+global.fontSS = font_add_sprite_ext(MOD_GLOBAL.fontSSspr, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, -6);
+
+global.MenuNoteArraySelect = 0;
+global.MenuNoteArray = [0, 48]
+
 //          EXTRA PLAYER SPR / FRENZ-E / CHEESED UP LEGACY ASSETS
 MOD_GLOBAL.spr_rocketturnair = sprite_add(MOD_PATH + "/sprites/spr_rocketturnair.png", 15, false, false, 50, 50);
 MOD_GLOBAL.spr_PZLapPortalEnd = sprite_add(MOD_PATH + "/sprites/exPlayer/LapPortalEnd.png", 13, false, false, 100, 100);
@@ -276,7 +313,7 @@ MOD_GLOBAL.spr_fireass_intro = sprite_add(MOD_PATH + "/sprites/spr_fireass_intro
 MOD_GLOBAL.spr_fireass_fall = sprite_add(MOD_PATH + "/sprites/spr_fireass_fall.png", 3, false, false, 50, 50);
 MOD_GLOBAL.spr_fireass_dash = sprite_add(MOD_PATH + "/sprites/spr_fireass_dash.png", 16, false, false, 75, 75);
 
-// TOPPINSSS
+// CONFECTI
 
 //1
 MOD_GLOBAL.spr_marshmallow_appear = sprite_add(MOD_PATH + "/sprites/toppins/spr_marshmallow_appear.png", 14, false, false, 50, 50);

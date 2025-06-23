@@ -14,7 +14,7 @@ if array_contains(MOD_GLOBAL.CustomThemesCheck,argument1)
     var laphell = check_lap_mode(2);
     if (!lap) // pizza time
     {	
-        var secs = MOD_GLOBAL.pizzyosttimes[global.escapetheme]
+        var secs = MOD_GLOBAL.pizzyosttimes[global.PZ_opts.escapetheme]
         if (time < secs * 12)
             curState += 0.5;
     }
@@ -37,7 +37,7 @@ if array_contains(MOD_GLOBAL.CustomThemesCheck,argument1)
 	}
 	if string_pos("(L2)",argument1) != 0
 	{
-		if global.laps == 2 && (global.lapmode != 1 or global.lap3duringinf)
+		if global.laps == 2 && (global.lapmode != 1 or global.PZ_opts.lap3duringinf)
 		{
 			panicstart = 0
 		}
