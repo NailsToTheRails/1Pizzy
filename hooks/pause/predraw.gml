@@ -54,7 +54,7 @@ if fade > 0
 	var secretIconScale = [1, 1, 1];
 	var secretIconVisible = [max(global.secretfound > 0, (secretcount > 0) * 0.5), max(global.secretfound > 1, (secretcount > 1) * 0.5), max(global.secretfound > 2, (secretcount > 2) * 0.5)];
 	var bar_sprite = asset_get_index("MOD_GLOBAL.spr_newpause_bars" + string(selected + 1));
-	var shake = Approach(shake, 0, 1);
+	shake = Approach(shake, 0, 1);
 	var whitealpha = floor_ext(lerp(whitealpha, 0, 0.3), 100);
 	var b = pause_menu[i];
 	
@@ -126,7 +126,7 @@ if fade > 0
 	    mapentry = array_get(ds_map_find_value(pause_menu_map, b), 0);
 	    
 	    if (!is_undefined(mapentry))
-	        draw_sprite_ext(spr_newpause_icons, mapentry, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
+	        draw_sprite_ext(spr_newpause_icons, selected, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
 
 	    switch _txt
 	    {    

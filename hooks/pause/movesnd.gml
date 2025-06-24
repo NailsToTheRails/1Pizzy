@@ -15,4 +15,9 @@ fmod_event_instance_set_parameter(global.PZ_menu_note_inst, "note", _note, true)
 fmod_event_instance_play(global.PZ_menu_note_inst);
 global.MenuNoteArraySelect++;
 global.MenuNoteArraySelect = wrap(global.MenuNoteArraySelect, 0, array_length(global.MenuNoteArray) - 1);
+
+if key_down2
+shake = 10;
+else if key_up2
+shake = -10;
 return false;
