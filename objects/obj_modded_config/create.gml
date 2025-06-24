@@ -15,7 +15,7 @@ options = [
             {
                 name: lang_get_value("PZConfigM1"),//Escape Theme
                 variable: "escapetheme",
- 				options: ["Sugar Rush (Lila Mix)", "Sugar Rush (Exhibition Night)", "Glucose Getaway!", "Glucose Getaway! (Construct)", "Glucose Getaway! (Bewitched! Remix)", "Midi Getaway! (Demo 1)", "Midi Getaway! (Construct)", "THE pizzelle's FAVORITE SONG(...)", "It's SugaryPizza Time!", "Glucose Getaway! (Fanmade Demo 2 ver.)"],
+ 				options: ["Sugar Rush (Lila Mix)", "Sugar Rush (Exhibition Night)", "Glucose Getaway!", "Glucose Getaway! (Construct)", "Glucose Getaway! (Bewitched! Remix)", "Midi Getaway! (Demo 1)", "Midi Getaway! (Construct)", "THE pizzelle's FAVORITE SONG(...)", "Glucose Getaway! (Fanmade Demo 2 ver.)"],
                 desc: lang_get_value("PZConfigM1D") // Change the music that plays during Sugar Rush as Pizzelle.
             },
             {
@@ -27,7 +27,7 @@ options = [
             {
                 name: lang_get_value("PZConfigM3"),//Lap 3 Theme
                 variable: "lap3theme",
-                options: ["Clockin' Out Late", "Harry's Despair-y (Bilk Mix)", "Harry's Despair-y", "Sugarcube Hailstorm", "UNEXECUTION", "Blue Licorice", "Gummy Harry's Brain Freezin' (V1)", "Gummy Harry's Brain Freezin' (V2)", "Coneball Lapping Two"],
+                options: ["Clockin' Out Late", "Harry's Despair-y (Bilk Mix)", "Harry's Despair-y", "Sugarcube Hailstorm", "WEXECUTION", "Blue Licorice", "Gummy Harry's Brain Freezin' (V1)", "Gummy Harry's Brain Freezin' (V2)", "Coneball Lapping Two"],
                 desc:lang_get_value("PZConfigM3D") //"Change the music that plays during Lap 3 as Pizzelle."
             },
             {
