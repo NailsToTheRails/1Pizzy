@@ -23,6 +23,9 @@ if instance_exists(obj_skinchoice)
     MOD_GLOBAL.pizzloaded = false;
 }
 
+if (instance_exists(obj_player))
+global.playercharacter = obj_player.character
+
 var portalobjs = [obj_lapportal, obj_lapportalentrance, "obj_practiceportal", "obj_practiceportal_exit", "obj_lotw_enterportal", "obj_lotw_exitportal"];
 for (var i = 0; i < array_length(portalobjs); i++)
 {

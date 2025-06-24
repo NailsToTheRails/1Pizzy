@@ -21,6 +21,8 @@ version_check = function(ver_allowed, show_error = 1)
 	return true;
 }
 
+global.playercharacter = -4
+
 version_check([3])
 
 randomize()

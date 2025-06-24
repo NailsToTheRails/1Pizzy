@@ -84,9 +84,9 @@ options = [
                 desc: lang_get_value("PZConfigC7D")
             },
             {
-                name: lang_get_value("PZConfigC8"),// Extreme Exhibition Visuals
+                name: lang_get_value("PZConfigC8"),// Pause Menu Toggle
                 variable: "SSENmenu",
-                options: ["OFF", "ON"/*, "Pizzelle Only"*/],
+                options: ["OFF", "ON", "Pizzelle Only"],
                 desc: lang_get_value("PZConfigC8D")
             },
         ]
