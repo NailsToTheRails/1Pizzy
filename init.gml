@@ -21,8 +21,6 @@ version_check = function(ver_allowed, show_error = 1)
 	return true;
 }
 
-global.playercharacter = -4
-
 version_check([3])
 
 randomize()
@@ -52,6 +50,9 @@ MOD_GLOBAL.ctop = add_sprite("spr_cranktopping",1,135,87)
 MOD_GLOBAL.atop = add_sprite("spr_aranktopping",1,135,87)
 MOD_GLOBAL.stop = add_sprite("spr_sranktopping",1,135,87)
 MOD_GLOBAL.pzcol = add_sprite("spr_fontcandle",10,0,0)
+
+MOD_GLOBAL.pl_char = "P"
+
 global.PZcollectfont = font_add_sprite_ext(MOD_GLOBAL.pzcol, "0123456789", true, 0);
 
 

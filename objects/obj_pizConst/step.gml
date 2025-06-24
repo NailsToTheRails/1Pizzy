@@ -1,4 +1,7 @@
 if !instance_exists(obj_player1) exit;
+
+MOD_GLOBAL.pl_char = obj_player.character
+
 if (obj_player1.character != "PZ") exit;
 
 if instance_exists(obj_taxitransition)
@@ -22,9 +25,6 @@ if instance_exists(obj_skinchoice)
     MOD_GLOBAL.PZPatLoaded = false;
     MOD_GLOBAL.pizzloaded = false;
 }
-
-if (instance_exists(obj_player))
-global.playercharacter = obj_player.character
 
 var portalobjs = [obj_lapportal, obj_lapportalentrance, "obj_practiceportal", "obj_practiceportal_exit", "obj_lotw_enterportal", "obj_lotw_exitportal"];
 for (var i = 0; i < array_length(portalobjs); i++)
@@ -79,18 +79,26 @@ with (obj_ghostdrapes)
     sprite_index = MOD_GLOBAL.spr_PZghostdrape;
 }
 // Its Quite That Simple Really.
-with (obj_combotitle) {
-	if (global.PZ_opts.combonames) {
-	sprite_index = MOD_GLOBAL.spr_SScomboTitles;
-	} else {
-	sprite_index = spr_comboend_title1;
+with (obj_combotitle)
+{
+	if (global.PZ_opts.combonames) 
+	{
+		sprite_index = MOD_GLOBAL.spr_SScomboTitles;
+	} 
+	else 
+	{
+		sprite_index = spr_comboend_title1;
 	}
 }
-with (obj_comboend) {
-	if (global.PZ_opts.combonames) {
-	sprite = MOD_GLOBAL.spr_SScomboTitles;
-	} else {
-	sprite = spr_comboend_title1;
+with (obj_comboend) 
+{
+	if (global.PZ_opts.combonames) 
+	{
+		sprite = MOD_GLOBAL.spr_SScomboTitles;
+	} 
+	else
+	{
+		sprite = spr_comboend_title1;
 	}
 }
 

@@ -1,4 +1,4 @@
-if (global.PZ_opts.SSENmenu == 0) or (global.PZ_opts.SSENmenu == 2 && global.playercharacter != "PZ") exit;
+if (global.PZ_opts.SSENmenu == 0) or (global.PZ_opts.SSENmenu == 2 && MOD_GLOBAL.pl_char != "PZ") exit;
 
 function floor_ext(arg0, arg1)
 {
