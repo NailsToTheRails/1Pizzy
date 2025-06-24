@@ -127,6 +127,19 @@ if fade > 0
 	    
 	    if (!is_undefined(mapentry))
 	        draw_sprite_ext(spr_newpause_icons, mapentry, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
+
+	    switch _txt
+	    {    
+	        case "RESTART LEVEL":
+                    _txt = "RETRY"
+		break;
+                case "EXIT LEVEL":
+                    _txt = "EXIT"
+		break;
+                case "CHEF TASKS":
+                    _txt = "TASKS"
+		break;
+	    }
 	    
 	    draw_text_ext_color(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, -5, 100000, c_gray, c_gray, c_gray, c_gray, 1);
 	    draw_text_ext_colour(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, -5, 100000, c_white, c_white, c_white, c_white, current_bar_chosen);
