@@ -76,7 +76,7 @@ global.PZ_opts = {
 }
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 
-global.PZ_menu_note_inst = fmod_event_create_instance("event:/sugary/pausemove");
+global.PZ_menu_note_inst = fmod_event_create_instance("event:/sugary/pausesnd");
 global.pizzyost = [global.PZ_opts.escapetheme, global.PZ_opts.lap2theme, global.PZ_opts.lap3theme];
 
 ini_close();
