@@ -5,6 +5,8 @@
 	"spr_itspizzatime": {"images": 2, "speed": 0.2},
 	"spr_menusandbox_idle": {"images": 3},
 	"spr_menusandbox_select": {"images": 3},
+	"spr_soundtestdanceridle": {"images": 9, "speed":0.9},
+	"spr_soundtestdancerdance": {"images": 9, "speed":0.9},
 
 	"spr_tv_empty": {"images": 1},
 	"spr_tv_exprcollect": {"images": 12},
