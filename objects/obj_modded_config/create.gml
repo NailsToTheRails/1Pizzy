@@ -109,7 +109,7 @@ options = [
 	            {
                 name: lang_get_value("PZConfigG2"),//Gameplay Style
                 variable: "walljumptype",
-                options: ["Exhibition Night", "2022 Demo", "NJA Style", "Frenzy Worlds"],
+                options: ["Exhibition Night", "Scoutdigo", "NJA Style", "Frenzy Worlds"],
                 desc: lang_get_value("PZConfigG2D")//"Modifies certain parts of Pizzelle's moveset."
             },
         ]
