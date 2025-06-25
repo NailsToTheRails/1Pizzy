@@ -211,11 +211,16 @@ MOD_GLOBAL.spr_newpause_bars3 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpau
 MOD_GLOBAL.spr_newpause_bars4 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars4.png", 2, false, false, 160, 48);
 MOD_GLOBAL.spr_newpause_bars5 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars5.png", 2, false, false, 160, 48);
 MOD_GLOBAL.spr_newpause_border = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_border.png", 2, false, false, 530, 320);
-MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
 MOD_GLOBAL.spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 10, false, false, 36, 36);
 MOD_GLOBAL.spr_newpause_secreticon = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secreticon.png", 3, false, false, 40, 40);
 MOD_GLOBAL.spr_newpause_secrets = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secrets.png", 3, false, false, 16, 16);
 MOD_GLOBAL.spr_newpause_treasure = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_treasure.png", 2, false, false, 94, 91);
+//	    PAUSE PORTRAITS
+MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_pizzelle_pause.png", 3, false, false, 184, 162);
+MOD_GLOBAL.spr_peppino_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_peppino_pause.png", 2, false, false, 250, 250);
+MOD_GLOBAL.spr_noise_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_noise_pause.png", 3, false, false, 250, 250);
+MOD_GLOBAL.spr_vigi_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_vigi_pause.png", 2, false, false, 250, 250);
+
 
 MOD_GLOBAL.fontSSspr = sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0);
 global.fontSS = font_add_sprite_ext(MOD_GLOBAL.fontSSspr, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, -6);

@@ -44,11 +44,38 @@ if fade > 0
 	}
 	
 	var spr_newpause_icons = MOD_GLOBAL.spr_newpause_icons
-	var is_not_level, bar_x_offsets, bar_y_offsets, bar_text, bar_sprite, i, y_pad, x_pos, y_pos, current_bar_chosen, current_bar_x, _txt, entry, mapentry;
+	var is_not_level, bar_x_offsets, bar_y_offsets, bar_text, bar_sprite, i, y_pad, x_pos, y_pos, current_bar_chosen, current_bar_x, _txt, entry, mapentry, playerPauseSprite;
 	var _length = array_length(pause_menu);
-	var playerPauseSprite = MOD_GLOBAL.spr_pizzelle_pause
-	var playerPauseIndex = 0;
-	
+	var oldportrait = false;
+        /*
+	someone fix my shittty attempt at adding custom pause portrait so others can add their own for their character
+	anybody EXCEPT nails because i refuse to pull from his branch till he readds my changes that i talked with ruby about previously
+	instance_activate_object(obj_player);
+	if (custom != -4 && !is_undefined(struct_get_from_hash(custom.sprites.misc, variable_get_hash("spr_pauseportrait"))))
+	_spr = obj_player.spr_pauseportrait
+	else */
+	switch (MOD_GLOBAL.pl_char)
+	{
+	    case "PZ":
+	    playerPauseSprite = MOD_GLOBAL.spr_pizzelle_pause
+	    break;
+
+	    case "P":
+	    playerPauseSprite = MOD_GLOBAL.spr_peppino_pause
+	    oldportrait = true;
+	    break
+
+	    case "N":
+	    playerPauseSprite = MOD_GLOBAL.spr_noise_pause
+	    break
+
+	    case "V":
+	    playerPauseSprite = MOD_GLOBAL.spr_vigi_pause
+	    oldportrait = true;
+	    break
+		
+	}
+
 	var pausedSprite = undefined;
 	var pauseBorder = MOD_GLOBAL.spr_newpause_border
 	var secretIconScale = [1, 1, 1];
@@ -147,11 +174,11 @@ if fade > 0
 	
 	if (!is_not_level) draw_sprite_ext(MOD_GLOBAL.spr_newpause_treasure, treasurefound, 835 + pauseslidein, 400, 1, 1, 0, c_white, (treasurealpha == 0 && treasurefound == 0) ? 0.5 : max(treasurealpha, global.treasure));
 	
-	draw_sprite_ext_flash(playerPauseSprite, playerPauseIndex, 100 - pauseslidein, 422 + pauseslidein, 1, 1, 0, 5183024, 1);
+	draw_sprite_ext_flash(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, 100 - pauseslidein, 422 + pauseslidein, 1, 1, 0, 5183024, 1);
 	shader_set(global.Pal_Shader);
 	pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture);
 	pal_swap_set(spr_palette, paletteselect, false);
-	draw_sprite_ext(playerPauseSprite, playerPauseIndex, 107 - pauseslidein, 411 + pauseslidein, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, 107 - pauseslidein, 411 + pauseslidein, 1, 1, 0, c_white, 1);
 	pal_swap_reset();
 	
 	if (transfotext != -4 && !instance_exists(obj_achievement_pause))
