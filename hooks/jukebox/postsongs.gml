@@ -18,7 +18,7 @@ add_multisong("event:/sugary/music/soundtest/sweet_release", "Sweet Release of D
 	"event:/sugary/music/soundtest/sweet_release_of_death_esquiz", "Sweet Release of Death (Esquiz Remix) - Esquiz",
 	"event:/sugary/music/soundtest/sweet_release_of_midi", "Sweet Release of Death (MIDI) - Lila",
 	"event:/sugary/music/soundtest/sweet_release_of_death_demo_2", "Sweet Release of Death (Fanmade Demo 2 ver.) - Unknown",
-	"event:/sugary/music/soundtest/sweet_release_of_jam", "Sweet Release of Death (Space Jam Mashup) - NJA");
+	"event:/sugary/music/soundtest/sweet_release_of_jam", "Sweet Release of Death (Space Jam Mashup) - NJA",
 
 add_separator();
 
