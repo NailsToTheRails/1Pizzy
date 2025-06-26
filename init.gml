@@ -199,7 +199,6 @@ MOD_GLOBAL.bg_SSjukeboxdisc = sprite_add(MOD_PATH + "/sprites/bg_SSjukeboxdisc.p
 MOD_GLOBAL.spr_taxitransitionPZ = sprite_add(MOD_PATH + "/sprites/spr_taxitransition.png", 1, false, false, 22, 16)
 MOD_GLOBAL.spr_taxitransitionPZCOP = sprite_add(MOD_PATH + "/sprites/spr_taxitransition_cop.png", 1, false, false,  22, 16)
 MOD_GLOBAL.spr_taxitransitionPZPIZZA = sprite_add(MOD_PATH + "/sprites/spr_taxitransition_pizza.png", 1, false, false,  22, 16)
-MOD_GLOBAL.spr_PZdance = sprite_add(MOD_PATH + "/sprites/spr_playerPZ_dance.png", 11, false, false,  50, 50)
 MOD_GLOBAL.spr_spacePZ = sprite_add(MOD_PATH + "/sprites/spacePZ.png", 2, false, false, 32, 23)
 MOD_GLOBAL.remux = true;
 

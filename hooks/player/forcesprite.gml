@@ -16,7 +16,6 @@ if object_index = obj_player1
     }
     switch sprite_index
     {
-        case spr_pepdance: return MOD_GLOBAL.spr_PZdance; break;
         case spr_player_trashjump: return MOD_GLOBAL.spr_PZtrashjump; break;
         case spr_player_trashjump2: return MOD_GLOBAL.spr_PZtrashjump2; break;
         case spr_player_trashfall: return MOD_GLOBAL.spr_PZtrashfall; break;

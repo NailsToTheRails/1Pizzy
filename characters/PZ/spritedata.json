@@ -8,6 +8,9 @@
 	"spr_soundtestdanceridle": {"images": 9, "speed":0.9},
 	"spr_soundtestdancerdance": {"images": 9, "speed":0.9},
 
+	"spr_soundtestidle": {"images": 11, "yorigin":50},
+	"spr_soundtestwalk": {"images": 11, "yorigin":50},
+
 	"spr_tv_empty": {"images": 1},
 	"spr_tv_exprcollect": {"images": 12},
 	"spr_tv_exprcombo": {"images": 78},
