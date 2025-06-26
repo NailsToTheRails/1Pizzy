@@ -282,6 +282,12 @@
 	"spr_cheesepepfall": {"images": 12,"yorigin":50},
 	"spr_cheesepepland": {"images": 6,"yorigin":50},
 	"spr_jetpackstart2": {"images": 8,"yorigin":62,"speed":0.8},
+	"spr_boxxedpepidle": {"images": 20,"yorigin":50},
+	"spr_boxxedpepintro": {"images": 11,"yorigin":50},
+	"spr_boxxedpepwalk": {"images": 4,"yorigin":50},
+	"spr_boxxedpepspin": {"images": 7,"yorigin":50},
+	"spr_boxxedpepair": {"images": 5,"yorigin":50},
+	"spr_boxxedpepflap": {"images": 9,"yorigin":50},
 
 	"spr_clown": {"images": 15,"yorigin":50,"speed":0.3},
 	"spr_clownjump": {"images": 7,"yorigin":50},
