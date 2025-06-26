@@ -10,7 +10,6 @@ add_multisong("event:/sugary/music/soundtest/glucose_getaway", "Glucose Getaway 
 	"event:/sugary/music/soundtest/midi_getaway", "Glucose Getaway (MIDI) - Lila",
 	"event:/sugary/music/soundtest/midi_getaway_construct", "Glucose Getaway (Construct MIDI) - Lila");
 add_song("event:/sugary/music/soundtest/thepizzellesfavoritesongthatheylistentowhentheydoit", "THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT - Lila");
-add_song("event:/sugary/music/soundtest/sugarypizza_time", "It's SugaryPizza Time! - RexelisCool");
 
 add_separator();
 
@@ -20,7 +19,6 @@ add_multisong("event:/sugary/music/soundtest/sweet_release", "Sweet Release of D
 	"event:/sugary/music/soundtest/sweet_release_of_midi", "Sweet Release of Death (MIDI) - Lila",
 	"event:/sugary/music/soundtest/sweet_release_of_death_demo_2", "Sweet Release of Death (Fanmade Demo 2 ver.) - Unknown",
 	"event:/sugary/music/soundtest/sweet_release_of_jam", "Sweet Release of Death (Space Jam Mashup) - NJA",
-	"event:/sugary/music/soundtest/i'm_in_the_thick_of_death", "Sweet Release of Death (Thick of It Mashup) - chezcake");
 
 add_separator();
 

@@ -8,11 +8,16 @@ function wrap(arg0, arg1, arg2)
     return ((((arg0 - _min) % range) + range) % range) + _min;
 }
 
-if (global.PZ_opts.SSENmenu == 0) /*or (global.PZ_opts.SSENmenu == 2 && pl_character != "PZ")*/ exit;
+if (global.PZ_opts.SSENmenu == 0) or (global.PZ_opts.SSENmenu == 2 && MOD_GLOBAL.pl_char != "PZ") exit;
 
 _note = global.MenuNoteArray[global.MenuNoteArraySelect];
 fmod_event_instance_set_parameter(global.PZ_menu_note_inst, "note", _note, true);
 fmod_event_instance_play(global.PZ_menu_note_inst);
 global.MenuNoteArraySelect++;
 global.MenuNoteArraySelect = wrap(global.MenuNoteArraySelect, 0, array_length(global.MenuNoteArray) - 1);
+
+if key_down2
+shake = 10;
+else if key_up2
+shake = -10;
 return false;

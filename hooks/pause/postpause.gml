@@ -48,13 +48,15 @@ enum MusicNote
 	GS7 = 45,
 	A7 = 46,
 	AS7 = 47,
-	B7 = 48
+	B7 = 48,
+	C8 = 49
 }
 
 pauseslidein = 500;
 playerPauseIndex = irandom_range(0, sprite_get_number(MOD_GLOBAL.spr_pizzelle_pause) - 1);
 borderscale = 4;
 global.MenuNoteArraySelect = 0;
+shake = 0;
 switch (global.leveltosave)
 {
 	default:
@@ -80,11 +82,3 @@ switch (global.leveltosave)
 global.MenuNoteArray = note_array;
 fmod_event_instance_set_paused(global.PZ_menu_note_inst, false);
 
-/*
-//stupidest way to get the player's character
-instance_activate_object(obj_player1)
-with (obj_player1)
-{
-	other.pl_character = character
-}
-instance_deactivate_object(obj_player1)

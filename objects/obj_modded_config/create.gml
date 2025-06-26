@@ -62,7 +62,7 @@ options = [
             {
                 name: lang_get_value("PZConfigC4"),//Taunt Sounds
                 variable: "tauntstyle",
-                options: ["Exhibition Night", "Demo 1", "Pizza Tower"],
+                options: ["Exhibition Night", "2022 Demo", "Pizza Tower"],
                 desc: lang_get_value("PZConfigC4D")
             },
             {
@@ -84,10 +84,16 @@ options = [
                 desc: lang_get_value("PZConfigC7D")
             },
             {
-                name: lang_get_value("PZConfigC8"),// Extreme Exhibition Visuals
+                name: lang_get_value("PZConfigC8"),// Pause Menu Toggle
                 variable: "SSENmenu",
-                options: ["OFF", "ON"/*, "Pizzelle Only"*/],
+                options: ["OFF", "ON", "Pizzelle Only"],
                 desc: lang_get_value("PZConfigC8D")
+            },
+	    {
+                name: lang_get_value("PZConfigC9"),// Pause Menu Style
+                variable: "pausemenustyle",
+                options: ["Exhibition Night", "Old"],
+                desc: lang_get_value("PZConfigC9D")
             },
         ]
     },
