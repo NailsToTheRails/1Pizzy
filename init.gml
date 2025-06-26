@@ -1,3 +1,28 @@
+version_check = function(ver_allowed, show_error = 1)
+{
+    var suka = string_split(global.game_version,".",false)
+    suka[0] = string_copy(suka[0], 2, 1);
+    repeat(array_length(suka)-array_length(ver_allowed)) array_push(ver_allowed,0)
+    repeat(array_length(ver_allowed)-array_length(suka)) array_push(suka,0)
+    for (var i = 0; i < array_length(suka); i++)
+    {
+        if ver_allowed[i] > real(suka[i]) 
+        {
+        	var WHAT_THE_FUCK = "";
+			for(var o = 0; o < array_length(ver_allowed); o++)
+			{
+				WHAT_THE_FUCK = WHAT_THE_FUCK+string(ver_allowed[o])+"."
+			}
+            if show_error show_message("ERROR\n-----------"+"\nOutdated CUM+ version for mod: "+global.processing_mod.name+"\nVersion Needed: "+WHAT_THE_FUCK+"\nCurrent Version: "+global.game_version+"\nThe mod may not work correctly,\nUse at your own risk"+"\n-----------")
+            return false;
+        }
+        else if ver_allowed[i] != real(suka[i]) return true;
+    }
+	return true;
+}
+
+version_check([3])
+
 randomize()
 MOD_GLOBAL._iconlist = []
 
@@ -25,6 +50,9 @@ MOD_GLOBAL.ctop = add_sprite("spr_cranktopping",1,135,87)
 MOD_GLOBAL.atop = add_sprite("spr_aranktopping",1,135,87)
 MOD_GLOBAL.stop = add_sprite("spr_sranktopping",1,135,87)
 MOD_GLOBAL.pzcol = add_sprite("spr_fontcandle",10,0,0)
+
+MOD_GLOBAL.pl_char = "P"
+
 global.PZcollectfont = font_add_sprite_ext(MOD_GLOBAL.pzcol, "0123456789", true, 0);
 
 
@@ -38,6 +66,7 @@ global.PZ_opts = {
 	extremevisual : ini_read_real("modded", "extremevisual", 0),
 	tauntstyle : ini_read_real("modded", "tauntstyle", 0),
 	SSENmenu : ini_read_real("modded", "SSENmenu", 1),
+	pausemenustyle : ini_read_real("modded", "pausemenustyle", 0),
 	// MUSIC
 	escapetheme : ini_read_real("modded", "escapetheme", 0),
 	lap2theme : ini_read_real("modded", "lap2theme", 0),
@@ -49,7 +78,7 @@ global.PZ_opts = {
 }
 MOD_GLOBAL.pizzypronoun = ["M", "F", "X"]
 
-global.PZ_menu_note_inst = fmod_event_create_instance("event:/sugary/pausemove");
+global.PZ_menu_note_inst = fmod_event_create_instance("event:/sugary/pausesnd");
 global.pizzyost = [global.PZ_opts.escapetheme, global.PZ_opts.lap2theme, global.PZ_opts.lap3theme];
 
 ini_close();
@@ -85,7 +114,7 @@ MOD_GLOBAL.pizzyost[3,2] = "event:/sugary/music/(L3)Sugarcube Hailstorm"
 MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)UNEXPECTION"
 MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
 MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
-MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
+MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"Add commentMore actions
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
 MOD_GLOBAL.pizzyost[9,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
 
@@ -185,11 +214,16 @@ MOD_GLOBAL.spr_newpause_bars3 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpau
 MOD_GLOBAL.spr_newpause_bars4 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars4.png", 2, false, false, 160, 48);
 MOD_GLOBAL.spr_newpause_bars5 = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_bars5.png", 2, false, false, 160, 48);
 MOD_GLOBAL.spr_newpause_border = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_border.png", 2, false, false, 530, 320);
-MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/spr_pizzelle_pause.png", 3, false, false, 184, 162);
 MOD_GLOBAL.spr_newpause_icons = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_icons.png", 10, false, false, 36, 36);
 MOD_GLOBAL.spr_newpause_secreticon = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secreticon.png", 3, false, false, 40, 40);
 MOD_GLOBAL.spr_newpause_secrets = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_secrets.png", 3, false, false, 16, 16);
 MOD_GLOBAL.spr_newpause_treasure = sprite_add(MOD_PATH + "/sprites/pause/spr_newpause_treasure.png", 2, false, false, 94, 91);
+//	    PAUSE PORTRAITS
+MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_pizzelle_pause.png", 3, false, false, 184, 162);
+MOD_GLOBAL.spr_peppino_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_peppino_pause.png", 2, false, false, 250, 250);
+MOD_GLOBAL.spr_noise_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_noise_pause.png", 3, false, false, 250, 250);
+MOD_GLOBAL.spr_vigi_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_vigi_pause.png", 2, false, false, 250, 250);
+
 
 MOD_GLOBAL.fontSSspr = sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0);
 global.fontSS = font_add_sprite_ext(MOD_GLOBAL.fontSSspr, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, -6);
