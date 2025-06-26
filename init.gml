@@ -114,7 +114,7 @@ MOD_GLOBAL.pizzyost[3,2] = "event:/sugary/music/(L3)Sugarcube Hailstorm"
 MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)UNEXPECTION"
 MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
 MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
-MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"Add commentMore actions
+MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
 MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
 MOD_GLOBAL.pizzyost[9,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
 

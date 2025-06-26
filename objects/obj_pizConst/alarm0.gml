@@ -1,6 +1,8 @@
 if !instance_exists(obj_player1) exit;
 if !variable_global_exists("leveltosave") exit;
 
+if (obj_player1.character == "PZ" && room == tower_soundtest)
+instance_create(6750,320,obj_PZpainterDancer)
 
 if (global.PZ_opts.extremevisual && check_lap_mode(2) && global.panic && room != rank_room && global.leveltosave != "practice")
 {
