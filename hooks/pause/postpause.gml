@@ -81,4 +81,4 @@ switch (global.leveltosave)
 }
 global.MenuNoteArray = note_array;
 fmod_event_instance_set_paused(global.PZ_menu_note_inst, false);
-
+pattern_anim_bluat = 0
