@@ -153,7 +153,7 @@ if fade > 0
 	    mapentry = array_get(ds_map_find_value(pause_menu_map, b), 0);
 	    
 	    if (!is_undefined(mapentry))
-	        draw_sprite_ext(spr_newpause_icons, selected, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
+	        draw_sprite_ext(spr_newpause_icons, struct_get(PZ_icon_struct, pause_menu[selected]), current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
 
 	    switch _txt
 	    {    
