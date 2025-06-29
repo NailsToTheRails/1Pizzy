@@ -56,10 +56,10 @@ if fade > 0
 	else */
 	playerPauseSprite = MOD_GLOBAL.spr_peppino_pause
 	
-	if struct_exists(PZ_player_spr_menu, MOD_GLOBAL.pl_char)
+	if struct_exists(global.PZ_player_spr_menu, MOD_GLOBAL.pl_char)
 	{
-		playerPauseSprite = PZ_player_spr_menu[$ MOD_GLOBAL.pl_char].spr
-		oldportrait = PZ_player_spr_menu[$ MOD_GLOBAL.pl_char].old_behavior
+		playerPauseSprite = global.PZ_player_spr_menu[$ MOD_GLOBAL.pl_char].spr
+		oldportrait = global.PZ_player_spr_menu[$ MOD_GLOBAL.pl_char].old_behavior
 	}
 	/*
 	switch (MOD_GLOBAL.pl_char)
