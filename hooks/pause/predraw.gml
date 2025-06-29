@@ -178,7 +178,10 @@ if fade > 0
 	
 	draw_sprite_ext_flash(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, 100 - pauseslidein, 422 + pauseslidein, 1, 1, 0, 5183024, 1);
 	shader_set(global.Pal_Shader);
-	pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture, false, (pattern_anim_bluat * sprite_get_speed(global.palettetexture)) % sprite_get_number(global.palettetexture));
+	
+	if global.palettetexture != -4 pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture, false, (pattern_anim_bluat * sprite_get_speed(global.palettetexture)) % sprite_get_number(global.palettetexture));
+	else pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture);
+
 	pal_swap_set(spr_palette, paletteselect, false);
 	draw_sprite_ext(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, 107 - pauseslidein, 411 + pauseslidein, 1, 1, 0, c_white, 1);
 	pal_swap_reset();
