@@ -222,25 +222,6 @@ MOD_GLOBAL.spr_pizzelle_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/
 MOD_GLOBAL.spr_peppino_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_peppino_pause.png", 2, false, false, 250, 250);
 MOD_GLOBAL.spr_noise_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_noise_pause.png", 3, false, false, 250, 250);
 MOD_GLOBAL.spr_vigi_pause = sprite_add(MOD_PATH + "/sprites/pause/portraits/spr_vigi_pause.png", 2, false, false, 250, 250);
-//		PAUSE STRUCT
-global.PZ_player_spr_menu = {
-	"PZ" : {
-		spr : MOD_GLOBAL.spr_pizzelle_pause,
-		old_behavior : false,
-	},
-	"P" : {
-		spr : MOD_GLOBAL.spr_peppino_pause,
-		old_behavior : true,
-	},
-	"N" : {
-		spr : MOD_GLOBAL.spr_noise_pause,
-		old_behavior : false,
-	},
-	"V" : {
-		spr : MOD_GLOBAL.spr_vigi_pause,
-		old_behavior : true,
-	},
-}
 
 
 MOD_GLOBAL.fontSSspr = sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0);
