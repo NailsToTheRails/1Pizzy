@@ -87,6 +87,7 @@ PZ_icon_struct = {
 	"pause_resume" : 0,
 	"pause_options" : 1,
 	"pause_restart" : 2,
+	"pause_jukebox" : 5,
 	"pause_achievements" : 3,
 	"pause_exit_title" : 4,
 	"pause_exit" : 4,

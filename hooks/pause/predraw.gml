@@ -151,9 +151,11 @@ if fade > 0
 	    draw_sprite(bar_sprite, current_bar_chosen, current_bar_x, y_pos + (shake * current_bar_chosen));
 	    entry = pause_menu[i];
 	    mapentry = array_get(ds_map_find_value(pause_menu_map, b), 0);
-	    
+	    var menu_icon = 0;
+	    if struct_exists(PZ_icon_struct, pause_menu[selected]) menu_icon = struct_get(PZ_icon_struct, pause_menu[selected])
+
 	    if (!is_undefined(mapentry))
-	        draw_sprite_ext(spr_newpause_icons, struct_get(PZ_icon_struct, pause_menu[selected]), current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
+	        draw_sprite_ext(spr_newpause_icons, menu_icon, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
 
 	    switch _txt
 	    {    
