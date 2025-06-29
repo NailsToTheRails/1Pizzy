@@ -1,12 +1,3 @@
-function wrap(arg0, arg1, arg2)
-{
-    var _min, _max, range;
-    
-    _min = min(arg1, arg2);
-    _max = max(arg1, arg2);
-    range = (_max - _min) + 1;
-    return ((((arg0 - _min) % range) + range) % range) + _min;
-}
 
 if (global.PZ_opts.SSENmenu == 0) or (global.PZ_opts.SSENmenu == 2 && MOD_GLOBAL.pl_char != "PZ") exit;
 
@@ -16,8 +7,7 @@ fmod_event_instance_play(global.PZ_menu_note_inst);
 global.MenuNoteArraySelect++;
 global.MenuNoteArraySelect = wrap(global.MenuNoteArraySelect, 0, array_length(global.MenuNoteArray) - 1);
 
-if key_down2
-shake = 10;
-else if key_up2
-shake = -10;
+var UoD = key_down2 - key_up2
+if UoD != 0 shake = UoD*10
+
 return false;
