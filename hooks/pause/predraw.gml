@@ -54,6 +54,14 @@ if fade > 0
 	if (custom != -4 && !is_undefined(struct_get_from_hash(custom.sprites.misc, variable_get_hash("spr_pauseportrait"))))
 	_spr = obj_player.spr_pauseportrait
 	else */
+	playerPauseSprite = MOD_GLOBAL.spr_peppino_pause
+	
+	if struct_exists(PZ_player_spr_menu, MOD_GLOBAL.pl_char)
+	{
+		playerPauseSprite = PZ_player_spr_menu[$ MOD_GLOBAL.pl_char].spr
+		oldportrait = PZ_player_spr_menu[$ MOD_GLOBAL.pl_char].old_behavior
+	}
+	/*
 	switch (MOD_GLOBAL.pl_char)
 	{
 	    case "PZ":
@@ -75,7 +83,7 @@ if fade > 0
 	    break
 		
 	}
-
+	*/
 	var pausedSprite = undefined;
 	var pauseBorder = MOD_GLOBAL.spr_newpause_border
 	var secretIconScale = [1, 1, 1];

@@ -92,3 +92,23 @@ PZ_icon_struct = {
 	"pause_exit_title" : 4,
 	"pause_exit" : 4,
 }
+
+PZ_player_spr_menu = {
+	"PZ" : {
+		spr : MOD_GLOBAL.spr_pizzelle_pause,
+		old_behavior : false,
+	},
+	"P" : {
+		spr : MOD_GLOBAL.spr_peppino_pause,
+		old_behavior : true,
+	},
+	"N" : {
+		spr : MOD_GLOBAL.spr_noise_pause,
+		old_behavior : false,
+	},
+	"V" : {
+		spr : MOD_GLOBAL.spr_vigi_pause,
+		old_behavior : true,
+	},
+}
+
