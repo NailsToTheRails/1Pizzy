@@ -54,6 +54,14 @@ if fade > 0
 	if (custom != -4 && !is_undefined(struct_get_from_hash(custom.sprites.misc, variable_get_hash("spr_pauseportrait"))))
 	_spr = obj_player.spr_pauseportrait
 	else */
+	playerPauseSprite = MOD_GLOBAL.spr_peppino_pause
+	
+	if struct_exists(global.PZ_player_spr_menu, MOD_GLOBAL.pl_char)
+	{
+		playerPauseSprite = global.PZ_player_spr_menu[$ MOD_GLOBAL.pl_char].spr
+		oldportrait = global.PZ_player_spr_menu[$ MOD_GLOBAL.pl_char].old_behavior
+	}
+	/*
 	switch (MOD_GLOBAL.pl_char)
 	{
 	    case "PZ":
@@ -75,7 +83,7 @@ if fade > 0
 	    break
 		
 	}
-
+	*/
 	var pausedSprite = undefined;
 	var pauseBorder = MOD_GLOBAL.spr_newpause_border
 	var secretIconScale = [1, 1, 1];
@@ -151,9 +159,11 @@ if fade > 0
 	    draw_sprite(bar_sprite, current_bar_chosen, current_bar_x, y_pos + (shake * current_bar_chosen));
 	    entry = pause_menu[i];
 	    mapentry = array_get(ds_map_find_value(pause_menu_map, b), 0);
-	    
+	    var menu_icon = 0;
+	    if struct_exists(PZ_icon_struct, pause_menu[selected]) menu_icon = struct_get(PZ_icon_struct, pause_menu[selected])
+
 	    if (!is_undefined(mapentry))
-	        draw_sprite_ext(spr_newpause_icons, selected, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
+	        draw_sprite_ext(spr_newpause_icons, menu_icon, current_bar_x + random_range(-1, 1) + 117, y_pos + random_range(-1, 1), 1, 1, 0, c_white, current_bar_chosen);
 
 	    switch _txt
 	    {    
@@ -174,9 +184,14 @@ if fade > 0
 	
 	if (!is_not_level) draw_sprite_ext(MOD_GLOBAL.spr_newpause_treasure, treasurefound, 835 + pauseslidein, 400, 1, 1, 0, c_white, (treasurealpha == 0 && treasurefound == 0) ? 0.5 : max(treasurealpha, global.treasure));
 	
+	pattern_anim_bluat++
+	
 	draw_sprite_ext_flash(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, 100 - pauseslidein, 422 + pauseslidein, 1, 1, 0, 5183024, 1);
 	shader_set(global.Pal_Shader);
-	pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture);
+	
+	if global.palettetexture != -4 pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture, false, (pattern_anim_bluat * sprite_get_speed(global.palettetexture)) % sprite_get_number(global.palettetexture));
+	else pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture);
+
 	pal_swap_set(spr_palette, paletteselect, false);
 	draw_sprite_ext(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, 107 - pauseslidein, 411 + pauseslidein, 1, 1, 0, c_white, 1);
 	pal_swap_reset();
