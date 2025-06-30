@@ -212,3 +212,24 @@ dresser_PaleMachine = "Eres una maquina palida."
 pattern_sugarysecret = "Secreto Azucarado"
 pattern_sugarysecretD = "Tengo pintura en el ojo y arde como el infierno!"
 dresser_SugarySecret = "Obtenido por entrar un secreto en Sugary Spire"
+
+
+#-------------------
+# MODDED KEYS
+#-------------------
+PZ_KKmsg = "El Fantasma esta libre..."
+
+lapgranny1PZ = "Entonces esto es el famoso Pizza Tower!"
+lapgranny2PZ = "Ya sabia que te gustaba los dulces mas que la pizza, pero to pasas..."
+lapgranny3PZ = "No es la exhibición!"
+lapgranny4PZ = "Es Bob Esponja!"
+lapgranny5PZ = "Ay dulce cielo... Vete porfavor, no quiero tener caries."
+lapgranny6PZ = "Como puede esa cosita dejarte alcanzar a ese italiano barrigon? Que chido."
+lapgranny7PZ = "El Pintor? Pff. Yo puedo pintar tambien."
+
+lapgranny11PZ = "A mi me gusto mas Dance & Cafe."
+lapgranny12PZ = "A mi me gusto mas Construct."
+lapgranny13PZ = "A mi me gusto mas Demo 1."
+
+lapgranny15PZ = "Todos esos dulces no pueden ser buenos para tu salud, cariño. "
+lapgranny17PZ = "Noise? Que paso, te ves tonto!"

@@ -53,6 +53,8 @@ lapgranny19PZ = "You HAVE heard of pizza, right?"
 lapgranny20PZ = "Weren't you supposed to be long gone by now?"
 lapgranny21PZ = "my port"
 
+PZ_KKmsg = "The Ghost is Awake..."
+
 dresser_PZ1 = "Pizzelle"
 dresser_PZ1D = "Love PRONOUN_2 or hate PRONOUN_2."
 

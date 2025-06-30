@@ -193,6 +193,19 @@ global.pm_shed_PZ =
     guy_gustavo_section_fall: -4,
 };
 
+global.KKov_PZ =
+{
+    msg: lang_get_value("PZ_KKmsg"),
+    tvspr: sprite_add(MOD_PATH + "/sprites/spr_tv_peddito.png", 2, false, false, 140, 134),
+    barfill: -4,
+    barfly: -4,
+    barflyD: -4,
+    barflyW: -4,
+    barflyS: -4,
+    barframe: -4,
+    stunable: -4
+}
+
 MOD_GLOBAL.prankanim = sprite_add(MOD_PATH + "/sprites/prankanim.png", 38, false, false, 480, 270)
 
 MOD_GLOBAL.bg_SSjukeboxdisc = sprite_add(MOD_PATH + "/sprites/bg_SSjukeboxdisc.png", 1, false, false, 202, 202);
