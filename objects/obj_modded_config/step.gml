@@ -6,12 +6,24 @@ bgscroll -= 1;
 
 updown = key_down2 - key_up2
 leftright = key_right2 + key_left2
+updownhold = key_down - key_up
 
-if updown != 0 {
+if updownhold != 0 hold_down_arrow_qol += updownhold
+else hold_down_arrow_qol = 0
+
+if abs(hold_down_arrow_qol) > 20 && hold_down_arrow_qol/6 == floor(hold_down_arrow_qol/6) //slowing down shit
+{
     sound_play("event:/sfx/ui/step");
-    selection = clamp(selection+updown, -1, array_length(options[category].variables)-1)
+    selection = wrap(selection+updownhold, -1, array_length(options[category].variables)-1)
 }
-if leftright != 0 {
+if updown != 0 
+{
+    sound_play("event:/sfx/ui/step");
+    //selection = clamp(selection+updown, -1, array_length(options[category].variables)-1)
+    selection = wrap(selection+updown, -1, array_length(options[category].variables)-1)
+}
+if leftright != 0
+{
     if selection > -1
     {
         sound_play("event:/sfx/ui/select");

@@ -117,5 +117,5 @@ options = [
 ]
 
 category = 0;
-
+hold_down_arrow_qol = 0;
 arrow = 0;
