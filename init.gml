@@ -431,4 +431,14 @@ MOD_GLOBAL.spr_yogurtfirebg2 = add_sprite("extreme/spr_yogurtfirebg2", 1, 0, 270
 MOD_GLOBAL.spr_yogurtfirebg = add_sprite("extreme/spr_yogurtfirebg", 2, 480, 270);
 MOD_GLOBAL.bg_yogurtDebris = add_sprite("extreme/bg_yogurtDebris", 2, 0, 0);
 
+MOD_GLOBAL.spr_pause_ss = add_sprite("pause/old/spr_pause_ss", 1, 0, 0);
+MOD_GLOBAL.spr_pausebg_ss = add_sprite("pause/old/spr_pausebg_ss", 1, 0, 0);
+MOD_GLOBAL.spr_pausebutton_ss = add_sprite("pause/old/spr_pausebutton_ss", 2, 0, 0);
+
+MOD_GLOBAL.spr_pauseconfecti1 = add_sprite("pause/old/spr_pauseconfecti1", 2, 0, 0);
+MOD_GLOBAL.spr_pauseconfecti2 = add_sprite("pause/old/spr_pauseconfecti2", 2, 0, 0);
+MOD_GLOBAL.spr_pauseconfecti3 = add_sprite("pause/old/spr_pauseconfecti3", 2, 0, 0);
+MOD_GLOBAL.spr_pauseconfecti4 = add_sprite("pause/old/spr_pauseconfecti4", 2, 0, 0);
+MOD_GLOBAL.spr_pauseconfecti5 = add_sprite("pause/old/spr_pauseconfecti5", 2, 0, 0);
+
 instance_create(0,0,obj_pizConst);
