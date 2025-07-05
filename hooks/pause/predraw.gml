@@ -277,7 +277,7 @@ switch (global.PZ_opts.pausemenustyle)
 		
 		pattern_anim_bluat++
 		
-		draw_sprite_ext_flash(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, 5183024, 1);
+		//draw_sprite_ext_flash(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, 5183024, 1);
 		shader_set(global.Pal_Shader);
 		
 		if global.palettetexture != -4 pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture, false, (pattern_anim_bluat * sprite_get_speed(global.palettetexture)) % sprite_get_number(global.palettetexture));
@@ -286,6 +286,49 @@ switch (global.PZ_opts.pausemenustyle)
 		pal_swap_set(spr_palette, paletteselect, false);
 		draw_sprite_ext(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, c_white, 1);
 		pal_swap_reset();
+		
+		draw_set_font(global.fontSS);
+        draw_set_align(1);
+        draw_set_color(c_white);
+        var _x = xx + 86;
+        var _y = yy + 40;
+        
+        if (global.level_seconds > 10)
+            draw_text_new(_x, _y, string(global.level_minutes) + ":" + string(floor(global.level_seconds)));
+        
+        if (global.level_seconds < 10)
+            draw_text_new(_x, _y, string(global.level_minutes) + ":0" + string(floor(global.level_seconds)));
+        
+        var unselected_color = #9494AF;
+        var len = array_length(pause_menu);
+        
+        for (var i = 0; i < len; i++)
+        {
+            _x = xx + lerp(191, 68, i / (len - 1));
+            _y = yy + lerp(20, 393, i / (len - 1));
+            draw_sprite(MOD_GLOBAL.spr_pausebutton_ss, selected != i, _x, _y);
+            draw_set_align(0, 1);
+            
+			var str = pause_menu[i];
+			switch str
+			{
+				case "pause_resume": str = "RESUME"; break;
+				case "pause_options": str = "OPTIONS"; break;
+				case "pause_restart": str = "RETRY"; break;
+				case "pause_exit": str = "EXIT\n  STAGE"; break;
+				case "pause_exit_title": str = "EXIT\n  STAGE"; break;
+				case "pause_jukebox": str = "STOP\n  MUSIC"; break;
+				case "pause_achievements": str = "CHEF\n TASKS"; break;
+				case "pause_exit_menu": str = "EXIT\n  MENU"; break;
+				case "pause_checkpoint": str = "CHECKPOINT"; break;
+				default: str = string_upper(str); break;
+			}
+            
+            draw_set_colour((selected == i) ? c_white : unselected_color);
+            var info = font_get_offset();
+            draw_text_ext(floor((_x + 155) - (string_width(str) / 2)) - info.x, (floor(_y) + 70) - info.y, str, 38, 960);
+        }
+
     }
     return false;
 	break;
