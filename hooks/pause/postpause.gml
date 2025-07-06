@@ -78,6 +78,14 @@ switch (global.leveltosave)
 	case "ruin":
     note_array = [MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.C6, MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.CS6];
     break;
+
+	case "dungeon":
+    note_array = [MusicNote.C6, MusicNote.AS5, MusicNote.DS6, MusicNote.C6, MusicNote.DS6, MusicNote.C6, MusicNote.DS6, MusicNote.E6, MusicNote.F6, MusicNote.G6, MusicNote.G6, MusicNote.AS6, MusicNote.G6, MusicNote.F6, MusicNote.DS6, MusicNote.C6, MusicNote.AS5, MusicNote.B5, MusicNote.G6, MusicNote.DS6, MusicNote.C6, MusicNote.AS6, MusicNote.G6, MusicNote.DS6, MusicNote.C6, MusicNote.AS6, MusicNote.G6, MusicNote.F6, MusicNote.DS6, MusicNote.D6, MusicNote.C6, MusicNote.C7, MusicNote.DS7, MusicNote.C7, MusicNote.G6, MusicNote.DS6, MusicNote.DS7, MusicNote.C7, MusicNote.G6, MusicNote.DS6, MusicNote.DS7, MusicNote.F7, MusicNote.FS7, MusicNote.G7, MusicNote.AS7, MusicNote.C8];
+    break;
+
+	case "cyop_golf2":
+	note_array = [MusicNote.F5,MusicNote.F5,MusicNote.F5,MusicNote.GS5,MusicNote.C6,MusicNote.GS5,MusicNote.C6,MusicNote.CS5,MusicNote.CS5,MusicNote.F5,MusicNote.GS5,MusicNote.AS5,MusicNote.C6,MusicNote.GS5];
+	break;
 }
 global.MenuNoteArray = note_array;
 fmod_event_instance_set_paused(global.PZ_menu_note_inst, false);
