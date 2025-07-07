@@ -275,7 +275,9 @@ global.PZ_player_spr_menu = {
 
 
 MOD_GLOBAL.fontSSspr = sprite_add(MOD_PATH + "/sprites/spr_font.png", 59, false, false, 0, 0);
+MOD_GLOBAL.fontSSsprOLD = sprite_add(MOD_PATH + "/sprites/pause/old/spr_fontOLD.png", 40, false, false, 0, 10);
 global.fontSS = font_add_sprite_ext(MOD_GLOBAL.fontSSspr, "AÁÀÂÃBCÇDEÉÊFGHIÍJKLMNÑOÓÔÕPQRSTUÚVWXYZ!¡.,1234567890:?¿_- ", 1, -6);
+global.fontSSOLD = font_add_sprite_ext(MOD_GLOBAL.fontSSsprOLD, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.0123456789: ", 1, -17);
 
 global.MenuNoteArraySelect = 0;
 global.MenuNoteArray = [0, 48]
@@ -452,6 +454,7 @@ MOD_GLOBAL.bg_yogurtDebris = add_sprite("extreme/bg_yogurtDebris", 2, 0, 0);
 MOD_GLOBAL.spr_pause_ss = add_sprite("pause/old/spr_pause_ss", 1, 0, 0);
 MOD_GLOBAL.spr_pausebg_ss = add_sprite("pause/old/spr_pausebg_ss", 1, 0, 0);
 MOD_GLOBAL.spr_pausebutton_ss = add_sprite("pause/old/spr_pausebutton_ss", 2, 0, 0);
+MOD_GLOBAL.spr_pausebutton_ss_short = add_sprite("pause/old/spr_pausebutton_ss_short", 2, 0, 0);
 
 MOD_GLOBAL.spr_pauseconfecti1 = add_sprite("pause/old/spr_pauseconfecti1", 2, 0, 0);
 MOD_GLOBAL.spr_pauseconfecti2 = add_sprite("pause/old/spr_pauseconfecti2", 2, 0, 0);

@@ -50,13 +50,6 @@ switch (global.PZ_opts.pausemenustyle)
 		var is_not_level, bar_x_offsets, bar_y_offsets, bar_text, bar_sprite, i, y_pad, x_pos, y_pos, current_bar_chosen, current_bar_x, _txt, entry, mapentry, playerPauseSprite;
 		var _length = array_length(pause_menu);
 		var oldportrait = false;
-	        /*
-		someone fix my shittty attempt at adding custom pause portrait so others can add their own for their character
-		anybody EXCEPT nails because i refuse to pull from his branch till he readds my changes that i talked with ruby about previously
-		instance_activate_object(obj_player);
-		if (custom != -4 && !is_undefined(struct_get_from_hash(custom.sprites.misc, variable_get_hash("spr_pauseportrait"))))
-		_spr = obj_player.spr_pauseportrait
-		else */
 		playerPauseSprite = MOD_GLOBAL.spr_peppino_pause
 		
 		if struct_exists(global.PZ_player_spr_menu, MOD_GLOBAL.pl_char)
@@ -284,10 +277,10 @@ switch (global.PZ_opts.pausemenustyle)
 		else pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture);
 	
 		pal_swap_set(spr_palette, paletteselect, false);
-		draw_sprite_ext(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, c_white, 1);
+		draw_sprite_ext(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, c_white, fade);
 		pal_swap_reset();
 		
-		draw_set_font(global.fontSS);
+		draw_set_font(global.fontSSOLD);
         draw_set_align(1);
         draw_set_color(c_white);
         var _x = xx + 86;
@@ -306,7 +299,11 @@ switch (global.PZ_opts.pausemenustyle)
         {
             _x = xx + lerp(191, 68, i / (len - 1));
             _y = yy + lerp(20, 393, i / (len - 1));
-            draw_sprite(MOD_GLOBAL.spr_pausebutton_ss, selected != i, _x, _y);
+            var j = array_length(pause_menu);
+			var pausebar = MOD_GLOBAL.spr_pausebutton_ss;
+			/* if (j >= 4)
+			pausebar = MOD_GLOBAL.spr_pausebutton_ss_short*/
+			draw_sprite(pausebar, selected != i, _x, _y);
             draw_set_align(0, 1);
             
 			var str = pause_menu[i];
