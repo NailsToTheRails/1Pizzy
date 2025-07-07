@@ -15,7 +15,7 @@ options = [
             {
                 name: lang_get_value("PZConfigM1"),//Escape Theme
                 variable: "escapetheme",
- 				options: ["Sugar Rush (Lila Mix)", "Sugar Rush (Exhibition Night)", "Glucose Getaway!", "Glucose Getaway! (Construct)", "Glucose Getaway! (Bewitched! Remix)", "Midi Getaway! (Demo 1)", "Midi Getaway! (Construct)", "THE pizzelle's FAVORITE SONG(...)", "It's SugaryPizza Time!", "Glucose Getaway! (Fanmade Demo 2 ver.)"],
+ 				options: ["Sugar Rush (Lila Mix)", "Sugar Rush (Exhibition Night)", "Glucose Getaway!", "Glucose Getaway! (Construct)", "Glucose Getaway! (Bewitched! Remix)", "Midi Getaway! (Demo 1)", "Midi Getaway! (Construct)", "THE pizzelle's FAVORITE SONG(...)", "Glucose Getaway! (Fanmade Demo 2 ver.)"],
                 desc: lang_get_value("PZConfigM1D") // Change the music that plays during Sugar Rush as Pizzelle.
             },
             {
@@ -27,7 +27,7 @@ options = [
             {
                 name: lang_get_value("PZConfigM3"),//Lap 3 Theme
                 variable: "lap3theme",
-                options: ["Clockin' Out Late", "Harry's Despair-y (Bilk Mix)", "Harry's Despair-y", "Sugarcube Hailstorm", "UNEXECUTION", "Blue Licorice", "Gummy Harry's Brain Freezin' (V1)", "Gummy Harry's Brain Freezin' (V2)", "Coneball Lapping Two"],
+                options: ["Clockin' Out Late", "Harry's Despair-y (Bilk Mix)", "Harry's Despair-y", "Sugarcube Hailstorm", "Blue Licorice", "Gummy Harry's Brain Freezin' (V1)", "Gummy Harry's Brain Freezin' (V2)", "Coneball Lapping Two"],
                 desc:lang_get_value("PZConfigM3D") //"Change the music that plays during Lap 3 as Pizzelle."
             },
             {
@@ -35,6 +35,12 @@ options = [
                 variable: "lap3duringinf",
                 options: ["OFF", "ON"],
                 desc: lang_get_value("PZConfigM4D")
+            },
+            {
+                name: lang_get_value("PZConfigM5"),//Taunt Sounds
+                variable: "tauntstyle",
+                options: ["Exhibition Night", "2022 Demo", "Pizza Tower"],
+                desc: lang_get_value("PZConfigM5D")
             }
         ]
     },
@@ -60,39 +66,39 @@ options = [
                 desc: lang_get_value("PZConfigC3D")
             },
             {
-                name: lang_get_value("PZConfigC4"),//Taunt Sounds
-                variable: "tauntstyle",
-                options: ["Exhibition Night", "2022 Demo", "Pizza Tower"],
+                name: lang_get_value("PZConfigC4"),//Pizzelle's Pronouns
+                variable: "pizzypronoun",
+                options: ["he/him", "she/her", "they/them"],
                 desc: lang_get_value("PZConfigC4D")
             },
             {
-                name: lang_get_value("PZConfigC5"),//Pizzelle's Pronouns
-                variable: "pizzypronoun",
-                options: ["he/him", "she/her", "they/them"],
+                name: lang_get_value("PZConfigC5"),// Spookey Toggle
+                variable: "spookeytoggle",
+                options: ["OFF", "ON"],
                 desc: lang_get_value("PZConfigC5D")
             },
             {
-                name: lang_get_value("PZConfigC6"),// Spookey Toggle
-                variable: "spookeytoggle",
-                options: ["OFF", "ON"],
+                name: lang_get_value("PZConfigC6"),// Extreme Exhibition Visuals
+                variable: "extremevisual",
+                options: ["OFF", "LAP 4", "LAP 3+"],
                 desc: lang_get_value("PZConfigC6D")
             },
             {
-                name: lang_get_value("PZConfigC7"),// Extreme Exhibition Visuals
-                variable: "extremevisual",
-                options: ["OFF", "LAP 4", "LAP 3+"],
-                desc: lang_get_value("PZConfigC7D")
-            },
-            {
-                name: lang_get_value("PZConfigC8"),// Pause Menu Toggle
+                name: lang_get_value("PZConfigC7"),// Pause Menu Toggle
                 variable: "SSENmenu",
                 options: ["OFF", "ON", "Pizzelle Only"],
-                desc: lang_get_value("PZConfigC8D")
+                desc: lang_get_value("PZConfigC7D")
             },
-	    {
-                name: lang_get_value("PZConfigC9"),// Pause Menu Style
+	        {
+                name: lang_get_value("PZConfigC8"),// Pause Menu Style
                 variable: "pausemenustyle",
                 options: ["Exhibition Night", "Old"],
+                desc: lang_get_value("PZConfigC8D")
+            },
+            	    {
+                name: lang_get_value("PZConfigC9"),// Sprite Style
+                variable: "spritestyle",
+                options: ["Exhibition Night", "Pre-Exhibition", "2022 Demo"],
                 desc: lang_get_value("PZConfigC9D")
             },
         ]
@@ -109,7 +115,7 @@ options = [
 	            {
                 name: lang_get_value("PZConfigG2"),//Gameplay Style
                 variable: "walljumptype",
-                options: ["Exhibition Night", "Scoutdigo", "NJA Style", "Frenzy Worlds"],
+                options: ["Exhibition Night", "2022 Demo", "NJA Style", "Frenzy Worlds (WIP)"],
                 desc: lang_get_value("PZConfigG2D")//"Modifies certain parts of Pizzelle's moveset."
             },
         ]

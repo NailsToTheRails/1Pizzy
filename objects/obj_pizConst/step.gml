@@ -26,6 +26,30 @@ if instance_exists(obj_skinchoice)
     MOD_GLOBAL.pizzloaded = false;
 }
 
+with (obj_player)
+{
+	switch (global.PZ_opts.spritestyle)
+	{
+		case 0:
+		if (other.sprreset)
+		{
+			scr_characterspr()
+			other.sprreset = 0;
+		}
+		break;
+		case 2:
+		other.sprreset = 1;
+		spr_idle = MOD_GLOBAL.spr_idleD1;
+		spr_move = MOD_GLOBAL.spr_moveD1;
+		spr_mach1 = MOD_GLOBAL.spr_mach1D1;
+		spr_mach = MOD_GLOBAL.spr_machD1;
+		spr_mach4 = MOD_GLOBAL.spr_mach4D1;
+		spr_crazyrun = MOD_GLOBAL.spr_crazyrunD1;
+		spr_machslideboost3 = MOD_GLOBAL.spr_machslideboost3D1;
+		break;
+	}
+}
+
 var portalobjs = [obj_lapportal, obj_lapportalentrance, "obj_practiceportal", "obj_practiceportal_exit", "obj_lotw_enterportal", "obj_lotw_exitportal"];
 for (var i = 0; i < array_length(portalobjs); i++)
 {

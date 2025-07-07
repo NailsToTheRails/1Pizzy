@@ -34,6 +34,14 @@ add_sprite = function(name, frames, xorigin, yorigin, spritefps = -1)
     return s ?? undefined;
 }
 
+add_player_sprite = function(name, frames, xorigin, yorigin, spritefps = -1, style)
+{
+    spritefps = spritefps == 0 ? -1 : spritefps;
+    var s = sprite_add(concat(MOD_PATH, "/sprites/player/", style, "/", name, ".png" ), frames, false, false, xorigin, yorigin);
+    sprite_set_speed(s, abs(spritefps), spritespeed_framespergameframe);
+    return s ?? undefined;
+}
+
 var _f = file_find_first(MOD_PATH + "/sprites/icons/*.png",0)
 for(var _i = 0; _f != "";_i++)
 {
@@ -55,6 +63,18 @@ MOD_GLOBAL.pl_char = "P"
 
 global.PZcollectfont = font_add_sprite_ext(MOD_GLOBAL.pzcol, "0123456789", true, 0);
 
+/* Sprite Style WIP - Bogineer
+D1 = Demo 1
+PD = Post Demo
+add_player_sprite(name, frames, xorigin, yorigin, spritefps = -1, style)
+*/
+MOD_GLOBAL.spr_idleD1 = add_player_sprite("spr_idle", 11, 50, 50, 1, "demo1")
+MOD_GLOBAL.spr_moveD1 = add_player_sprite("spr_move", 8, 50, 50, 0.5, "demo1")
+MOD_GLOBAL.spr_mach1D1 = add_player_sprite("spr_mach1", 12, 50, 50, 1, "demo1")
+MOD_GLOBAL.spr_machD1 = add_player_sprite("spr_mach", 3, 50, 50, 1, "demo1")
+MOD_GLOBAL.spr_mach4D1 = add_player_sprite("spr_mach4", 4, 50, 50, 1, "demo1")
+MOD_GLOBAL.spr_crazyrunD1 = add_player_sprite("spr_crazyrun", 3, 100, 50, 1, "demo1")
+MOD_GLOBAL.spr_machslideboost3D1 = add_player_sprite("spr_machslideboost3", 13, 50, 50, 1, "demo1")
 
 global.PZ_opts = {
 	// COSMETIC
@@ -64,14 +84,15 @@ global.PZ_opts = {
 	combonames : ini_read_real("modded", "combonames", 0),
 	pizzypronoun : ini_read_real("modded", "pizzypronoun", 1), // 0 he/him 1 she/her 2 they/them
 	extremevisual : ini_read_real("modded", "extremevisual", 0),
-	tauntstyle : ini_read_real("modded", "tauntstyle", 0),
 	SSENmenu : ini_read_real("modded", "SSENmenu", 1),
 	pausemenustyle : ini_read_real("modded", "pausemenustyle", 0),
-	// MUSIC
+    spritestyle : ini_read_real("modded", "spritestyle", 0),
+	// AUDIO
 	escapetheme : ini_read_real("modded", "escapetheme", 0),
 	lap2theme : ini_read_real("modded", "lap2theme", 0),
 	lap3theme : ini_read_real("modded", "lap3theme", 0),
 	lap3duringinf : ini_read_real("modded", "lap3duringinf", 0),
+    tauntstyle : ini_read_real("modded", "tauntstyle", 0),
 	// GAMEPLAY
 	walljumptype : ini_read_real("modded", "walljumptype", 0),
 	experimenPZ : ini_read_real("modded","experimenPZ",0),
@@ -98,8 +119,7 @@ MOD_GLOBAL.pizzyost[4,0] = "event:/sugary/music/(L1)Glucose Getaway (Bewitched! 
 MOD_GLOBAL.pizzyost[5,0] = "event:/sugary/music/(L1)Midi Getaway (Demo 1)"
 MOD_GLOBAL.pizzyost[6,0] = "event:/sugary/music/(L1)Midi Getaway (Construct)"
 MOD_GLOBAL.pizzyost[7,0] = "event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT"
-MOD_GLOBAL.pizzyost[8,0] = "event:/sugary/music/(L1)It's SugaryPizza Time!"
-MOD_GLOBAL.pizzyost[9,0] = "event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)"
+MOD_GLOBAL.pizzyost[8,0] = "event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)"
 MOD_GLOBAL.pizzyost[0,1] = "event:/sugary/music/(L2)Sweet Release of Death (EN)"
 MOD_GLOBAL.pizzyost[1,1] = "event:/sugary/music/(L2)Sweet Release of Death (Demo 1)"
 MOD_GLOBAL.pizzyost[2,1] = "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)"
@@ -111,12 +131,10 @@ MOD_GLOBAL.pizzyost[0,2] = "event:/sugary/music/(L3)Clockin' Out Late"
 MOD_GLOBAL.pizzyost[1,2] = "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)"
 MOD_GLOBAL.pizzyost[2,2] = "event:/sugary/music/(L3)Harry's Despair-y"
 MOD_GLOBAL.pizzyost[3,2] = "event:/sugary/music/(L3)Sugarcube Hailstorm"
-MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)UNEXPECTION"
-MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Blue Licorice"
-MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)thickofit"
-MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
-MOD_GLOBAL.pizzyost[8,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
-MOD_GLOBAL.pizzyost[9,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
+MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)Blue Licorice"
+MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
+MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
+MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
 
 // I don't know what to do this is the best i got :sob: - Ashley
 MOD_GLOBAL.pizzyosttimes[0] = 99
