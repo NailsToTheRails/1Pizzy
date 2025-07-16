@@ -6,27 +6,39 @@ bgscroll -= 1;
 
 updown = key_down2 - key_up2
 leftright = key_right2 + key_left2
+updownhold = key_down - key_up
 
-if updown != 0 {
+if updownhold != 0 hold_down_arrow_qol += updownhold
+else hold_down_arrow_qol = 0
+
+if abs(hold_down_arrow_qol) > 20 && hold_down_arrow_qol/6 == floor(hold_down_arrow_qol/6) //slowing down shit
+{
     sound_play("event:/sfx/ui/step");
-    selection = clamp(selection+updown, -1, array_length(options[category].variables)-1)
+    selection = wrap(selection+updownhold, -1, array_length(options[category].variables)-1)
 }
-
-if leftright != 0 {
+if updown != 0 
+{
+    sound_play("event:/sfx/ui/step");
+    //selection = clamp(selection+updown, -1, array_length(options[category].variables)-1)
+    selection = wrap(selection+updown, -1, array_length(options[category].variables)-1)
+}
+if leftright != 0
+{
     if selection > -1
     {
         sound_play("event:/sfx/ui/select");
-        variable_global_set(options[category].variables[selection].variable,clamp(variable_global_get(options[category].variables[selection].variable)+leftright,0,array_length(options[category].variables[selection].options)-1));
+        //variable_global_set(options[category].variables[selection].variable,clamp(variable_global_get(options[category].variables[selection].variable)+leftright,0,array_length(options[category].variables[selection].options)-1));
+        struct_set(opt_struct, options[category].variables[selection].variable, clamp(struct_get(opt_struct ,options[category].variables[selection].variable)+leftright,0,array_length(options[category].variables[selection].options)-1))
     }
     else
     {
         sound_play("event:/sfx/ui/step");
-        category += leftright;
+        category = (array_length(options)+category+leftright) % (array_length(options));
         arrow = leftright * 12;
-        if category >= array_length(options)
+        /*if category >= array_length(options)
             category = 0;
         else if category < 0
-            category = array_length(options)-1;
+            category = array_length(options)-1;*/
     }
 }
 

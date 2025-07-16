@@ -14,7 +14,7 @@ repeat (array_length(options[category].variables)) {
     draw_text(200, SCREEN_HEIGHT/6 + (i * 32), (options[category].variables[i].name))
     draw_set_font(lang_get_font("font_small"))
     draw_set_halign(fa_right);
-    draw_text(SCREEN_WIDTH - 200,SCREEN_HEIGHT/6 + (i * 32), options[category].variables[i].options[variable_global_get(options[category].variables[i].variable)])
+    draw_text(SCREEN_WIDTH - 200,SCREEN_HEIGHT/6 + (i * 32), options[category].variables[i].options[struct_get(opt_struct, options[category].variables[i].variable)])
     i++;
 }
 draw_set_halign(fa_center);
@@ -25,9 +25,9 @@ var _l = string_width(options[category].name);
 draw_set_font(lang_get_font("font_small"));
 draw_set_color(selection == -1 ? c_white : c_grey);
 draw_set_halign(fa_right);
-draw_text(SCREEN_WIDTH/2 - max(_l, 90) + min(0, arrow), 42, "<");
+draw_text(SCREEN_WIDTH/2 - max(_l, 120) + min(0, arrow), 42, "<");
 draw_set_halign(fa_left);
-draw_text(SCREEN_WIDTH/2 + max(_l, 90) + max(0, arrow), 42, ">");
+draw_text(SCREEN_WIDTH/2 + max(_l, 120) + max(0, arrow), 42, ">");
 
 if selection > -1
 {

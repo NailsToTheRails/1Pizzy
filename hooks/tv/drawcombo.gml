@@ -1,5 +1,6 @@
+
 if (obj_player1.character != "PZ") exit;
-switch (global.combometertype) {
+switch (global.PZ_opts.combometertype) {
 	case 0:
 	case 1:
 	static barfill_frame = 0
@@ -21,9 +22,9 @@ switch (global.combometertype) {
 
 	draw_sprite_ext(MOD_GLOBAL.spr_tvHUD_comboMeter_back, 0, _x-137, _y-80, 1, 1, 0, c_white, 1);
 	var border_sprite = MOD_GLOBAL.spr_tvHUD_comboMeter_cut
-	var bar_sprite = !global.combometertype ? MOD_GLOBAL.spr_tvHUD_comboMeter : MOD_GLOBAL.spr_tvHUD_comboMeter_JUNE
-	var meter_sprite = !global.combometertype ? MOD_GLOBAL.spr_tvHUD_comboMeter_fill : MOD_GLOBAL.spr_tvHUD_comboMeter_fill_JUNE
-	var pal_sprite = !global.combometertype ? MOD_GLOBAL.spr_tvHUD_comboMeter_pal : MOD_GLOBAL.spr_tvHUD_comboMeter_pal_JUNE
+	var bar_sprite = !global.PZ_opts.combometertype ? MOD_GLOBAL.spr_tvHUD_comboMeter : MOD_GLOBAL.spr_tvHUD_comboMeter_JUNE
+	var meter_sprite = !global.PZ_opts.combometertype ? MOD_GLOBAL.spr_tvHUD_comboMeter_fill : MOD_GLOBAL.spr_tvHUD_comboMeter_fill_JUNE
+	var pal_sprite = !global.PZ_opts.combometertype ? MOD_GLOBAL.spr_tvHUD_comboMeter_pal : MOD_GLOBAL.spr_tvHUD_comboMeter_pal_JUNE
 
 	// fuckin.. make draw clip
 	draw_reset_clip();

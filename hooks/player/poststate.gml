@@ -19,6 +19,7 @@ var mod_instance_exists = function(_object)
 
 if character == "PZ"
 {
+	if sprite_index == spr_playerN_mach3 sprite_index = spr_mach4
     if PZ_sprite_previous != sprite_index
     {
         // Always start his idle animation from first frame
@@ -113,6 +114,7 @@ if character == "PZ"
             break;
         
         #endregion
+
         #region CLIMBWALL
 
         case states.climbwall:
@@ -139,7 +141,7 @@ if character == "PZ"
         #region SUPER JUMP
 
         case states.Sjump:
-	if (global.walljumptype == 0) {
+	if (global.PZ_opts.walljumptype == 0) {
             move = key_left + key_right;
             if move != 0 && sprite_index == spr_superjump
             {
@@ -229,15 +231,12 @@ if character == "PZ"
                 
                 if key_attack
                 {
-                    
                     repeat (5)
                     {
                         with instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_secretpoof) {
-				sprite_index = MOD_GLOBAL.spr_spinningFireParticle			
-			}
-                    }
-                    
-                    
+						sprite_index = MOD_GLOBAL.spr_spinningFireParticle			
+					}
+                }
                     movespeed = 12;
                     hsp = movespeed * dir;
                     state = states.mach3;
@@ -267,8 +266,7 @@ if character == "PZ"
             if key_shoot2
 			    scr_perform_move(2, state);
 	    
-             if (!mod_instance_exists(obj_wallkickDust))
-       		 instance_create(x + random_range(-40, 40), y + random_range(-40, 40), obj_wallkickDust);
+            if (!mod_instance_exists(obj_wallkickDust)) instance_create(x + random_range(-40, 40), y + random_range(-40, 40), obj_wallkickDust);
 
             if punch_afterimage > 0
                 punch_afterimage--;
@@ -296,28 +294,33 @@ if character == "PZ"
         #endregion
          #region ROCKET
         case states.rocket:
-      
-            if (key_left == -1 && xscale == 1 && !grounded)
-             state = 185;
-            
-            if (key_right && xscale == -1 && !grounded)
-            state = 185;
-
+      	if (global.PZ_opts.experimenPZ) {
+            if (move != xscale && move != 0 && sprite_index != spr_rocketstart && !grounded) {
+	     image_speed = 0.55
+             state = states.rocketslide;
+	     sound_play_3d("event:/sfx/pep/machslideboost", x, y);
+	    }
+	}
         break;
 
         case states.rocketslide:
+	if (global.PZ_opts.experimenPZ) {
             if (!grounded) 
-           {sprite_index = MOD_GLOBAL.spr_rocketturnair;
-           movespeed *= 1.01;;
+           {
+	   	sprite_index = MOD_GLOBAL.spr_rocketturnair;
+          	movespeed *= 1.01;;
            }
-            else
-            {movespeed *= 1.022;}
-
+           else
+           {
+		movespeed *= 1.022;
+	   }
+	}
         break;
 
         #endregion
                #region FIREMOUTH
         case states.firemouth:
+	if (global.PZ_opts.experimenPZ) {
             if (grounded && image_index > 8)
             {
                 if (key_jump2)
@@ -342,6 +345,7 @@ if character == "PZ"
                 {sprite_index = spr_firemouthspin;}
             }
             */
+	}
 
         break;
         
@@ -350,7 +354,7 @@ if character == "PZ"
 		  #region FIRE ASS
 
         case states.fireass:
-			if (global.walljumptype == 0) 
+			if (global.PZ_opts.walljumptype == 0) 
 			{
 				if scr_slapbuffercheck()//(input_buffer_slap > 0)
 		        {
@@ -376,9 +380,9 @@ if character == "PZ"
         #endregion
         #region KNIGHT
         case 38:
-          if (global.experimenPZ = 1)
+        if (global.PZ_opts.experimenPZ = 1 && character == "PZ")
         {
-            if(PZ_sprite_previous == spr_knightpepdoublejump && key_jump2 && !grounded)
+            if (PZ_sprite_previous == spr_knightpepdoublejump && key_jump2 && !grounded)
             {
                 state = "PZknightGlide"
             }
@@ -401,12 +405,13 @@ if character == "PZ"
             hsp = Approach(hsp,10*move,0.6);
             if (move != 0)
             {
-                obj_player1.xscale = move;
+                xscale = move;
             }
 
             if (key_down)
             {
-                state = 47;
+                state = states.knightpep;
+				with (instance_create(x, y - 16, obj_parryeffect)) sprite_index = spr_knightpep_downcloud;
                 vsp = 7;
                 sprite_index = spr_knightpepdowntrust;
             }
@@ -414,46 +419,57 @@ if character == "PZ"
             {
                 if (move != 0)
                 {
-                state = 38;
-                sprite_index = spr_knightpepcharge;
-                hsp = -8 * image_xscale;
+	                state = 38;
+	                sprite_index = spr_knightpepcharge;
+	                hsp = -8 * move;
+	                movespeed = hsp * -move //random bullshit go!
                 }
                 else
                 {
-                state = 47;
-                sprite_index = spr_knightpepland;
+	                state = 47;
+	                sprite_index = spr_knightpepland;
                 }
             }
+			if (scr_solid(x + sign(hsp), y) && (!scr_slope() || check_solid(x + sign(hsp), y - 2)) && !check_slope(x + sign(hsp), y) && !place_meeting(x + sign(hsp), y, obj_destructibles))
+			{
+				instance_create(x + (xscale * 40), y, obj_bumpeffect);
+				movespeed = 0;
+				vsp = -6;
+				sprite_index = spr_knightpepbump;
+				image_index = floor(image_number - 1);
+				state = states.knightpepbump;
+				sound_play_3d("event:/sfx/pep/groundpound", x, y);
+			}
         break;
         #endregion
 
-	  #region UPPERCUT PETALS
+		#region UPPERCUT PETALS
 
         case states.punch:
     	static petal_timer = 2;
-if (sprite_index = spr_breakdanceuppercut) {
-	 if (!petal_timer-- && vsp <= 0)
-  	  {
-    	    with (instance_create(x + random_range(-40, 40), y + random_range(-40, 40), obj_moddeddebris))
-   	     {
-     	       image_angle = 0;
-     	       image_alpha = 5;
-      	      image_speed = 0.35;
-        	    vsp = 2;
-            	hsp = 0;
-            	grav = 0.35;
-            	terminalVelocity = 1;
-        	}
-        
-        	petal_timer = 4;
-    	}
-}
-            break;
+		if (sprite_index = spr_breakdanceuppercut)
+		{
+			if (!petal_timer-- && vsp <= 0)
+		  	{
+				with (instance_create(x + random_range(-40, 40), y + random_range(-40, 40), obj_moddeddebris))
+				{
+					image_angle = 0;
+					image_alpha = 5;
+					image_speed = 0.35;
+	        	    vsp = 2;
+	            	hsp = 0;
+	            	grav = 0.35;
+	            	terminalVelocity = 1;
+				}
+	        	petal_timer = 4;
+	    	}
+		}
+        break;
         
         #endregion
-case states.keyget:
-
-return false;
-break;
+		case states.keyget:
+		tv_do_expression(MOD_GLOBAL.spr_tv_keyget);    
+		return false;
+		break;
     }
 }

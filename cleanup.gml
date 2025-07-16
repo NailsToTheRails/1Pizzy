@@ -1,6 +1,8 @@
+if (MOD_GLOBAL.PZ_snd_wallkick) {
 destroy_sounds([
     MOD_GLOBAL.PZ_snd_wallkick
 ]);
+}
 var i = 0
 while i <array_length(global.mods)
 {
@@ -30,3 +32,5 @@ if instance_exists(obj_modlist)
 		i++
 	}
 }
+fmod_event_instance_release(global.yaebal)
+fmod_event_instance_release(global.PZ_menu_note_inst)

@@ -3,6 +3,7 @@
 	"desc": "Adds Pizzelle from Sugary Spire: Exhibition Night",
 	"author": "Daedalend (Original Author lila)",
 	"contributors":"who?,whom?,whomst?",
-	"version": "1.6",
-	"format": 2
+	"version": "2.0",
+	"format": 2,
+	"tvcolor": "#FF69B4"
 }
