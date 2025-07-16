@@ -24,6 +24,9 @@
 	"voicehurt": "event:/sugary/voice/hurt",
 	"voicetransfo": "event:/sugary/voice/transfo",
         "secretwall": "event:/sugary/secretwall",
-        "breakdancemusic": "event:/sugary/breakdancemusic"
+        "breakdancemusic": "event:/sugary/breakdancemusic",
+	"superjump": "event:/sugary/superjump",
+	"parry": "event:/sugary/parry"
+
     }
 }
