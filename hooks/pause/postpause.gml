@@ -63,6 +63,8 @@ switch (global.leveltosave)
     note_array = [MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.CS7, MusicNote.CS6, MusicNote.GS6, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.G6, MusicNote.C6, MusicNote.G6, MusicNote.C7, MusicNote.C6, MusicNote.C7, MusicNote.G6, MusicNote.C6, MusicNote.G6];
     break;
 
+// floor 1
+
 	case "tutorial":
     note_array = [MusicNote.DS7, MusicNote.CS7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.DS7, MusicNote.CS7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.DS7, MusicNote.CS7, MusicNote.E7, MusicNote.B6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.GS6, MusicNote.E7, MusicNote.FS7, MusicNote.E7, MusicNote.CS7, MusicNote.E7, MusicNote.B6, MusicNote.GS6, MusicNote.GS6, MusicNote.A6, MusicNote.B6, MusicNote.A6, MusicNote.GS6, MusicNote.FS6, MusicNote.E6, MusicNote.E7];
     break;
@@ -78,6 +80,53 @@ switch (global.leveltosave)
 	case "ruin":
     note_array = [MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.C6, MusicNote.FS5, MusicNote.FS5, MusicNote.A5, MusicNote.B5, MusicNote.A5, MusicNote.B5, MusicNote.CS6];
     break;
+
+	case "dungeon":
+    note_array = [MusicNote.C6, MusicNote.AS5, MusicNote.DS6, MusicNote.C6, MusicNote.DS6, MusicNote.C6, MusicNote.DS6, MusicNote.E6, MusicNote.F6, MusicNote.G6, MusicNote.G6, MusicNote.AS6, MusicNote.G6, MusicNote.F6, MusicNote.DS6, MusicNote.C6, MusicNote.AS5, MusicNote.B5, MusicNote.G6, MusicNote.DS6, MusicNote.C6, MusicNote.AS6, MusicNote.G6, MusicNote.DS6, MusicNote.C6, MusicNote.AS6, MusicNote.G6, MusicNote.F6, MusicNote.DS6, MusicNote.D6, MusicNote.C6, MusicNote.C7, MusicNote.DS7, MusicNote.C7, MusicNote.G6, MusicNote.DS6, MusicNote.DS7, MusicNote.C7, MusicNote.G6, MusicNote.DS6, MusicNote.DS7, MusicNote.F7, MusicNote.FS7, MusicNote.G7, MusicNote.AS7, MusicNote.C8];
+    break;
+
+// floor 2
+
+	case "badland":
+     note_array = [MusicNote.G5, MusicNote.D6, MusicNote.D6, MusicNote.G6, MusicNote.F6, MusicNote.F6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.AS5, MusicNote.C6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.AS5, MusicNote.D6, MusicNote.C6, MusicNote.F6, MusicNote.F6, MusicNote.F6, MusicNote.G6, MusicNote.G6, MusicNote.F6, MusicNote.F6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.AS5, MusicNote.C6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.AS5, MusicNote.C6, MusicNote.D6, MusicNote.C6, MusicNote.AS5, MusicNote.G5, MusicNote.F5, MusicNote.D5, MusicNote.F5, MusicNote.G5];
+     break;
+
+// floor 3
+
+// floor 4
+
+// floor 5
+
+	case "chateau":
+    note_array = [MusicNote.A5, MusicNote.C6, MusicNote.E6, MusicNote.A5, MusicNote.DS6, MusicNote.C6, MusicNote.A5, MusicNote.C6, MusicNote.DS6, MusicNote.A5, MusicNote.E6, MusicNote.A5, MusicNote.DS6, MusicNote.C6, MusicNote.A5, MusicNote.G5, MusicNote.F5, MusicNote.C6, MusicNote.E6, MusicNote.A5, MusicNote.DS6, MusicNote.C6, MusicNote.A5, MusicNote.C6, MusicNote.DS6, MusicNote.A5, MusicNote.E6, MusicNote.A5, MusicNote.DS6, MusicNote.A5, MusicNote.G6, MusicNote.A6];
+    break;
+
+	case "war":
+    note_array = [MusicNote.F5, MusicNote.F6, MusicNote.C6, MusicNote.F5, MusicNote.F6, MusicNote.C6, MusicNote.F5, MusicNote.F6, MusicNote.C6, MusicNote.F5, MusicNote.F6, MusicNote.C6, MusicNote.F5, MusicNote.F6, MusicNote.C6, MusicNote.F5, MusicNote.CS6, MusicNote.GS5, MusicNote.F5, MusicNote.CS6, MusicNote.GS5, MusicNote.F5, MusicNote.CS6, MusicNote.GS5, MusicNote.F5, MusicNote.CS6, MusicNote.GS5, MusicNote.F5, MusicNote.CS6, MusicNote.GS5, MusicNote.F5, MusicNote.CS6, MusicNote.DS6, MusicNote.AS5, MusicNote.F5, MusicNote.DS6, MusicNote.AS5, MusicNote.F5, MusicNote.DS6, MusicNote.AS5, MusicNote.F5, MusicNote.DS6, MusicNote.AS5, MusicNote.F5, MusicNote.DS6, MusicNote.AS5, MusicNote.F5, MusicNote.DS6, MusicNote.DS6, MusicNote.AS5, MusicNote.G5, MusicNote.DS6, MusicNote.AS5, MusicNote.G5, MusicNote.DS6, MusicNote.AS5, MusicNote.G5, MusicNote.DS6, MusicNote.AS5, MusicNote.G5, MusicNote.DS6, MusicNote.AS5, MusicNote.G5, MusicNote.DS6];
+    break;
+
+// bosses
+
+	case "b_pepperman":
+    note_array = [MusicNote.D6, MusicNote.D6, MusicNote.F6, MusicNote.G6, MusicNote.GS6, MusicNote.A6, MusicNote.C7, MusicNote.A6, MusicNote.GS6, MusicNote.GS6, MusicNote.G6, MusicNote.F6, MusicNote.D6, MusicNote.D6, MusicNote.F6, MusicNote.G6, MusicNote.D6, MusicNote.D6, MusicNote.F6, MusicNote.G6, MusicNote.GS6, MusicNote.A6, MusicNote.C7, MusicNote.A6, MusicNote.D7, MusicNote.D7, MusicNote.C7, MusicNote.A6, MusicNote.GS6, MusicNote.D6, MusicNote.F6, MusicNote.D6];
+    break;
+
+// cyop towers
+
+	case "cyop_golf2":
+     note_array = [MusicNote.F5,MusicNote.F5,MusicNote.F5,MusicNote.GS5,MusicNote.C6,MusicNote.GS5,MusicNote.C6,MusicNote.CS5,MusicNote.CS5,MusicNote.F5,MusicNote.GS5,MusicNote.AS5,MusicNote.C6,MusicNote.GS5];
+     break;
+
+// modded content
+
+	case "lotw":
+     note_array = [MusicNote.G6,MusicNote.A6,MusicNote.AS6,MusicNote.G6,MusicNote.D7,MusicNote.A6,MusicNote.AS6,MusicNote.G6,    MusicNote.G6,MusicNote.A6,MusicNote.AS6,MusicNote.G6,MusicNote.D7,MusicNote.A6,MusicNote.AS6,MusicNote.G6,MusicNote.FS6,MusicNote.A6,MusicNote.AS6,MusicNote.FS6,MusicNote.D7,MusicNote.A6,MusicNote.AS6,MusicNote.FS6,MusicNote.FS6,MusicNote.A6,MusicNote.AS6,MusicNote.D7,MusicNote.C7,MusicNote.AS6,MusicNote.A6,MusicNote.FS6,];
+     break;
+
+	case "practice":
+     note_array = [MusicNote.GS6,MusicNote.B6,MusicNote.D7,MusicNote.GS6,MusicNote.B6,MusicNote.D7,MusicNote.GS6,MusicNote.B6,MusicNote.DS7,MusicNote.GS6,MusicNote.B6,MusicNote.DS7,MusicNote.GS6,MusicNote.B6,MusicNote.CS7,MusicNote.E7,MusicNote.GS6,MusicNote.B6,MusicNote.D7,MusicNote.GS6,MusicNote.B6,MusicNote.D7,MusicNote.GS6,MusicNote.B6,MusicNote.DS7,MusicNote.GS6,MusicNote.B6,MusicNote.DS7,MusicNote.GS6,MusicNote.B6,MusicNote.CS7,MusicNote.E7,MusicNote.FS6,MusicNote.A6,MusicNote.C7,MusicNote.FS6,MusicNote.A6,MusicNote.C7,MusicNote.FS6,MusicNote.A6,MusicNote.CS7,MusicNote.FS6,MusicNote.A6,MusicNote.CS7,MusicNote.FS6,MusicNote.A6,MusicNote.B6,MusicNote.D7,MusicNote.FS6,MusicNote.A6,MusicNote.C7,MusicNote.FS6,MusicNote.A6,MusicNote.C7,MusicNote.FS6,MusicNote.A6,MusicNote.CS7,MusicNote.FS6,MusicNote.A6,MusicNote.CS7,MusicNote.FS6,MusicNote.A6,MusicNote.B6,MusicNote.D7];
+     break;
+
 }
 global.MenuNoteArray = note_array;
 fmod_event_instance_set_paused(global.PZ_menu_note_inst, false);
