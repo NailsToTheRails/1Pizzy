@@ -8,7 +8,12 @@
 	"spr_soundtestdanceridle": {"images": 9, "speed":0.9},
 	"spr_soundtestdancerdance": {"images": 9, "speed":0.9},
 
-	"spr_soundtestidle": {"images": 11, "yorigin":50},
+	"spr_escapepointer1_fall": {"images": 3},
+	"spr_escapepointer1_exit": {"images": 12},
+	"spr_escapepointer2_fall": {"images": 3},
+	"spr_escapepointer2_exit": {"images": 10},
+
+	"spr_soundtestidle": {"images": 16, "yorigin":50},
 	"spr_soundtestwalk": {"images": 11, "yorigin":50},
 
 	"spr_tv_empty": {"images": 1},
