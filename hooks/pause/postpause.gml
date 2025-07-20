@@ -57,6 +57,7 @@ playerPauseIndex = irandom_range(0, sprite_get_number(MOD_GLOBAL.spr_pizzelle_pa
 borderscale = 4;
 global.MenuNoteArraySelect = 0;
 shake = 0;
+oldportrait_index = global.panic
 switch (global.leveltosave)
 {
 	default:

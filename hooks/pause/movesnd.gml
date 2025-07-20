@@ -1,10 +1,13 @@
 
 if (global.PZ_opts.SSENmenu == 0) or (global.PZ_opts.SSENmenu == 2 && MOD_GLOBAL.pl_char != "PZ") exit;
 
-if (global.PZ_opts.pausemenustyle == 2)
+if (global.PZ_opts.pausemenustyle == 1)
 {
-	return "event:/sfx/pep/step"
-	exit;
+	var xx = CAMX + (SCREEN_WIDTH / 2)
+	var yy = CAMY + (SCREEN_HEIGHT / 2)
+	fmod_event_one_shot_3d("event:/sfx/pep/step", xx, yy)
+	//return "event:/sfx/pep/step" //Doesn't work like that because this event is 3d
+	return "";
 }
 
 _note = global.MenuNoteArray[global.MenuNoteArraySelect];

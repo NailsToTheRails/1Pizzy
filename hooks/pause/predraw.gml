@@ -95,7 +95,8 @@ switch (global.PZ_opts.pausemenustyle)
 		if (!is_undefined(pausedSprite))
 		    draw_sprite_stretched(pausedSprite, 0, 0, 0, 960, 540);
 		
-		var is_not_level = global.leveltosave == -4
+		var is_not_level = (global.leveltosave == -4 || global.leveltosave == "tutorial" || global.leveltosave == "secretworld" || global.leveltosave == "exit" || global.leveltosave == "grinch")
+
 		var bordercolor = #0D001B
 		draw_set_alpha(fade - 0.5);
 		draw_rectangle_color(0, 0, obj_screensizer.actual_width, obj_screensizer.actual_height, bordercolor, bordercolor, bordercolor, bordercolor, false);
@@ -178,7 +179,8 @@ switch (global.PZ_opts.pausemenustyle)
 		    draw_text_ext_colour(current_bar_x - 20, y_pos + (shake * current_bar_chosen), _txt, -5, 100000, c_white, c_white, c_white, c_white, current_bar_chosen);
 		}
 		
-		if (!is_not_level) draw_sprite_ext(MOD_GLOBAL.spr_newpause_treasure, treasurefound, 835 + pauseslidein, 400, 1, 1, 0, c_white, (treasurealpha == 0 && treasurefound == 0) ? 0.5 : max(treasurealpha, global.treasure));
+		if (!is_not_level) 
+			draw_sprite_ext(MOD_GLOBAL.spr_newpause_treasure, treasurefound, 835 + pauseslidein, 400, 1, 1, 0, c_white, (treasurealpha == 0 && treasurefound == 0) ? 0.5 : max(treasurealpha, global.treasure));
 		
 		pattern_anim_bluat++
 		
@@ -249,7 +251,7 @@ switch (global.PZ_opts.pausemenustyle)
         draw_reset_clip();*/
         draw_sprite(MOD_GLOBAL.spr_pause_ss, 0, xx, yy);
         
-        if (global.leveltosave != -4)
+        if (global.leveltosave != -4 && global.leveltosave != "tutorial" && global.leveltosave != "secretworld" && global.leveltosave != "exit")
         {
             draw_sprite(MOD_GLOBAL.spr_pauseconfecti1, global.shroomfollow, xx, yy);
             draw_sprite(MOD_GLOBAL.spr_pauseconfecti2, global.cheesefollow, xx, yy);
@@ -269,15 +271,15 @@ switch (global.PZ_opts.pausemenustyle)
 		}
 		
 		pattern_anim_bluat++
-		
-		//draw_sprite_ext_flash(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, 5183024, 1);
+
+		draw_sprite_ext_flash(playerPauseSprite, oldportrait ? oldportrait_index  : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, 5183024, fade);
 		shader_set(global.Pal_Shader);
 		
 		if global.palettetexture != -4 pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture, false, (pattern_anim_bluat * sprite_get_speed(global.palettetexture)) % sprite_get_number(global.palettetexture));
 		else pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture);
 	
 		pal_swap_set(spr_palette, paletteselect, false);
-		draw_sprite_ext(playerPauseSprite, oldportrait ? global.panic : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, c_white, fade);
+		draw_sprite_ext(playerPauseSprite, oldportrait ? oldportrait_index  : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, c_white, fade);
 		pal_swap_reset();
 		
 		draw_set_font(global.fontSSOLD);
