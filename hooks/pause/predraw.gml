@@ -278,7 +278,8 @@ switch (global.PZ_opts.pausemenustyle)
 		if global.palettetexture != -4 pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture, false, (pattern_anim_bluat * sprite_get_speed(global.palettetexture)) % sprite_get_number(global.palettetexture));
 		else pattern_set(global.Base_Pattern_Color, playerPauseSprite, random_range(0, 2), 1, 1, global.palettetexture);
 	
-		pal_swap_set(spr_palette, paletteselect, false);
+		if (sprite_exists(spr_palette))
+			pal_swap_set(spr_palette, paletteselect, false);
 		draw_sprite_ext(playerPauseSprite, oldportrait ? oldportrait_index  : playerPauseIndex, xx + 686, yy + 285, 1, 1, 0, c_white, fade);
 		pal_swap_reset();
 		

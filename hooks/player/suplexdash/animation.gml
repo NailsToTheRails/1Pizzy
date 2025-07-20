@@ -1,39 +1,33 @@
 static shine_effect = 0;
-
 var attackdash = shotgunAnim ? spr_shotgunsuplexdash : spr_suplexdash;
-if character == "PZ" && sprite_index == attackdash
+
+if (character != "PZ" || sprite_index != attackdash)
+    return true; // Continue regular code
+
+if (!grounded)
 {
-    // ... it also has behaviour code. but does it truly matter? No.
-    if !grounded
-    {	
-	
-        if key_down
-            vsp = 6;
-	if (global.PZ_opts.walljumptype == 0) {
-        if key_down or image_index >= image_number - 4
-        {
-            sprite_index = spr_suplexdashjumpstart;
-            image_index = 0;
-        }
-        else
-            vsp = min(vsp, 0);
-	}
-        else
-            vsp = min(vsp, 0);
-	if (global.PZ_opts.walljumptype == 2) {
-	// NJATASTIC
-	if key_down
-        {
-            sprite_index = spr_suplexdashjumpstart;
-            image_index = 0;
+    if (key_down)
+        vsp = 6;
+
+    if (global.PZ_opts.walljumptype == 0 && (key_down || image_index >= image_number - 4))
+    {
+        sprite_index = spr_suplexdashjumpstart;
+        image_index = 0;
+    }
+    else
+        vsp = min(vsp, 0);
+
+    if (global.PZ_opts.walljumptype == 2 && key_down)
+    {
+        sprite_index = spr_suplexdashjumpstart;
+        image_index = 0;
 		movespeed = 50
-        }
-	}
     }
 
-    if shine_effect-- <= 0
+    if (shine_effect-- <= 0)
     {
         shine_effect = 6;
+
         with instance_create(x, y, obj_explosioneffect)
         {
             sprite_index = spr_shineeffect;
@@ -42,5 +36,5 @@ if character == "PZ" && sprite_index == attackdash
     }
 
     image_speed = 0.3;
-    return false; // cancels normal code
+    return false;
 }

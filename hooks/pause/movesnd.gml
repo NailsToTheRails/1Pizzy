@@ -1,7 +1,6 @@
-
 if (global.PZ_opts.SSENmenu == 0) or (global.PZ_opts.SSENmenu == 2 && MOD_GLOBAL.pl_char != "PZ") exit;
 
-if (global.PZ_opts.pausemenustyle == 1)
+if (global.PZ_opts.pausemenustyle == 2)
 {
 	var xx = CAMX + (SCREEN_WIDTH / 2)
 	var yy = CAMY + (SCREEN_HEIGHT / 2)
