@@ -19,6 +19,7 @@ if global.panic exit;
 if global.timeattack exit;
 if global.snickchallenge exit;
 if global.jukebox != -4 exit;
+if global.MOD.CosmicClones exit;
 // checking global.leveltosave == "entrance" isn't really neccesary since we check obj_music.music.event_name == "event:/music/w1/entrance" but I still do it because why not
 if global.leveltosave == "entrance" && obj_player1.character == "PZ" && obj_music.music.event_name == "event:/music/w1/entrance" && obj_music.music.event_name != "event:/sugary/music/entrance"
 {
