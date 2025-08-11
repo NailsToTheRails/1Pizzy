@@ -34,21 +34,18 @@ if obj_player1.character == "PZ"
 			return MOD_GLOBAL.pizzyost.GlucoseGetawayConstruct
 			break;
 			case 4 :
-			return MOD_GLOBAL.pizzyost.GlucoseGetawayBewitched
-			break;
-			case 5 :
 			return MOD_GLOBAL.pizzyost.MidiGetawayDemo1
 			break;
-			case 6 :
+			case 5 :
 			return MOD_GLOBAL.pizzyost.MidiGetawayConstruct
 			break;
-			case 7 :
+			case 6 :
 			return MOD_GLOBAL.pizzyost.PizzyDoingIt
 			break;
-			case 8 :
+			case 7 :
 			return MOD_GLOBAL.pizzyost.SugaryPizza
 			break;
-			case 9 :
+			case 8 :
 			return MOD_GLOBAL.pizzyost.SugarRushDemo2
 			break;
 			}
