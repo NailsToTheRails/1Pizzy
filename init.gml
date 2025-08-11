@@ -58,7 +58,7 @@ global.PZ_opts = {
 	toppinstyle : ini_read_real("modded", "toppinstyle", 0),
 	combonames : ini_read_real("modded", "combonames", 0),
 	pizzypronoun : ini_read_real("modded", "pizzypronoun", 1), // 0 he/him 1 she/her 2 they/them
-	extremevisual : ini_read_real("modded", "extremevisual", 0),
+	extremevisual : 0,
 	SSENmenu : ini_read_real("modded", "SSENmenu", 1),
 	pausemenustyle : ini_read_real("modded", "pausemenustyle", 0),
     spritestyle : ini_read_real("modded", "spritestyle", 0),
