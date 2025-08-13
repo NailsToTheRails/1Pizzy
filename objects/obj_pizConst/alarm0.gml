@@ -1,4 +1,5 @@
 if !instance_exists(obj_player1) exit;
+if !instance_exists(obj_player) exit;
 if !variable_global_exists("leveltosave") exit;
 
 if (obj_player1.character == "PZ" && room == tower_soundtest)
