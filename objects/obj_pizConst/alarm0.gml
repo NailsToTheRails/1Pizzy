@@ -1,25 +1,14 @@
 if !instance_exists(obj_player1) exit;
+if !instance_exists(obj_player) exit;
 if !variable_global_exists("leveltosave") exit;
 
 if (obj_player1.character == "PZ" && room == tower_soundtest)
 instance_create(6750,320,obj_PZpainterDancer)
 
-if (global.PZ_opts.extremevisual && global.panic && room != rank_room && global.leveltosave != "practice")
-{
-    var lap = global.PZ_opts.extremevisual == 1 ? 3 : 2;
-    if (global.laps >= lap)
-    {
-        instance_create(0, 0, obj_yogurtdebriseffect);
-        instance_create(0, 0, obj_yogurtfirebg);
-    }
-    obj_panicdebris.draw = false;
-}
-
 if global.panic exit;
 if global.timeattack exit;
 if global.snickchallenge exit;
 if global.jukebox != -4 exit;
-if global.MOD.CosmicClones exit;
 // checking global.leveltosave == "entrance" isn't really neccesary since we check obj_music.music.event_name == "event:/music/w1/entrance" but I still do it because why not
 if global.leveltosave == "entrance" && obj_player1.character == "PZ" && obj_music.music.event_name == "event:/music/w1/entrance" && obj_music.music.event_name != "event:/sugary/music/entrance"
 {

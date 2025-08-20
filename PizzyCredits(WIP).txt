@@ -22,7 +22,6 @@ Lap 1:
 	-"Sugar Rush (Exhibition Night)" // RodMod, CableChords, The8BitDrummer
 	-"Glucose Getaway" // Rodmod
 	-"Glucose Getaway (Construct)" // RodMod
-	-"Glucose Getaway (Bewitched! Remix)" // dexiedoo_octo
 	-"MIDI" // Lila
 	-"It's SugaryPizza Time!" // RexelisCool
 	-"Glucose Getaway! ("Demo 2" ver.)" // ???
@@ -36,7 +35,6 @@ Lap 2:
 	-"I'm in The Thick of Death" // Chezcake
 
 Lap 3:
-	-"Clockin' Out Late (Sugary Spire UST)" // dexiedoo_octo
 	-"Harry's Despair-y (Bilk Mix) (Sugary Spire UST)" // BilkShaked
 	-"Harry's Despair-y (Sugary Spire UST)" // Inceptradom
 	-"UNEXPECTATION (Sugary Spire UST)" // Zeus_073

@@ -1,28 +1,3 @@
-version_check = function(ver_allowed, show_error = 1)
-{
-    var suka = string_split(global.game_version,".",false)
-    suka[0] = string_copy(suka[0], 2, 1);
-    repeat(array_length(suka)-array_length(ver_allowed)) array_push(ver_allowed,0)
-    repeat(array_length(ver_allowed)-array_length(suka)) array_push(suka,0)
-    for (var i = 0; i < array_length(suka); i++)
-    {
-        if ver_allowed[i] > real(suka[i]) 
-        {
-        	var WHAT_THE_FUCK = "";
-			for(var o = 0; o < array_length(ver_allowed); o++)
-			{
-				WHAT_THE_FUCK = WHAT_THE_FUCK+string(ver_allowed[o])+"."
-			}
-            if show_error show_message("ERROR\n-----------"+"\nOutdated CUM+ version for mod: "+global.processing_mod.name+"\nVersion Needed: "+WHAT_THE_FUCK+"\nCurrent Version: "+global.game_version+"\nThe mod may not work correctly,\nUse at your own risk"+"\n-----------")
-            return false;
-        }
-        else if ver_allowed[i] != real(suka[i]) return true;
-    }
-	return true;
-}
-
-version_check([3])
-
 randomize()
 MOD_GLOBAL._iconlist = []
 
@@ -83,7 +58,7 @@ global.PZ_opts = {
 	toppinstyle : ini_read_real("modded", "toppinstyle", 0),
 	combonames : ini_read_real("modded", "combonames", 0),
 	pizzypronoun : ini_read_real("modded", "pizzypronoun", 1), // 0 he/him 1 she/her 2 they/them
-	extremevisual : ini_read_real("modded", "extremevisual", 0),
+	extremevisual : 0,
 	SSENmenu : ini_read_real("modded", "SSENmenu", 1),
 	pausemenustyle : ini_read_real("modded", "pausemenustyle", 0),
     spritestyle : ini_read_real("modded", "spritestyle", 0),
@@ -115,11 +90,11 @@ MOD_GLOBAL.pizzyost[0,0] = "event:/sugary/music/(L1)Sugar Rush (Lila Mix)"
 MOD_GLOBAL.pizzyost[1,0] = "event:/sugary/music/(L1)Sugar Rush (Exhibition Night)"
 MOD_GLOBAL.pizzyost[2,0] = "event:/sugary/music/(L1)Glucose Getaway"
 MOD_GLOBAL.pizzyost[3,0] = "event:/sugary/music/(L1)Glucose Getaway (Construct)"
-MOD_GLOBAL.pizzyost[4,0] = "event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)"
-MOD_GLOBAL.pizzyost[5,0] = "event:/sugary/music/(L1)Midi Getaway (Demo 1)"
-MOD_GLOBAL.pizzyost[6,0] = "event:/sugary/music/(L1)Midi Getaway (Construct)"
-MOD_GLOBAL.pizzyost[7,0] = "event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT"
-MOD_GLOBAL.pizzyost[8,0] = "event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)"
+MOD_GLOBAL.pizzyost[4,0] = "event:/sugary/music/(L1)Midi Getaway (Demo 1)"
+MOD_GLOBAL.pizzyost[5,0] = "event:/sugary/music/(L1)Midi Getaway (Construct)"
+MOD_GLOBAL.pizzyost[6,0] = "event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT"
+MOD_GLOBAL.pizzyost[7,0] = "event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)"
+
 MOD_GLOBAL.pizzyost[0,1] = "event:/sugary/music/(L2)Sweet Release of Death (EN)"
 MOD_GLOBAL.pizzyost[1,1] = "event:/sugary/music/(L2)Sweet Release of Death (Demo 1)"
 MOD_GLOBAL.pizzyost[2,1] = "event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)"
@@ -127,14 +102,14 @@ MOD_GLOBAL.pizzyost[3,1] = "event:/sugary/music/(L2)Sweet Release of MIDI"
 MOD_GLOBAL.pizzyost[4,1] = "event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)"
 MOD_GLOBAL.pizzyost[5,1] = "event:/sugary/music/(L2)Sweet Release of Jam"
 MOD_GLOBAL.pizzyost[6,1] = "event:/sugary/music/(L2)I'm in The Thick of Death"
-MOD_GLOBAL.pizzyost[0,2] = "event:/sugary/music/(L3)Clockin' Out Late"
-MOD_GLOBAL.pizzyost[1,2] = "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)"
-MOD_GLOBAL.pizzyost[2,2] = "event:/sugary/music/(L3)Harry's Despair-y"
-MOD_GLOBAL.pizzyost[3,2] = "event:/sugary/music/(L3)Sugarcube Hailstorm"
-MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)Blue Licorice"
-MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
-MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
-MOD_GLOBAL.pizzyost[7,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
+
+MOD_GLOBAL.pizzyost[0,2] = "event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)"
+MOD_GLOBAL.pizzyost[1,2] = "event:/sugary/music/(L3)Harry's Despair-y"
+MOD_GLOBAL.pizzyost[2,2] = "event:/sugary/music/(L3)Sugarcube Hailstorm"
+MOD_GLOBAL.pizzyost[3,2] = "event:/sugary/music/(L3)Blue Licorice"
+MOD_GLOBAL.pizzyost[4,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin'"
+MOD_GLOBAL.pizzyost[5,2] = "event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2"
+MOD_GLOBAL.pizzyost[6,2] = "event:/sugary/music/(L3)Coneball Lapping Two"
 
 // I don't know what to do this is the best i got :sob: - Ashley
 MOD_GLOBAL.pizzyosttimes[0] = 99
@@ -178,7 +153,7 @@ if instance_exists(obj_modlist)
 		i++
 	}
 }
-MOD_GLOBAL.CustomThemesCheck = ["event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)","event:/sugary/music/(L1)Glucose Getaway (Bewitched! Remix)","event:/sugary/music/(L1)Glucose Getaway (Construct)","event:/sugary/music/(L1)Glucose Getaway","event:/sugary/music/(L1)It's SugaryPizza Time!","event:/sugary/music/(L1)Midi Getaway (Construct)","event:/sugary/music/(L1)Midi Getaway (Demo 1)","event:/sugary/music/(L1)Sugar Rush (Exhibition Night)","event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT","event:/sugary/music/(L1)Sugar Rush (Lila Mix)","event:/sugary/music/(L2)Sweet Release of Death (Demo 1)","event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)","event:/sugary/music/(L2)Sweet Release of Death (EN)","event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)","event:/sugary/music/(L2)Sweet Release of MIDI","event:/sugary/music/(L2)Sweet Release of Jam","event:/sugary/music/(L2)I'm in The Thick of Death","event:/sugary/music/(L3)Blue Licorice","event:/sugary/music/(L3)Clockin' Out Late","event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)","event:/sugary/music/(L2)(L3)Harry's Despair-y","event/:sugary/music/(L3)UNEXPECTION","event/:sugary/music/(L3)Sugarcube Hailstorm","event:/sugary/music/(L3)thickofit","event:/sugary/music/(L3)Gummy Harry's Brain Freezin'","event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2","event:/sugary/music/(L3)Coneball Lapping Two",]
+MOD_GLOBAL.CustomThemesCheck = ["event:/sugary/music/(L1)Glucose Getaway (FANMADE DEMO 2)","event:/sugary/music/(L1)Glucose Getaway (Construct)","event:/sugary/music/(L1)Glucose Getaway","event:/sugary/music/(L1)It's SugaryPizza Time!","event:/sugary/music/(L1)Midi Getaway (Construct)","event:/sugary/music/(L1)Midi Getaway (Demo 1)","event:/sugary/music/(L1)Sugar Rush (Exhibition Night)","event:/sugary/music/(L1)THE pizzelle's FAVORITE SONG THAT they listen TO WHEN they do IT","event:/sugary/music/(L1)Sugar Rush (Lila Mix)","event:/sugary/music/(L2)Sweet Release of Death (Demo 1)","event:/sugary/music/(L2)Sweet Release of Death (FANMADE DEMO 2)","event:/sugary/music/(L2)Sweet Release of Death (EN)","event:/sugary/music/(L2)Sweet Release of Death (Esquiz Mix)","event:/sugary/music/(L2)Sweet Release of MIDI","event:/sugary/music/(L2)Sweet Release of Jam","event:/sugary/music/(L2)I'm in The Thick of Death","event:/sugary/music/(L3)Blue Licorice","event:/sugary/music/(L3)Harry's Despair-y (Bilk Mix)","event:/sugary/music/(L2)(L3)Harry's Despair-y","event/:sugary/music/(L3)UNEXPECTION","event/:sugary/music/(L3)Sugarcube Hailstorm","event:/sugary/music/(L3)thickofit","event:/sugary/music/(L3)Gummy Harry's Brain Freezin'","event:/sugary/music/(L3)Gummy Harry's Brain Freezin' V2","event:/sugary/music/(L3)Coneball Lapping Two",]
 MOD_GLOBAL.EPIC = sprite_add(MOD_PATH + "/sprites/Epic.png", 1, false, false, 50, 50);
 MOD_GLOBAL.PZ_snd_wallkick = fmod_event_create_instance("event:/sugary/wallkick");
 MOD_GLOBAL.spr_tv_exprmach2 = sprite_add(MOD_PATH + "/sprites/spr_tv_exprmach2.png", 8, false, false, 139, 134);
@@ -445,11 +420,6 @@ MOD_GLOBAL.spr_candy_taunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_t
 MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_supertaunt.png", 10, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
-
-// extreme exhibition lap 4 visuals
-MOD_GLOBAL.spr_yogurtfirebg2 = add_sprite("extreme/spr_yogurtfirebg2", 1, 0, 270);
-MOD_GLOBAL.spr_yogurtfirebg = add_sprite("extreme/spr_yogurtfirebg", 2, 480, 270);
-MOD_GLOBAL.bg_yogurtDebris = add_sprite("extreme/bg_yogurtDebris", 2, 0, 0);
 
 MOD_GLOBAL.spr_pause_ss = add_sprite("pause/old/spr_pause_ss", 1, 0, 0);
 MOD_GLOBAL.spr_pausebg_ss = add_sprite("pause/old/spr_pausebg_ss", 1, 0, 0);
