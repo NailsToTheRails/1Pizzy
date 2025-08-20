@@ -421,11 +421,6 @@ MOD_GLOBAL.spr_candy_supertaunt = sprite_add(MOD_PATH + "/sprites/toppins/spr_ca
 MOD_GLOBAL.spr_candy_panic = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panic.png", 26, false, false, 50, 54);
 MOD_GLOBAL.spr_candy_panicWalk = sprite_add(MOD_PATH + "/sprites/toppins/spr_candy_panicWalk.png", 15, false, false, 50, 54);
 
-// extreme exhibition lap 4 visuals
-MOD_GLOBAL.spr_yogurtfirebg2 = add_sprite("extreme/spr_yogurtfirebg2", 1, 0, 270);
-MOD_GLOBAL.spr_yogurtfirebg = add_sprite("extreme/spr_yogurtfirebg", 2, 480, 270);
-MOD_GLOBAL.bg_yogurtDebris = add_sprite("extreme/bg_yogurtDebris", 2, 0, 0);
-
 MOD_GLOBAL.spr_pause_ss = add_sprite("pause/old/spr_pause_ss", 1, 0, 0);
 MOD_GLOBAL.spr_pausebg_ss = add_sprite("pause/old/spr_pausebg_ss", 1, 0, 0);
 MOD_GLOBAL.spr_pausebutton_ss = add_sprite("pause/old/spr_pausebutton_ss", 2, 0, 0);
